@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delhi Travel Guide | RouteMitra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#cities">Cities</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<div class="gwalior-hero">
+    <h1>Explore Delhi</h1>
+    <p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
+</div>
+
+<!-- TOURIST PLACES -->
+<div class="gwalior-section">
+    <h2>Top Tourist Places in Delhi</h2>
+    <div class="places">
+        <div class="place-card"><img src="Images/delhi_images/red_fort.jpg" alt="Red Fort"><div>Red Fort</div></div>
+        <div class="place-card"><img src="Images/delhi_images/qutub_minar.jpg" alt="Qutub Minar"><div>Qutub Minar</div></div>
+        <div class="place-card"><img src="Images/delhi_images/humayun_tomb.jpg" alt="Humayun's Tomb"><div>Humayun's Tomb</div></div>
+        <div class="place-card"><img src="Images/delhi_images/india_gate.jpg" alt="India Gate"><div>India Gate</div></div>
+        <div class="place-card"><img src="Images/delhi_images/rashtrapati_bhavan.jpg" alt="Rashtrapati Bhavan"><div>Rashtrapati Bhavan</div></div>
+        <div class="place-card"><img src="Images/delhi_images/jantar_mantar.jpg" alt="Jantar Mantar"><div>Jantar Mantar</div></div>
+        <div class="place-card"><img src="Images/delhi_images/purana_qila.jpg" alt="Purana Qila"><div>Purana Qila</div></div>
+        <div class="place-card"><img src="Images/delhi_images/lotus_temple.jpg" alt="Lotus Temple"><div>Lotus Temple</div></div>
+        <div class="place-card"><img src="Images/delhi_images/akshardham_temple.jpg" alt="Akshardham Temple"><div>Akshardham Temple</div></div>
+        <div class="place-card"><img src="Images/delhi_images/jama_masjid.jpg" alt="Jama Masjid"><div>Jama Masjid</div></div>
+        <div class="place-card"><img src="Images/delhi_images/gurudwara_bangla_sahib.jpg" alt="Gurudwara Bangla Sahib"><div>Gurudwara Bangla Sahib</div></div>
+        <div class="place-card"><img src="Images/delhi_images/laxminarayan_temple.jpg" alt="Laxminarayan Temple"><div>Laxminarayan Temple</div></div>
+        <div class="place-card"><img src="Images/delhi_images/chandni_chowk.jpg" alt="Chandni Chowk"><div>Chandni Chowk</div></div>
+        <div class="place-card"><img src="Images/delhi_images/connaught_place.jpg" alt="Connaught Place"><div>Connaught Place</div></div>
+        <div class="place-card"><img src="Images/delhi_images/hauz_khas_village.jpg" alt="Hauz Khas Village"><div>Hauz Khas Village</div></div>
+        <div class="place-card"><img src="Images/delhi_images/dilli_haat.jpg" alt="Dilli Haat"><div>Dilli Haat</div></div>
+        <div class="place-card"><img src="Images/delhi_images/national_museum.jpg" alt="National Museum"><div>National Museum</div></div>
+        <div class="place-card"><img src="Images/delhi_images/gandhi_smriti.jpg" alt="Gandhi Smriti"><div>Gandhi Smriti</div></div>
+        <div class="place-card"><img src="Images/delhi_images/lodhi_gardens.jpg" alt="Lodhi Gardens"><div>Lodhi Gardens</div></div>
+    </div>
+</div>
+
+<!-- DAY-WISE PLANS -->
+<div class="section">
+    <h2>Choose Your Travel Plan</h2>
+    <div class="buttons">
+        <button onclick="showPlan(1)">1 Day</button>
+        <button onclick="showPlan(2)">2 Day</button>
+        <button onclick="showPlan(3)">3 Day</button>
+        <button onclick="showPlan(4)">4 Day</button>
+    </div>
+
+    <div id="planDisplay" class="plan-box">
+        Click a plan to see detailed route.
+    </div>
+</div>
+<!-- DELHI COMPLETE COVERAGE SUMMARY -->
+<div class="section">
+  <h2>📍 Delhi Complete Coverage Summary</h2>
+
+  <div class="plan-box">
+    <h3>🗺 Area-Wise Coverage</h3>
+
+    <p><strong>Old Delhi:</strong> Red Fort, Jama Masjid, Chandni Chowk</p>
+    <p><strong>Central Delhi:</strong> India Gate, Rashtrapati Bhavan, Connaught Place</p>
+    <p><strong>South Delhi:</strong> Qutub Minar, Lotus Temple, Hauz Khas, Dilli Haat</p>
+    <p><strong>Lutyens Zone:</strong> National Museum, Lodhi Garden, Purana Qila</p>
+    <p><strong>Spiritual & Modern:</strong> Akshardham, Raj Ghat, Rail Museum</p>
+
+    <hr>
+
+    <h3>🎯 Planning Logic</h3>
+    <p>✔ Area-wise Route Planning</p>
+    <p>✔ Metro Optimized Travel</p>
+    <p>✔ Minimal Backtracking</p>
+    <p>✔ 4 Days = Almost Complete Delhi Coverage</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+<!-- JS -->
+<script>
+const plans = {
+1: `
+<div class="day-title">🔥 Day 1 – Old + Central Delhi Compact Route</div>
+
+<div class="timeline-item">
+<div class="time">🟢 8:00 AM – Chandni Chowk</div>
+<p>🥘 Breakfast: Parathe Wali Gali, Chole Bhature</p>
+<p>🚇 Metro: Chandni Chowk (Yellow Line)</p>
+<p>⏳ Stay Time: 45–60 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 9:00 AM – Jama Masjid</div>
+<p>📍 500m from Chandni Chowk</p>
+<p>🚶 Walking Time: 7–10 min</p>
+<p>⏳ Stay Time: 45 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 10:00 AM – Red Fort</div>
+<p>📍 1 km from Jama Masjid</p>
+<p>🚶 15 min walk</p>
+<p>🎟 Entry Ticket Required</p>
+<p>🚇 Lal Qila Metro (Violet Line)</p>
+<p>⏳ Stay Time: 1.5–2 hrs</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 12:30 PM – Travel to Connaught Place</div>
+<p>📍 6 km from Red Fort</p>
+<p>🚇 Metro: Lal Qila → Rajiv Chowk</p>
+<p>⏳ Travel Time: 25–30 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 1:15 PM – Lunch at Connaught Place</div>
+<p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 2:30 PM – Rashtrapati Bhavan</div>
+<p>📍 2.5 km from CP</p>
+<p>🚗 10 min drive</p>
+<p>⏳ Stay Time: 30 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 3:15 PM – India Gate</div>
+<p>📍 2 km from Rashtrapati Bhavan</p>
+<p>🚗 5–10 min drive</p>
+<p>⏳ Stay Time: 30–40 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 4:30 PM – Humayun's Tomb</div>
+<p>📍 6 km from India Gate</p>
+<p>🚗 15–20 min drive</p>
+<p>⏳ Stay Time: 1–1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 6:30 PM – Evening Chill (Back to CP)</div>
+<p>📍 7 km from Humayun’s Tomb</p>
+<p>☕ Coffee + Shopping</p>
+</div>
+`,
+2: `
+<div class="day-title">🔥 Day 2 – South Delhi Heritage + Spiritual + Modern Route</div>
+
+<div class="timeline-item">
+<div class="time">🟢 8:30 AM – Qutub Minar</div>
+<p>📍 Mehrauli Area</p>
+<p>🚇 Metro: Qutub Minar (Yellow Line)</p>
+<p>⏳ Stay Time: 1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 10:30 AM – Lotus Temple</div>
+<p>📍 8 km from Qutub Minar</p>
+<p>🚗 20–25 min drive</p>
+<p>🚇 Nehru Place Metro (Violet Line)</p>
+<p>⏳ Stay Time: 45–60 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 12:00 PM – Kalkaji Mandir</div>
+<p>📍 Walking distance from Lotus Temple</p>
+<p>⏳ Stay Time: 30–40 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 1:30 PM – Lunch Break</div>
+<p>📍 Nehru Place / Saket Area</p>
+<p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 2:45 PM – Hauz Khas Village</div>
+<p>📍 9 km from Nehru Place</p>
+<p>🚗 20–25 min drive</p>
+<p>🚇 Hauz Khas Metro (Yellow Line)</p>
+<p>⏳ Stay Time: 1–1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 4:30 PM – Dilli Haat</div>
+<p>📍 4 km from Hauz Khas</p>
+<p>🚗 10–15 min drive</p>
+<p>🚇 INA Metro (Yellow Line)</p>
+<p>⏳ Stay Time: 1–1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 6:30 PM – Akshardham Temple</div>
+<p>📍 15 km from INA</p>
+<p>🚇 Metro: INA → Rajiv Chowk → Blue Line to Akshardham</p>
+<p>⏳ Stay Time: 2 hr (Evening Light Show Famous)</p>
+</div>
+`,
+3: `
+<div class="day-title">🔥 Day 3 – Lutyens Delhi + Museums + Garden Route</div>
+
+<div class="timeline-item">
+<div class="time">🟢 8:30 AM – Gurudwara Bangla Sahib</div>
+<p>📍 Connaught Place Area</p>
+<p>🚇 Metro: Rajiv Chowk / Patel Chowk</p>
+<p>⏳ Stay Time: 45–60 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 9:45 AM – Jantar Mantar</div>
+<p>📍 1 km from Bangla Sahib</p>
+<p>🚶 10–15 min walk</p>
+<p>⏳ Stay Time: 45 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 11:00 AM – National Museum</div>
+<p>📍 2 km from Jantar Mantar</p>
+<p>🚗 5–10 min drive</p>
+<p>🚇 Central Secretariat Metro</p>
+<p>⏳ Stay Time: 1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 1:00 PM – Lunch (Khan Market Area)</div>
+<p>📍 2 km from National Museum</p>
+<p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 2:30 PM – Lodhi Garden</div>
+<p>📍 2 km from Khan Market</p>
+<p>🚗 5–10 min drive</p>
+<p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 4:00 PM – Purana Qila</div>
+<p>📍 4 km from Lodhi Garden</p>
+<p>🚗 15 min drive</p>
+<p>⏳ Stay Time: 1–1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 6:00 PM – India Habitat Centre (Evening Relax)</div>
+<p>📍 2 km from Purana Qila</p>
+<p>☕ Café + Cultural Vibe</p>
+<p>⏳ Relax Time: 1 hr</p>
+</div>
+`,
+4: `
+<div class="day-title">🔥 Day 4 – Modern Delhi + Markets + Cultural Experience</div>
+
+<div class="timeline-item">
+<div class="time">🟢 8:30 AM – Raj Ghat</div>
+<p>📍 Peaceful Memorial Area</p>
+<p>🚇 Nearest Metro: Delhi Gate / ITO</p>
+<p>⏳ Stay Time: 30–40 min</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 10:00 AM – National Rail Museum</div>
+<p>📍 12 km from Raj Ghat</p>
+<p>🚗 25–30 min drive</p>
+<p>🚇 Nearest Metro: Dhaula Kuan (Airport Line)</p>
+<p>⏳ Stay Time: 1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 1:00 PM – Lunch (Chanakyapuri / Satya Niketan)</div>
+<p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 3:00 PM – Pacific Mall (Tagore Garden)</div>
+<p>📍 10 km from Rail Museum</p>
+<p>🚗 25 min drive</p>
+<p>🚇 Metro: Tagore Garden (Blue Line)</p>
+<p>⏳ Stay Time: 1–1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 5:30 PM – Janpath Market</div>
+<p>📍 8 km from Pacific Mall</p>
+<p>🚇 Metro: Rajiv Chowk</p>
+<p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+<div class="time">🟢 7:00 PM – Gurudwara Sis Ganj Sahib</div>
+<p>📍 Chandni Chowk Area</p>
+<p>🚇 Metro: Chandni Chowk (Yellow Line)</p>
+<p>⏳ Evening Visit</p>
+</div>
+`,
+
+};
+
+function showPlan(day){
+document.getElementById("planDisplay").innerHTML = plans[day];
+}
+</script>
+
