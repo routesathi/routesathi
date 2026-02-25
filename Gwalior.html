@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gwalior Travel Guide | RouteMitra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#cities">Cities</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+    <!-- HERO -->
+<div class="gwalior-hero">
+
+    <h1>Explore Gwalior</h1>
+    <p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
+</div>
+
+<!-- TOURIST PLACES -->
+<div class="gwalior-section">
+
+    <h2>Top Tourist Places in Gwalior</h2>
+
+    <div class="places">
+        <div class="place-card">
+            <img src="images/gwalior_images/gwalior_fort.jpg" alt="Gwalior Fort">
+            <p>Historic 8th-century fort with stunning views of the city.</p>
+            <div>Gwalior Fort</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/man_singh_palace.jpg" alt="Man Singh Palace">
+            <div>Man Singh Palace</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/teli_ka_mandir.jpg" alt="Teli Ka Mandir">
+            <div>Teli Ka Mandir</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/sas_bahu_temple.jpg" alt="Sas Bahu Temple">
+            <div>Sas Bahu Temple</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/gujari_mahal.jpg" alt="Gujari Mahal">
+            <div>Gujari Mahal</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/gopachal_parvat.jpg" alt="Gopachal Parvat">
+            <div>Gopachal Parvat</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/jai_vilas_palace.jpg" alt="Jai Vilas Palace">
+            <div>Jai Vilas Palace</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/sarod_ghar.jpg" alt="Sarod Ghar">
+            <div>Sarod Ghar</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/tansen_tomb.jpg" alt="Tansen Tomb">
+            <div>Tansen Tomb</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/mohammad_ghaus_tomb.jpg" alt="Mohammad Ghaus Tomb">
+            <div>Mohammad Ghaus Tomb</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/sun_temple.jpg" alt="Sun Temple">
+            <div>Sun Temple</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/tighra_dam.jpg" alt="Tighra Dam">
+            <div>Tighra Dam</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/phool_bagh.jpg" alt="Phool Bagh">
+            <div>Phool Bagh</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/rani_laxmi_bai_memorial.jpg" alt="Rani Laxmi Bai Memorial">
+            <div>Rani Laxmi Bai Memorial</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/sarafa_bazaar.jpg" alt="Sarafa Bazaar">
+            <div>Sarafa Bazaar</div>
+        </div>
+        <div class="place-card">
+            <img src="images/gwalior_images/patankar_bazaar.jpg" alt="Patankar Bazaar">
+            <div>Patankar Bazaar</div>
+        </div>
+    </div>
+</div>
+
+<!-- ROUTE PLANNER -->
+<div class="section">
+    <h2>Choose Your Travel Plan</h2>
+
+    <div class="buttons">
+        <button onclick="showPlan(1)">1 Day</button>
+        <button onclick="showPlan(2)">2 Day</button>
+        <button onclick="showPlan(3)">3 Day</button>
+        <button onclick="showPlan(4)">4 Day</button>
+    </div>
+
+    <div id="planDisplay" class="plan-box">
+        Click a plan to see detailed route.
+    </div>
+</div>
+
+<footer>
+  © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+<script>
+const plans = {
+1: `<div class="day-title">⚡ 1 Day Smart Route Plan</div>
+
+<div class="timeline-item">
+<div class="time">🌅 8:30 AM – 1:00 PM</div>
+<strong style="color:#1e3c72;">🏰 FORT CLUSTER (Walking Distance ~1 KM)</strong><br><br>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gwalior Fort</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Man Singh Palace</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Teli Ka Mandir</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sas Bahu Temple</span>
+</div>
+
+<div class="timeline-item">
+<div class="time">🍽 1:00 PM – 2:00 PM</div>
+Lunch Break (Near Fort Exit)
+</div>
+
+<div class="timeline-item">
+<div class="time">🏛 2:30 PM – 4:30 PM</div>
+Jai Vilas Palace <span style="color:#777;">(City Center – Approx 3 KM from Fort)</span>
+</div>
+
+<div class="timeline-item">
+<div class="time">🌇 5:00 PM – 6:30 PM</div>
+Sun Temple <span style="color:#777;">(Perfect Sunset Spot – Approx 5 KM from City Center)</span>
+</div>
+
+<div class="route-note">
+📍 <strong>Route Flow:</strong> Fort Area ➜ City Center ➜ Sun Temple<br>
+📏 <strong>Total Distance:</strong> Approx 9–10 KM<br>
+💰 <strong>Estimated Budget:</strong> ₹800 – ₹1200<br>
+⏳ <strong>Time Saving Tip:</strong> Complete full Fort Complex in one go.
+</div>`,
+
+2: `<div class="day-title">🗓️ 2 Day Balanced Smart Plan</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 1 – Heritage Cluster (8:30 AM – 6:00 PM)</div>
+
+<strong style="color:#1e3c72;">🏰 Fort & Historic Zone (~3 KM Area)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gwalior Fort</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Man Singh Palace</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Teli Ka Mandir</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sas Bahu Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gujari Mahal</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gopachal Parvat</span>
+
+<br><br>🍽 Lunch in City Area<br>
+🌆 Evening: Tansen Tomb + Mohammad Ghaus Tomb
+</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 2 – Palace & Nature (9:00 AM – 6:30 PM)</div>
+
+<strong style="color:#1e3c72;">🏛 Royal & Relax Zone</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Jai Vilas Palace (Approx 3 KM)</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sarod Ghar (Approx 2 KM)</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Phool Bagh</span>
+
+<br><br>🍽 Lunch Break<br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sun Temple (Approx 5 KM)</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Tighra Dam (Approx 23 KM)</span>
+
+<br><br>🛍 Evening: Sarafa Bazaar / Patankar Bazaar
+</div>
+
+<div class="route-note">
+📌 Day 1 = Complete Heritage & Fort Area Together<br>
+📌 Day 2 = Palace + Gardens + Nature Relaxation<br>
+📏 <strong>Total Distance (2 Days):</strong> Approx 35–40 KM<br>
+💰 <strong>Estimated Budget:</strong> ₹2000 – ₹3000<br>
+🚗 Smooth Flow: No Backtracking | Area-wise Planning
+</div>`,
+
+
+3: `<div class="day-title">🧭 3 Day Relaxed Smart Plan</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 1 – Fort Heritage Zone (8:30 AM – 6 PM)</div>
+
+<strong style="color:#1e3c72;">🏰 Complete Fort Experience (~3 KM Area)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gwalior Fort</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Man Singh Palace</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Teli Ka Mandir</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sas Bahu Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gujari Mahal</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gopachal Parvat</span>
+
+<br><br>🌆 Evening: Tansen Tomb + Mohammad Ghaus Tomb
+</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 2 – Royal & Cultural Side (9 AM – 6 PM)</div>
+
+<strong style="color:#1e3c72;">🏛 Palace & Museum Circuit (~6 KM Area)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Jai Vilas Palace (Approx 3 KM)</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sarod Ghar (Approx 2 KM)</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Phool Bagh</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Rani Laxmi Bai Memorial</span>
+
+<br><br>🛍 Evening: Sarafa Bazaar / Patankar Bazaar
+</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 3 – Nature & Relax Mode (9 AM – Sunset)</div>
+
+<strong style="color:#1e3c72;">🌅 Scenic & Peaceful Spots (~25 KM Round)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sun Temple (Approx 5 KM)</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Tighra Dam (Approx 23 KM)</span>
+
+<br><br>☕ Relax by Lakeside + Photography Time
+</div>
+
+<div class="route-note">
+📌 Day 1 = Fort & Ancient Heritage<br>
+📌 Day 2 = Royal History + City Life<br>
+📌 Day 3 = Nature + Relaxation<br>
+📏 <strong>Total Distance:</strong> Approx 45–50 KM<br>
+💰 <strong>Estimated Budget:</strong> ₹3000 – ₹4500<br>
+🚗 Smooth Area-wise Planning | No Travel Confusion
+</div>`,
+
+4: `<div class="day-title">👑 4 Day Complete Premium Experience</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 1 – Fort Heritage Zone</div>
+
+<strong style="color:#1e3c72;">🏰 Ancient Gwalior (~3 KM)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gwalior Fort</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Man Singh Palace</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Teli Ka Mandir</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sas Bahu Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Gujari Mahal</span>
+</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 2 – Royal & Cultural Circuit</div>
+
+<strong style="color:#1e3c72;">🏛 Palace & Museums (~6 KM)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Jai Vilas Palace</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sarod Ghar</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Phool Bagh</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Rani Laxmi Bai Memorial</span>
+
+<br><br>🛍 Evening: Sarafa Bazaar / Patankar Bazaar
+</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 3 – Nature & Sunset Escape</div>
+
+<strong style="color:#1e3c72;">🌅 Relax & Scenic Views (~25 KM)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sun Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Tighra Dam</span>
+
+<br><br>☕ Photography + Lakeside Relax Time
+</div>
+
+<div class="timeline-item">
+<div class="time">📍 DAY 4 – Nearby Wonders & Adventure (Morena Side)</div>
+
+<strong style="color:#1e3c72;">🛕 Unique Temple Architecture (~80–100 KM Round Trip)</strong><br><br>
+
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Mitawali Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Bateshwar Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Kakanmath Temple</span>
+<span style="background:#eef3ff;padding:4px 8px;border-radius:5px;display:inline-block;margin:3px 0;">Sihoniya Jain Temple</span>
+
+<br><br>🦅 Optional: Chambal Safari (Wildlife Experience)
+</div>
+
+<div class="route-note">
+📌 Day 1 = Ancient Heritage<br>
+📌 Day 2 = Royal History & City Life<br>
+📌 Day 3 = Nature & Relaxation<br>
+📌 Day 4 = Morena Temples + Adventure<br>
+📏 <strong>Total Distance:</strong> Approx 120+ KM<br>
+💰 <strong>Estimated Budget:</strong> ₹5000 – ₹7000<br>
+🚗 Area-wise Smart Planning | No Backtracking | Complete Experience
+</div>`,
+
+};
+
+function showPlan(day){
+    document.getElementById("planDisplay").innerHTML = plans[day];
+}
+</script>
+
+</body>
+</html>
