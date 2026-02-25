@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | RouteMitra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>RouteMitra</h2>
+    <a href="index.html">⬅ Back to Home</a>
+</header>
+
+<div class="feedback-container">
+    <h1>💬 Share Your Feedback</h1>
+    <p>Your feedback helps us improve your travel planning experience.</p>
+
+    <form name="feedback" method="POST" data-netlify="true">
+        
+        <input type="hidden" name="form-name" value="feedback">
+        
+        <input type="text" name="name" placeholder="Your Name" required>
+        
+        <input type="email" name="email" placeholder="Your Email" required>
+        
+        <textarea name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+        
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
+
+<footer>
+    © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+</body>
+</html>
