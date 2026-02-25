@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasol Travel Guide | RouteMitra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#cities">Cities</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="gwalior-hero">
+
+    <h1>Explore Kasol</h1>
+    <p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
+</div>
+
+<!-- TOURIST PLACES -->
+<div class="gwalior-section">
+
+    <h2>Top Tourist Places in Kasol</h2>
+
+    <div class="places">
+        <div class="place-card">
+            <img src="images/kasol_images/parvati_river.jpg" alt="Parvati River">
+            <p>Beautiful riverside spot perfect for relaxing and nature walks.</p>
+            <div>Parvati River</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/manikaran_sahib.jpg" alt="Manikaran Sahib">
+            <div>Manikaran Sahib Gurudwara</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/chalal_village.jpg" alt="Chalal Village">
+            <div>Chalal Village</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/nature_park.jpg" alt="Nature Park">
+            <div>Nature Park Kasol</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/kasol_market.jpg" alt="Kasol Market">
+            <div>Kasol Market</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/tosh_village.jpg" alt="Tosh Village">
+            <div>Tosh Village</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/kheerganga.jpg" alt="Kheerganga Trek">
+            <div>Kheerganga Trek</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/malana_village.jpg" alt="Malana Village">
+            <div>Malana Village</div>
+        </div>
+
+        <div class="place-card">
+            <img src="images/kasol_images/naggar_village.jpg" alt="Naggar Village">
+            <div>Naggar Village</div>
+        </div>
+    </div>
+</div>
+
+<!-- ROUTE PLANNER -->
+<div class="section">
+    <h2>Choose Your Travel Plan</h2>
+
+    <div class="buttons">
+        <button onclick="showPlan(1)">1 Day</button>
+        <button onclick="showPlan(2)">2 Day</button>
+        <button onclick="showPlan(3)">3 Day</button>
+        <button onclick="showPlan(4)">4 Day</button>
+    </div>
+
+    <div id="planDisplay" class="plan-box">
+        Click a plan to see detailed route.
+    </div>
+</div>
+<!-- KASOL COMPLETE COVERAGE SUMMARY -->
+<div class="section">
+  <h2>📍 Kasol Complete Coverage Summary</h2>
+
+  <div class="plan-box">
+    <h3>🗺 Area-Wise Coverage</h3>
+
+    <p><strong>Kasol Village & Riverside Zone:</strong> Kasol Main Street, Parvati River Walk, local cafes (German Bakery, Evergreen, Moon Dance), Chalal Village, Riverside cafés, picnic / relaxation spots along Parvati River</p>
+    
+    <p><strong>Offbeat Villages & Trekking Zone:</strong> Tosh Village, Malana Village, Grahan Village, Pulga Village, Rasol Village & Kheerganga base, trekking, mountain streams, hidden waterfalls</p>
+    
+    <p><strong>Leisure / Easy Day Zone:</strong> Riverside easy walks, short treks, Chalal trails, Kasol main street shopping & local souvenirs, cafés & casual dining</p>
+
+    <hr>
+
+    <h3>🎯 Planning Logic</h3>
+    <p>✔ Area-wise Route Planning – North-South Parvati Valley & villages separated</p>
+    <p>✔ Minimal Backtracking – Day-wise visits in smooth sequence</p>
+    <p>✔ Mix of Experiences – Village culture + Riverside + Trekking + Leisure + Cafes</p>
+    <p>✔ 4 Days = Complete Coverage:</p>
+    <ul>
+      <li>Day 1: Kasol Village + Chalal + Tosh + Riverside picnic</li>
+      <li>Day 2: Malana, Grahan, Pulga offbeat exploration</li>
+      <li>Day 3: Rasol & Kheerganga trekking + Kasol riverside evening</li>
+      <li>Day 4: Leisure day, short walks, final souvenir shopping & departure</li>
+    </ul>
+    <p>✔ Highlights Managed – Each day balanced: trekking / sightseeing / café / river / village culture</p>
+    <p>✔ Travel Distance Optimized – Distances & travel modes included, zig-zag avoided</p>
+    <p>✔ Visitor-Friendly – Suitable for first-timers & casual tourists alike</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+<script>
+const plans = {
+1: `
+<div class="day-title">🔥 Day 1 – Kasol Village & Chalal Riverside</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Arrival / Hotel Check-in</div>
+  <p>Focus: Kasol village + Chalal village + riverside walk</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏘 8:30 AM – Kasol Village Walk</div>
+  <p>📍 Distance from hotel: 0–1 km</p>
+  <p>🚶 Travel Mode: Walking</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Kasol main street, local shops, Parvati River morning walk</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 9:45 AM – Chalal Village</div>
+  <p>📍 Distance from Kasol: 1 km</p>
+  <p>🚶 Travel Mode: Riverside walk (10–15 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Riverside cafes, peaceful vibes, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 11:00 AM – Easy Riverside Trek</div>
+  <p>📍 Distance from Chalal: 500 m – 1 km</p>
+  <p>🚶 Travel Mode: Walking / Easy trek</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Hidden waterfalls, serene nature spots</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🥘 12:00 PM – Brunch at Kasol Cafes</div>
+  <p>📍 Distance: 1 km back to Kasol</p>
+  <p>🚶 Travel Mode: Walking</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Cafes: German Bakery, Evergreen Cafe</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 1:15 PM – Riverside Picnic / Relax</div>
+  <p>📍 Near Parvati River</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Picnic, photography, river vibes</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛌 2:30 PM – Rest / Optional Short Walk</div>
+  <p>📍 Kasol Village</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌇 4:00 PM – Sunset at Chalal Riverside</div>
+  <p>⏳ Stay Time: 45–60 min</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 6:00 PM – Dinner at Kasol Cafes</div>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:00 PM – Return to Hotel / Rest</div>
+</div>
+`,
+
+2: `
+<div class="day-title">🔥 Day 2 – Malana & Village Trekking</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:30 AM – Departure from Kasol</div>
+  <p>Focus: Offbeat mountain villages, culture & trekking</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 8:00 AM – Malana Village</div>
+  <p>📍 Distance from Kasol: 21 km</p>
+  <p>🚗 Travel Mode: Cab / Bike + Short Trek</p>
+  <p>⏳ Stay Time: 2 hr</p>
+  <p>Highlights: Traditional village culture, photography, mountain views</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 10:30 AM – Grahan Village</div>
+  <p>📍 Distance from Malana: 5 km</p>
+  <p>🚶 Travel Mode: Trek / Riverside walk</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Authentic Parvati valley vibe, photo ops</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 12:00 PM – Pulga Village</div>
+  <p>📍 Distance from Grahan: 6 km</p>
+  <p>🚶 Travel Mode: Short trek (30–40 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Riverside cafes, hidden waterfalls</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🥘 1:30 PM – Lunch at Pulga / Riverside</div>
+  <p>📍 Within Pulga village</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 2:30 PM – Return to Kasol</div>
+  <p>📍 Distance: 10 km</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Travel Time: 45–60 min</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 3:30 PM – Kasol Riverside Chill</div>
+  <p>📍 Near hotel</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 5:00 PM – Dinner / Cafe</div>
+  <p>📍 Kasol Village</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 6:00 PM – Return to Hotel / Rest</div>
+</div>
+`,
+
+3: `
+<div class="day-title">🔥 Day 3 – Tosh Village & Riverside Nature Walks</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:30 AM – Departure from Kasol</div>
+  <p>Focus: Tosh village + Parvati river nature walks</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 8:00 AM – Tosh Village</div>
+  <p>📍 Distance from Kasol: 10 km</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Stay Time: 2 hr</p>
+  <p>Highlights: Mountain & river views, local cafes, optional waterfall short trek</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 10:30 AM – Riverside Walk to Small Waterfalls</div>
+  <p>📍 Distance from Tosh: 1 km</p>
+  <p>🚶 Travel Mode: Walking / Easy trek</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Hidden waterfalls, nature photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🥘 12:00 PM – Lunch at Tosh Cafes</div>
+  <p>📍 Distance: Village center</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚶 1:15 PM – Nature Trail / Riverside Exploration</div>
+  <p>📍 Distance: 1–2 km</p>
+  <p>⏳ Stay Time: 1–1.5 hr</p>
+  <p>Highlights: Offbeat scenic walks, photography, local flora</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 2:45 PM – Return to Kasol</div>
+  <p>📍 Distance: 10 km</p>
+  <p>⏳ Travel Time: 30–40 min</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 3:30 PM – Kasol Riverside Chill / Tea</div>
+  <p>📍 Near hotel</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 5:00 PM – Dinner / Cafe</div>
+  <p>📍 Kasol Village</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 6:00 PM – Return to Hotel / Rest</div>
+</div>
+`,
+
+4: `
+<div class="day-title">🔥 Day 4 – Hidden Waterfalls & Offbeat Trails Near Kasol</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:30 AM – Departure from Hotel</div>
+  <p>Focus: Hidden waterfalls, easy treks, offbeat nearby hamlets</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 8:00 AM – Rasol / Pulga Hidden Waterfalls</div>
+  <p>📍 Distance from Kasol: 6–8 km</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Stay Time: 1–1.5 hr</p>
+  <p>Highlights: Photography, riverside walks, peaceful nature</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 10:00 AM – Mini Trek to Offbeat Hamlets</div>
+  <p>📍 Distance: 2–3 km</p>
+  <p>🚶 Travel Mode: Easy trek</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Local life, mountain views, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🥘 12:00 PM – Lunch at Kasol Cafes</div>
+  <p>📍 Return to Kasol</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 1:30 PM – Riverside Relaxation / Parvati Walk</div>
+  <p>📍 Near hotel</p>
+  <p>⏳ Stay Time: 1–1.5 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 3:00 PM – Tea / Snacks at Local Cafes</div>
+  <p>📍 Kasol Village</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 4:30 PM – Departure / Return to Bhuntar / Manali</div>
+</div>
+`,
+
+};
+
+function showPlan(day){
+  document.getElementById("planDisplay").innerHTML = plans[day];
+}
+</script>

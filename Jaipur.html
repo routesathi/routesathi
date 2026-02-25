@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaipur Travel Guide | RouteMitra</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#cities">Cities</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="gwalior-hero">
+    <h1>Explore Jaipur</h1>
+    <p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
+</div>
+
+<!-- TOURIST PLACES -->
+<div class="jaipur-section">
+    <h2>Top Tourist Places in Jaipur</h2>
+
+    <div class="places">
+        <div class="place-card">
+            <img src="images/jaipur_images/hawa_mahal.jpg" alt="Hawa Mahal">
+            <div>Hawa Mahal</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/amber_fort.jpg" alt="Amber Fort">
+            <div>Amber Fort</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/jantar_mantar.jpg" alt="Jantar Mantar">
+            <div>Jantar Mantar</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/jaigarh_fort.jpg" alt="Jaigarh Fort">
+            <div>Jaigarh Fort</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/nahargarh_fort.jpg" alt="Nahargarh Fort">
+            <div>Nahargarh Fort</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/city_palace.jpg" alt="City Palace">
+            <div>City Palace</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/jal_mahal.jpg" alt="Jal Mahal">
+            <div>Jal Mahal</div>
+        </div>
+        <div class="place-card">
+            <img src="images/jaipur_images/birla_mandir.jpg" alt="Birla Mandir">
+            <div>Birla Mandir</div>
+        </div>
+    </div>
+</div>
+
+<!-- ROUTE PLANNER -->
+<div class="section">
+    <h2>Choose Your Travel Plan</h2>
+
+    <div class="buttons">
+        <button onclick="showPlan(1)">1 Day</button>
+        <button onclick="showPlan(2)">2 Day</button>
+        <button onclick="showPlan(3)">3 Day</button>
+        <button onclick="showPlan(4)">4 Day</button>
+    </div>
+
+    <div id="planDisplay" class="plan-box">
+        Click a plan to see detailed route.
+    </div>
+</div>
+
+<!-- JAIPUR COMPLETE COVERAGE SUMMARY -->
+<div class="section">
+  <h2>📍 Jaipur Complete Coverage Summary</h2>
+
+  <div class="plan-box">
+    <h3>🗺 Area-Wise Coverage</h3>
+
+    <p><strong>Amber & Forts:</strong> Amber Fort, Jaigarh Fort, Nahargarh Fort, Jaigarh Sunset</p>
+    <p><strong>City Heritage:</strong> City Palace, Hawa Mahal, Jantar Mantar, Jal Mahal</p>
+    <p><strong>Cultural / Offbeat:</strong> Anokhi Museum, Panna Meena ka Kund, Patrika Gate, Jawahar Circle Garden</p>
+    <p><strong>Shopping & Markets:</strong> Bapu Bazaar, Chokhi Dhani, Tripolia Bazaar, Johari Bazaar</p>
+    <p><strong>Modern / Leisure:</strong> World Trade Park, Rooftop Cafés</p>
+
+    <hr>
+
+    <h3>🎯 Planning Logic</h3>
+    <p>✔ Area-wise Route Planning (North, South, City & Fort Zones)</p>
+    <p>✔ Minimal Backtracking</p>
+    <p>✔ Mix of Heritage + Offbeat + Shopping + Leisure</p>
+    <p>✔ 4 Days = Almost Complete Jaipur Coverage</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+<!-- JS -->
+<script>
+const plans = {
+1: `
+<div class="day-title">👑 Day 1 – Complete Royal Jaipur Experience</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:30 AM – Hotel Departure</div>
+  City area se Amber side pahunchne me approx 30–40 minutes lagenge.
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 8:15 AM – Amber Fort</div>
+  <strong>Stay Time:</strong> 2 – 2.5 Hours<br>
+  Explore: Suraj Pol, Diwan-e-Aam, Ganesh Pol, Sheesh Mahal, Sukh Niwas<br>
+  <strong>Best Time:</strong> Morning photography<br>
+  Exit Around: 10:45 AM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏯 11:00 AM – Jaigarh Fort</div>
+  Amber se 10–15 min drive<br>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Highlights: Jaivana Cannon, Fort Walls, Aravalli View<br>
+  Exit Around: 12:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌊 12:20 PM – Jal Mahal (Photo Stop)</div>
+  20–25 minutes lakeside photography<br>
+  Entry allowed nahi hoti.
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 12:45 PM – Lunch Break</div>
+  Nearby restaurant / local dhaba (1 Hour)
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏛 2:00 PM – City Palace</div>
+  <strong>Stay Time:</strong> 1.5 Hours<br>
+  Explore: Mubarak Mahal, Chandra Mahal Courtyard, Royal Museum, Peacock Gate<br>
+  Exit Around: 3:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🔭 3:40 PM – Jantar Mantar</div>
+  <strong>Stay Time:</strong> 40–45 Minutes<br>
+  Exit Around: 4:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌬 4:40 PM – Hawa Mahal</div>
+  <strong>Stay Time:</strong> 30–40 Minutes<br>
+  Exit Around: 5:20 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌄 5:45 PM – Nahargarh Fort</div>
+  <strong>Stay Time:</strong> 1 – 1.5 Hour<br>
+  Sunset View + Full Jaipur City Lights<br>
+  Return Around: 7:15 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 8:00 PM – Bapu Bazaar (Optional)</div>
+  Mojari, Bandhani, Handicrafts Shopping
+</div>
+`,
+2: `
+<div class="day-title">🎨 Day 2 – Cultural + Architecture + Relaxed Jaipur</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Hotel se Departure</div>
+  Aaj ka focus: South Jaipur + Modern Architecture + Museums
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕌 8:30 AM – Birla Mandir Jaipur</div>
+  <strong>Stay Time:</strong> 45 Minutes<br>
+  ✔ White marble temple<br>
+  ✔ Peaceful atmosphere<br>
+  ✔ Photography allowed (outside)<br>
+  Exit Around: 9:15 AM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Birla Mandir → Albert Hall Museum</div>
+  Distance: ~3 km<br>
+  Time: 10–15 minutes<br>
+  Best Option: Auto / Cab
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏛 9:30 AM – Albert Hall Museum</div>
+  Stay Time: 1.5 – 2 Hours<br>
+  Explore: Egyptian Mummy, Royal artefacts, Coins, Paintings<br>
+  Exit Around: 11:30 AM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Albert Hall → Sisodia Rani Garden</div>
+  Distance: ~6 km<br>
+  Time: 20–25 minutes<br>
+  Cab Recommended
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌸 11:45 AM – Sisodia Rani Garden</div>
+  Stay Time: 45 Minutes<br>
+  Mughal style garden visit<br>
+  Exit Around: 12:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Sisodia Garden → Lunch Area</div>
+  Distance: ~5 km<br>
+  Time: 15–20 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 1:00 PM – Lunch Break</div>
+  Relaxed 1 Hour lunch (Raja Park / MI Road Area)
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Lunch Area → Galta Ji Temple</div>
+  Distance: ~8 km<br>
+  Time: 25–30 minutes<br>
+  Road narrow & hill side
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 2:15 PM – Galta Ji Temple</div>
+  Stay Time: 1 – 1.5 Hour<br>
+  Natural kund + hill view<br>
+  Exit Around: 3:45 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Galta Ji → Patrika Gate</div>
+  Distance: ~12 km<br>
+  Time: 30–35 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🎨 4:15 PM – Patrika Gate</div>
+  Stay Time: 30–40 Minutes<br>
+  Best Instagram photography spot<br>
+  Exit Around: 5:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Patrika Gate → Central Park</div>
+  Distance: ~7 km<br>
+  Time: 20–25 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌇 5:30 PM – Central Park Jaipur</div>
+  Stay Time: 1 Hour<br>
+  Evening walk + musical fountain<br>
+  Exit Around: 6:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel (Optional): Central Park → Chokhi Dhani</div>
+  Distance: ~15 km<br>
+  Time: 35–40 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍛 7:30 PM – Chokhi Dhani</div>
+  Stay Time: 2–3 Hours<br>
+  Traditional food + Folk dance + Village theme<br>
+  Return Around: 10:00 PM
+</div>
+`,
+3: `
+<div class="day-title">👑 Day 3 – Royal Leisure + Hidden Jaipur</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:30 AM – Hotel se Departure</div>
+  Aaj ka focus: Royal heritage + offbeat + local experiences
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 9:00 AM – Jaipur City Palace Museum</div>
+  <strong>Stay Time:</strong> 1.5 Hours<br>
+  Explore: Textile gallery, Royal weapon collection, Art & manuscripts<br>
+  <em>Agar Day 1 me sirf basic visit ki thi to aaj detailed museum explore karo</em><br>
+  Exit Around: 10:30 AM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: City Palace → Panna Meena ka Kund</div>
+  Distance: ~11 km | Time: 30–35 min<br>
+  Cab Recommended
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 11:15 AM – Panna Meena ka Kund</div>
+  <strong>Stay Time:</strong> 40 Minutes<br>
+  Highlights: Stepwell architecture, Photography spot, Peaceful vibe<br>
+  Exit Around: 12:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Panna Meena → Anokhi Museum of Hand Printing</div>
+  Distance: ~2 km | Time: 5–10 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🎨 12:10 PM – Anokhi Museum</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: Block printing history, Textile craft, Cultural learning<br>
+  Exit Around: 1:15 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Amber Area → Lunch (Amer Road / MI Road)</div>
+  Distance: ~10 km | Time: 25–30 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 1:45 PM – Lunch Break</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Relaxed lunch
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Lunch → Jawahar Circle Garden</div>
+  Distance: ~9 km | Time: 25–30 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌳 3:15 PM – Jawahar Circle Garden</div>
+  <strong>Stay Time:</strong> 45 Minutes<br>
+  Highlights: Circular garden, Musical fountain, Relaxing break<br>
+  Exit Around: 4:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Jawahar Circle → World Trade Park Jaipur</div>
+  Distance: ~2 km | Time: 5–10 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 4:15 PM – World Trade Park</div>
+  <strong>Stay Time:</strong> 1 – 1.5 Hour<br>
+  Highlights: Modern mall experience, Café break, AC comfort<br>
+  Exit Around: 5:45 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: WTP → Bapu Bazaar</div>
+  Distance: ~8 km | Time: 25–30 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 6:15 PM – Bapu Bazaar Shopping</div>
+  <strong>Stay Time:</strong> 1 – 1.5 Hour<br>
+  Highlights: Mojari, Bandhani, Lac bangles, Handicrafts<br>
+  Exit Around: 7:45 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌃 Optional Night Add-on: Nahargarh Fort</div>
+  <strong>Distance:</strong> ~6 km | Time: 20–25 min<br>
+  Highlights: Night city light view, Peaceful vibe<br>
+  Return Around: 9:30–10:00 PM
+</div>
+`,
+4: `
+<div class="day-title">🗺 Day 4 – Offbeat & Hidden Jaipur</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:30 AM – Hotel Departure</div>
+  Aaj ka focus: Hidden gems, offbeat spots, local experiences
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 9:00 AM – Nahargarh Fort Trek / Sunset View Spot</div>
+  Distance: ~6 km from hotel | Travel Time: 20–25 min by cab<br>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: City view, light trek, peaceful morning vibe<br>
+  Exit Around: 10:00 AM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Nahargarh → Gaitore Ki Chhatriyan</div>
+  Distance: ~5 km | Travel Time: 15–20 min by cab
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏛 10:30 AM – Gaitore Ki Chhatriyan</div>
+  <strong>Stay Time:</strong> 45 Minutes<br>
+  Explore: Royal cenotaphs, photography, quiet heritage spot<br>
+  Exit Around: 11:15 AM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Gaitore → Local Rajasthani Lunch Spot</div>
+  Distance: ~7 km | Travel Time: 20–25 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 12:00 PM – Lunch</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Try local Rajasthani thali / kachori / pyaz ki kachori
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Lunch → Tripolia / Johari Bazaar</div>
+  Distance: ~3–4 km | Travel Time: 10–15 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 1:30 PM – Tripolia / Johari Bazaar</div>
+  <strong>Stay Time:</strong> 1–1.5 Hour<br>
+  Explore: Handicrafts, jewelry, lac bangles, fabrics<br>
+  Exit Around: 3:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Bazaar → Rooftop Café / Hidden Stepwell</div>
+  Distance: ~4 km | Travel Time: 10–15 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 3:15 PM – Hidden Stepwell / Rooftop Café</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: Photography, relax, cultural vibe<br>
+  Exit Around: 4:15 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Stepwell → Jaigarh Fort (Optional Sunset)</div>
+  Distance: ~6 km | Travel Time: 15–20 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌄 4:30 PM – Jaigarh Fort Sunset (Optional)</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: Fort view, sunset, photography<br>
+  Exit Around: 5:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Fort → Hotel</div>
+  Distance: ~6 km | Travel Time: 20–25 min<br>
+  Return Around: 6:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌃 Optional Evening / Dinner</div>
+  Rooftop restaurant / local café near hotel
+</div>
+`,
+};
+
+function showPlan(day){
+    document.getElementById("planDisplay").innerHTML = plans[day];
+}
+</script>
