@@ -62,7 +62,7 @@ nav a:hover::after {
   padding-top: 80px;
   min-height: 75vh;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('Images/andaman_images/neil_island.jpg') center/cover no-repeat;
+              url('images/andaman_images/neil_island.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -793,6 +793,17 @@ body{
 .feedback-container button:hover{
     background:#16325c;
 }
+/* Home Buttons Fix */
+.home-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.home-buttons .btn{
+  width:auto;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -800,3 +811,4 @@ body{
     font-size: 28px;
   }
 }
+
