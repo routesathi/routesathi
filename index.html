@@ -1,187 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RouteMitra - Explore India Travel Plans & City Guides</title>
-  <meta name="description" content="Explore India with RouteMitra. Discover city travel plans for Gwalior, Delhi, Jaipur, Goa, Kasol and Andaman.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RouteSathi | Smart Travel Planning</title>
 
-  <!-- Affiliate / tracking script example -->
-  <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
-  (function () {
-      var script = document.createElement("script");
-      script.async = 1;
-      script.src = 'https://emrldco.com/NTAzMTMz.js?t=503133';
-      document.head.appendChild(script);
-  })();
-  </script>
+  <!-- SEO -->
+  <meta name="description" content="RouteSathi helps you plan day-wise travel itineraries for Indian cities with budget tips and smart routes." />
+  <meta name="keywords" content="Travel planner, Gwalior trip plan, Jaipur itinerary, Goa travel plan, India travel guide" />
+  <meta name="author" content="RouteSathi" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Auth Links -->
-  <div class="auth-top">
-    <a href="login.html">Log in</a>/<a href="signup.html">Sign up</a>
+
+<header>
+  <div class="logo">RouteSathi</div>
+
+  <nav id="nav-menu">
+    <a href="#">Home</a>
+    <a href="#cities">Cities</a>
+    <a href="#explore">Explore</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Plan Smarter, Travel Better</h1>
+  <p>Discover day-wise travel plans, budget tips and smart routes for India's best destinations.</p>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search your destination..." />
+    <button>Search</button>
   </div>
+</section>
 
-  <!-- Header + Navigation -->
-  <header>
-    <div class="logo-section">
-      <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
-    </div>
+<!-- CITIES -->
+<section class="cities" id="cities">
+  <h2>Popular Destinations</h2>
 
-    <nav class="center-nav">
-      <a href="index.html">Home</a>
-      <a href="#cities">Cities</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="card-container">
 
-    <div class="dropdown">
-      <a href="#" onclick="toggleCountries(event)">Countries ▾</a>
-      <div class="dropdown-content" id="countryMenu">
-        <div class="sub-dropdown">
-          <a href="#" onclick="toggleIndia(event)">India ▾</a>
-          <div class="sub-dropdown-content" id="indiaMenu">
-            <a href="#">Andhra Pradesh</a>
-            <a href="#">Arunachal Pradesh</a>
-            <a href="#">Assam</a>
-            <a href="#">Bihar</a>
-            <a href="#">Chhattisgarh</a>
-            <a href="goa.html">Goa</a>
-            <a href="#">Gujarat</a>
-            <a href="#">Haryana</a>
-            <a href="#" onclick="toggleHP(event)">Himachal Pradesh ▾</a>
-            <div class="sub-dropdown-content" id="hpMenu">
-              <a href="kasol.html">Kasol</a>
-            </div>
-            <a href="#">Jharkhand</a>
-            <a href="#">Karnataka</a>
-            <a href="#">Kerala</a>
-            <a href="#" onclick="toggleMP(event)">Madhya Pradesh ▾</a>
-            <div class="sub-dropdown-content" id="mpMenu">
-              <a href="gwalior.html">Gwalior</a>
-            </div>
-            <a href="#">Maharashtra</a>
-            <a href="#">Manipur</a>
-            <a href="#">Meghalaya</a>
-            <a href="#">Mizoram</a>
-            <a href="#">Nagaland</a>
-            <a href="#">Odisha</a>
-            <a href="#">Punjab</a>
-            <a href="#" onclick="toggleRajasthan(event)">Rajasthan ▾</a>
-            <div class="sub-dropdown-content" id="rajasthanMenu">
-              <a href="jaipur.html">Jaipur</a>
-            </div>
-            <a href="#">Sikkim</a>
-            <a href="#">Tamil Nadu</a>
-            <a href="#">Telangana</a>
-            <a href="#">Tripura</a>
-            <a href="#">Uttar Pradesh</a>
-            <a href="#">Uttarakhand</a>
-            <a href="#">West Bengal</a>
-
-            <hr>
-
-            <a href="#" onclick="toggleAN(event)">Andaman & Nicobar ▾</a>
-            <div class="sub-dropdown-content" id="anMenu">
-              <a href="andaman.html">Andaman</a>
-            </div>
-            <a href="#">Chandigarh</a>
-            <a href="#">Dadra & Nagar Haveli and Daman & Diu</a>
-            <a href="delhi.html">Delhi</a>
-            <a href="#">Jammu & Kashmir</a>
-            <a href="#">Ladakh</a>
-            <a href="#">Lakshadweep</a>
-            <a href="#">Puducherry</a>
-          </div>
-        </div>
-        <a href="#">USA</a>
-        <a href="#">UAE</a>
-        <a href="#">Thailand</a>
+    <div class="card">
+      <img src="images/gwalior.jpg" alt="Gwalior">
+      <div class="card-content">
+        <h3>Gwalior</h3>
+        <p>2–3 day smart itinerary with forts, temples & heritage spots.</p>
+        <a href="gwalior.html">View Plan</a>
       </div>
     </div>
-  </header>
 
-  <!-- Service Icons -->
-  <div class="service-icons">
-    <div class="service-item">✈️ Flights</div>
-    <div class="service-item">🏨 Hotels</div>
-    <div class="service-item">🏠 Homestays</div>
-    <div class="service-item">🎒 Holiday</div>
-    <div class="service-item">🚆 Trains</div>
-    <div class="service-item">🚌 Buses</div>
-    <div class="service-item">🚕 Cabs</div>
-    <div class="service-item active">🎟 Tours</div>
+    <div class="card">
+      <img src="images/jaipur.jpg" alt="Jaipur">
+      <div class="card-content">
+        <h3>Jaipur</h3>
+        <p>Explore Pink City with budget friendly day-wise planning.</p>
+        <a href="#">View Plan</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/goa.jpg" alt="Goa">
+      <div class="card-content">
+        <h3>Goa</h3>
+        <p>Beach vibes, nightlife & relaxation planned smartly.</p>
+        <a href="#">View Plan</a>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <!-- Why Use RouteMitra -->
-  <section class="why-use">
-    <h2>Why Use RouteMitra Travel Guide?</h2>
-    <div class="why-grid">
-      <div class="why-card">🗺 Organized Routes - Area-wise, zig-zag free</div>
-      <div class="why-card">⏱ Optimized Time - 1-4 day plans</div>
-      <div class="why-card">📍 Distance & Travel Mode - Walk, cab, bike</div>
-      <div class="why-card">🌟 Complete Experience - Heritage, markets & more</div>
-    </div>
-  </section>
+<!-- EXPLORE -->
+<section class="explore-section" id="explore">
+  <h2>Explore India</h2>
+  <button class="country-btn">View States</button>
+</section>
 
-  <!-- Hero + Search -->
-  <section class="hero">
-    <h1>Your Journey Starts with RouteMitra</h1>
-    <p>Ready-to-use travel plans for every city & destination</p>
+<!-- FOOTER -->
+<footer id="contact">
+  <p>© 2026 RouteSathi. All Rights Reserved.</p>
+</footer>
 
-    <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Search your city..." onkeyup="showSuggestions()" onkeypress="handleKey(event)">
-      <button onclick="searchCity()">Search</button>
-      <div id="suggestions" class="suggestions-box"></div>
-    </div>
-    <a href="#cities" class="btn">Start Exploring</a>
-  </section>
-
-  <!-- Popular Cities -->
-  <section class="cities" id="cities">
-    <h2>Popular Destinations</h2>
-    <div class="card-container">
-      <div class="card"><img src="images/gwalior.jpg"><h3>Gwalior</h3><a href="gwalior.html">View Plan</a></div>
-      <div class="card"><img src="images/delhi.jpg"><h3>Delhi</h3><a href="delhi.html">View Plan</a></div>
-      <div class="card"><img src="images/jaipur.jpg"><h3>Jaipur</h3><a href="jaipur.html">View Plan</a></div>
-      <div class="card"><img src="images/goa.jpg"><h3>Goa</h3><a href="goa.html">View Plan</a></div>
-      <div class="card"><img src="images/kasol.jpg"><h3>Kasol</h3><a href="kasol.html">View Plan</a></div>
-      <div class="card"><img src="images/andaman.jpg"><h3>Andaman</h3><a href="andaman.html">View Plan</a></div>
-    </div>
-  </section>
-
-  <!-- Emergency Section -->
-  <section class="emergency">
-    <h2>Emergency & Nearby Help</h2>
-    <div class="emergency-buttons">
-      <button onclick="openMap('hospital')">🏥 Hospital Near Me</button>
-      <button onclick="openMap('police station')">👮 Police Station Near Me</button>
-      <button onclick="openMap('fire station')">🔥 Fire Station Near Me</button>
-      <button onclick="openMap('atm')">🏧 ATM Near Me</button>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
-  </footer>
-
-  <script>
-    const cities = {"gwalior":"gwalior.html","delhi":"delhi.html","jaipur":"jaipur.html","goa":"goa.html","kasol":"kasol.html","andaman":"andaman.html","andaman and nicobar islands":"andaman.html"};
-    function searchCity(){let city=document.getElementById("cityInput").value.toLowerCase().trim();if(cities[city]){window.location.href=cities[city];}else{alert("City not found. Please try another city.");}}
-    function handleKey(e){if(e.key==="Enter"){searchCity();}}
-    function showSuggestions(){let input=document.getElementById("cityInput").value.toLowerCase();let suggestionBox=document.getElementById("suggestions");suggestionBox.innerHTML="";if(input==="")return;for(let city in cities){if(city.startsWith(input)){let div=document.createElement("div");div.innerHTML=city;div.onclick=function(){document.getElementById("cityInput").value=city;suggestionBox.innerHTML="";};suggestionBox.appendChild(div);}}}
-    function toggleStates(){const stateBox=document.getElementById("indiaStates");stateBox.style.display=stateBox.style.display==="block"?"none":"block";}
-    function toggleIndia(e){e.preventDefault();const menu=document.getElementById("indiaMenu");menu.style.display=menu.style.display==="block"?"none":"block";}
-    function toggleHP(e){e.preventDefault();const menu=document.getElementById("hpMenu");menu.style.display=menu.style.display==="block"?"none":"block";}
-    function toggleMP(e){e.preventDefault();const menu=document.getElementById("mpMenu");menu.style.display=menu.style.display==="block"?"none":"block";}
-    function toggleRajasthan(e){e.preventDefault();const menu=document.getElementById("rajasthanMenu");menu.style.display=menu.style.display==="block"?"none":"block";}
-    function toggleAN(e){e.preventDefault();const menu=document.getElementById("anMenu");menu.style.display=menu.style.display==="block"?"none":"block";}
-    function toggleCountries(e){e.preventDefault();const menu=document.getElementById("countryMenu");menu.style.display=menu.style.display==="block"?"none":"block";}
-    document.addEventListener("click",function(event){const dropdown=document.querySelector(".dropdown");const countryMenu=document.getElementById("countryMenu");const indiaMenu=document.getElementById("indiaMenu");const mpMenu=document.getElementById("mpMenu");const rajasthanMenu=document.getElementById("rajasthanMenu");if(!dropdown.contains(event.target)){countryMenu.style.display="none";indiaMenu.style.display="none";mpMenu.style.display="none";rajasthanMenu.style.display="none";}});
-    function openMap(place){window.open(`https://www.google.com/maps/search/${place}+near+me`,'_blank');}
-  </script>
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("nav-menu");
+  nav.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
