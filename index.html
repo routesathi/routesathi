@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RouteSathi | Smart Travel Planning</title>
-
-  <!-- SEO -->
-  <meta name="description" content="RouteSathi helps you plan day-wise travel itineraries for Indian cities with budget tips and smart routes." />
-  <meta name="keywords" content="Travel planner, Gwalior trip plan, Jaipur itinerary, Goa travel plan, India travel guide" />
-  <meta name="author" content="RouteSathi" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RouteMitra - Explore India Travel Plans</title>
+  <meta name="description" content="Day-wise smart travel plans for Indian cities. RouteMitra helps you explore better.">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="auth-top">
+  <a href="login.html">Log in</a> /
+  <a href="signup.html">Sign up</a>
+</div>
+
 <header>
-  <div class="logo">RouteSathi</div>
+  <div class="logo-section">
+    <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+  </div>
 
-  <nav id="nav-menu">
-    <a href="#">Home</a>
+  <nav>
+    <a href="index.html">Home</a>
     <a href="#cities">Cities</a>
-    <a href="#explore">Explore</a>
-    <a href="#contact">Contact</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html" class="btn-small">Give Feedback</a>
   </nav>
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Plan Smarter, Travel Better</h1>
-  <p>Discover day-wise travel plans, budget tips and smart routes for India's best destinations.</p>
+  <h1>Your Journey Starts with RouteMitra</h1>
+  <p>Ready-to-use, smart & optimized travel plans for every destination.</p>
 
   <div class="search-box">
-    <input type="text" placeholder="Search your destination..." />
+    <input type="text" placeholder="Search your city...">
     <button>Search</button>
+  </div>
+</section>
+
+<!-- WHY SECTION -->
+<section class="why-use">
+  <h2>Why Use RouteMitra?</h2>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>🗺 Organized Routes</h3>
+      <p>Zig-zag free, area-wise smart travel flow.</p>
+    </div>
+    <div class="why-card">
+      <h3>⏱ Time Optimized</h3>
+      <p>1–4 day ready-to-use travel structure.</p>
+    </div>
+    <div class="why-card">
+      <h3>📍 Distances & Mode</h3>
+      <p>Know travel time, transport & stay duration.</p>
+    </div>
+    <div class="why-card">
+      <h3>🌟 Complete Experience</h3>
+      <p>Heritage, beaches, markets & hidden gems.</p>
+    </div>
   </div>
 </section>
 
@@ -52,17 +73,17 @@
       <img src="images/gwalior.jpg" alt="Gwalior">
       <div class="card-content">
         <h3>Gwalior</h3>
-        <p>2–3 day smart itinerary with forts, temples & heritage spots.</p>
+        <p>Royal heritage & historic forts of MP.</p>
         <a href="gwalior.html">View Plan</a>
       </div>
     </div>
 
     <div class="card">
-      <img src="images/jaipur.jpg" alt="Jaipur">
+      <img src="images/delhi.jpg" alt="Delhi">
       <div class="card-content">
-        <h3>Jaipur</h3>
-        <p>Explore Pink City with budget friendly day-wise planning.</p>
-        <a href="#">View Plan</a>
+        <h3>Delhi</h3>
+        <p>Capital city culture & monuments.</p>
+        <a href="delhi.html">View Plan</a>
       </div>
     </div>
 
@@ -70,31 +91,30 @@
       <img src="images/goa.jpg" alt="Goa">
       <div class="card-content">
         <h3>Goa</h3>
-        <p>Beach vibes, nightlife & relaxation planned smartly.</p>
-        <a href="#">View Plan</a>
+        <p>Beaches & nightlife vibes.</p>
+        <a href="goa.html">View Plan</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- EXPLORE -->
-<section class="explore-section" id="explore">
-  <h2>Explore India</h2>
-  <button class="country-btn">View States</button>
+<!-- EMERGENCY -->
+<section class="emergency">
+  <h2>Emergency & Nearby Help</h2>
+  <p>Quick access to nearby services during travel.</p>
+
+  <div class="emergency-buttons">
+    <button>🏥 Hospital Near Me</button>
+    <button>👮 Police Station</button>
+    <button>🔥 Fire Station</button>
+    <button>🏧 ATM</button>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer id="contact">
-  <p>© 2026 RouteSathi. All Rights Reserved.</p>
+<footer>
+  © 2026 RouteMitra.com | Designed by Himanshu Jain
 </footer>
-
-<script>
-function toggleMenu() {
-  const nav = document.getElementById("nav-menu");
-  nav.classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
