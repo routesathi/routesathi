@@ -28,6 +28,18 @@
   </nav>
 </header>
 
+<!-- SERVICE ICONS -->
+<div class="service-icons">
+  <div class="service-item">✈️ Flights </div>
+  <div class="service-item">🏨 Hotels</div>
+  <div class="service-item">🏠 Homestays</div>
+  <div class="service-item">🎒 Holiday</div>
+  <div class="service-item">🚆 Trains</div>
+  <div class="service-item">🚌 Buses</div>
+  <div class="service-item">🚕 Cabs</div>
+  <div class="service-item active">🎟 Tours</div>
+</div>
+
 <!-- HERO -->
 <section class="hero">
   <h1>Your Journey Starts with RouteMitra</h1>
@@ -150,6 +162,14 @@
     <button>🏧 ATM</button>
   </div>
 </section>
+
+<script>
+  const flightsIcon = document.querySelector(".service-item:nth-child(1)");
+  flightsIcon.style.cursor = "pointer";
+  flightsIcon.addEventListener("click", function() {
+    window.open("https://aviasales.tpx.lv/jhI0W8b7", "_blank");
+  });
+</script>
 
 <footer>
   © 2026 RouteMitra.com | Designed by Himanshu Jain
