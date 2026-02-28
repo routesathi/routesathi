@@ -218,6 +218,72 @@ footer {
   color: white;
   font-size: 14px;
 }
+/* EMAIL CAPTURE */
+.email-capture {
+  padding: 60px 8%;
+  text-align: center;
+  background: #eef2ff;
+}
+
+.email-capture input {
+  padding: 12px;
+  width: 250px;
+  margin-top: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.email-capture button {
+  padding: 12px 18px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* BOOKING */
+.booking-section {
+  padding: 70px 8%;
+  text-align: center;
+  background: white;
+}
+
+.booking-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.booking-card {
+  width: 280px;
+  padding: 25px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.booking-card:hover {
+  transform: translateY(-6px);
+}
+
+.book-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.ad-space {
+  margin: 40px auto;
+  text-align: center;
+}
 
 /* MOBILE */
 @media(max-width:768px) {
@@ -237,3 +303,4 @@ footer {
     width: 100%;
   }
 }
+
