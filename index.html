@@ -162,37 +162,45 @@
     <button>🏧 ATM</button>
   </div>
 </section>
-
-<script>
-  const flightsIcon = document.querySelector(".service-item:nth-child(1)");
-  flightsIcon.style.cursor = "pointer";
-  flightsIcon.addEventListener("click", function() {
-    window.open("https://aviasales.tpx.lv/jhI0W8b7", "_blank");
-  });
-</script>
-
-<script>
-  const hotelIcon = document.querySelector(".service-item:nth-child(2)");
-  hotelIcon.style.cursor = "pointer";
-  hotelIcon.addEventListener("click", function() {
-    window.open("https://trip.tpx.lv/l0LGvRX9", "_blank");
-  });
-</script>
-  
-<script>
-  const trainIcon = document.querySelector(".service-item:nth-child(5)");
-  trainIcon.style.cursor = "pointer";
-  trainIcon.addEventListener("click", function() {
-    window.open("https://www.irctc.co.in", "_blank");
-  });
-</script>
-
 <footer>
   © 2026 RouteMitra.com | Designed by Himanshu Jain
 </footer>
 
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const serviceItems = document.querySelectorAll(".service-item");
+
+  // Flights (1st item)
+  if(serviceItems[0]){
+    serviceItems[0].style.cursor = "pointer";
+    serviceItems[0].addEventListener("click", function() {
+      window.open("https://aviasales.tpx.lv/jhI0W8b7", "_blank");
+    });
+  }
+
+  // Hotels (2nd item)
+  if(serviceItems[1]){
+    serviceItems[1].style.cursor = "pointer";
+    serviceItems[1].addEventListener("click", function() {
+      window.open("https://trip.tpx.lv/l0LGvRX9", "_blank");
+    });
+  }
+
+  // Trains (5th item)
+  if(serviceItems[4]){
+    serviceItems[4].style.cursor = "pointer";
+    serviceItems[4].addEventListener("click", function() {
+      window.open("https://www.irctc.co.in", "_blank");
+    });
+  }
+
+});
+</script>
+
 </body>
 </html>
+
 
 
 
