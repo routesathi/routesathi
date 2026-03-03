@@ -197,9 +197,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  function openMap(query){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(function(position){
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        window.open(`https://www.google.com/maps/search/${query}/@${lat},${lng},14z`, "_blank");
+      });
+    } else {
+      window.open(`https://www.google.com/maps/search/${query}`, "_blank");
+    }
+  }
+
+  const emergencyButtons = document.querySelectorAll(".emergency-buttons button");
+
+  emergencyButtons[0].onclick = () => openMap("hospital");
+  emergencyButtons[1].onclick = () => openMap("police station");
+  emergencyButtons[2].onclick = () => openMap("fire station");
+  emergencyButtons[3].onclick = () => openMap("atm");
+
+});
+</script>
 
 </body>
 </html>
+
 
 
 
