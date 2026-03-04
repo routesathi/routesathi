@@ -226,11 +226,20 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
   const input = document.getElementById("cityInput");
   const button = document.getElementById("searchBtn");
-
-  function searchCity() {
-    const city = input.value.trim();
+  
+const cityPages = {
+    "gwalior": "gwalior.html",
+    "delhi": "delhi.html",
+    "goa": "goa.html"
+  };
+    function searchCity() {
+    const city = input.value.trim().toLowerCase();
     if(city) {
-      window.open(`https://www.google.com/maps/search/${encodeURIComponent(city)}`, "_blank");
+      if(cityPages[city]) {
+        window.location.href = cityPages[city];
+      } else {
+        alert("City not found! Please check spelling.");
+      }
     } else {
       alert("Please enter a city name");
     }
@@ -238,10 +247,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   button.addEventListener("click", searchCity);
   input.addEventListener("keypress", function(e){
-    if(e.key === "Enter") {
-      searchCity();
-    }
+    if(e.key === "Enter") searchCity();
   });
+
 });
 </script>
 
