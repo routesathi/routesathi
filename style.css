@@ -36,6 +36,11 @@ header {
   top: 0;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   height: 45px;
 }
@@ -439,4 +444,110 @@ footer {
 
 .buttons button:hover {
   background: #ff9800;
+}
+
+/* MEGA MENU */
+.mega-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;              
+  background: white;
+  width: 850px;          
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  z-index: 1000;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.mega-column h4 {
+  margin-bottom: 10px;
+  color: #e63946;
+}
+
+.mega-column a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.mega-column a:hover {
+  color: #e63946;
+}
+
+.mega-dropdown:hover .mega-menu {
+  display: grid;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;      
+  left: 0;       
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* MOBILE MEGA MENU FIX */
+@media(max-width:768px){
+  .mega-menu{
+    grid-template-columns: repeat(2,1fr);
+    width: 95vw;
+    padding: 20px;
+  }
+}
+.mega-dropdown > a,
+.dropdown > a {
+  font-weight: 600;
+  font-size: 17px;
+  position: relative;
+}
+
+.mega-dropdown > a::after,
+.dropdown > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: #ff9800;
+  transition: 0.3s;
+}
+
+.mega-dropdown > a:hover::after,
+.dropdown > a:hover::after {
+  width: 100%;
 }
