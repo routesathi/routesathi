@@ -314,6 +314,89 @@ footer {
   background: #1e3c72;
   color: #fff;
 }
+/* Gwalior Hero */
+.gwalior-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url('images/gwalior_images/gwalior_hero.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.gwalior-hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.gwalior-hero p {
+  max-width: 600px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Gwalior Tourist Places */
+.gwalior-section {
+  padding: 70px 8%;
+  text-align: center;
+  background: #f1f5f9;
+}
+
+.gwalior-section .places {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.gwalior-section .place-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.gwalior-section .place-card:hover {
+  transform: translateY(-6px);
+}
+
+.gwalior-section .place-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.gwalior-section .place-card div {
+  padding: 12px 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1e3c72;
+}
+
+.gwalior-section .place-card p {
+  padding: 0 8px 12px 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .gwalior-hero h1 {
+    font-size: 28px;
+  }
+  .gwalior-hero p {
+    font-size: 16px;
+  }
+  .gwalior-section .places {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* MOBILE */
 @media(max-width:768px) {
@@ -334,3 +417,26 @@ footer {
   }
 }
 
+/* ROUTE PLANNER BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  gap: 15px;                 /* Space between buttons */
+  flex-wrap: wrap;           /* Mobile-friendly wrap */
+  margin: 20px 0;            /* Top & bottom space */
+}
+
+.buttons button {
+  padding: 12px 20px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: #ff9800;
+}
