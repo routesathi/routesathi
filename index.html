@@ -222,8 +222,32 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const input = document.getElementById("cityInput");
+  const button = document.getElementById("searchBtn");
+
+  function searchCity() {
+    const city = input.value.trim();
+    if(city) {
+      window.open(`https://www.google.com/maps/search/${encodeURIComponent(city)}`, "_blank");
+    } else {
+      alert("Please enter a city name");
+    }
+  }
+
+  button.addEventListener("click", searchCity);
+  input.addEventListener("keypress", function(e){
+    if(e.key === "Enter") {
+      searchCity();
+    }
+  });
+});
+</script>
+
 </body>
 </html>
+
 
 
 
