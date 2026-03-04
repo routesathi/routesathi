@@ -323,7 +323,7 @@ footer {
 .gwalior-hero {
   height: 60vh;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url('images/gwalior.jpg') center/cover no-repeat;
+              url('images/gwalior_images/gwalior_fort.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -551,4 +551,5 @@ footer {
 .dropdown > a:hover::after {
   width: 100%;
 }
+
 
