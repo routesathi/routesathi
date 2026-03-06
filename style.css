@@ -46,7 +46,7 @@ nav {
 }
 
 nav a {
-  margin-left: 25px;
+  margin: 8px 15px;
   text-decoration: none;
   color: #0f172a;
   font-weight: 600;
@@ -70,7 +70,8 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  height: 75vh;
+  min-height: 75vh;
+  height: auto;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
               url('images/goa.jpg') center/cover;
   display: flex;
@@ -151,6 +152,7 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -408,7 +410,9 @@ footer {
   .hero h1 {
     font-size: 30px;
   }
-
+  .hero p{
+    max-width:90%;
+  }
   .search-box {
     flex-direction: column;
   }
@@ -526,6 +530,7 @@ footer {
     grid-template-columns: repeat(2,1fr);
     width: 95vw;
     padding: 20px;
+    left: 0;
   }
 }
 .mega-dropdown > a,
@@ -709,6 +714,7 @@ nav a{
 }
 
 }
+
 
 
 
