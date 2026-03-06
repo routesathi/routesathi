@@ -714,6 +714,21 @@ nav a{
 }
 
 }
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+}
 
 
 
