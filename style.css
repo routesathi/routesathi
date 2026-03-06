@@ -70,7 +70,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  min-height: 75vh;
+  min-height: 60vh;
   height: auto;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
               url('images/goa.jpg') center/cover;
@@ -714,6 +714,7 @@ nav a{
 }
 
 }
+
 
 
 
