@@ -551,5 +551,126 @@ footer {
 .dropdown > a:hover::after {
   width: 100%;
 }
+/* ================= MOBILE RESPONSIVE FIX ================= */
+
+@media (max-width:768px){
+
+/* HEADER FIX */
+header{
+  flex-direction: column;
+  gap:10px;
+}
+
+nav{
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+nav a{
+  margin:8px 10px;
+  font-size:14px;
+}
+
+/* HERO FIX */
+.hero{
+  height:60vh;
+  padding:30px 15px;
+}
+
+.hero h1{
+  font-size:28px;
+}
+
+.hero p{
+  font-size:15px;
+}
+
+/* SEARCH BOX */
+.search-box{
+  flex-direction:column;
+  width:100%;
+}
+
+.search-box input{
+  width:100%;
+}
+
+.search-box button{
+  width:100%;
+}
+
+/* CITY CARDS */
+.card-container{
+  flex-direction:column;
+  align-items:center;
+}
+
+.card{
+  width:90%;
+}
+
+/* BOOKING CARDS */
+.booking-grid{
+  flex-direction:column;
+  align-items:center;
+}
+
+.booking-card{
+  width:90%;
+}
+
+/* GWALIOR HERO */
+.gwalior-hero{
+  height:50vh;
+}
+
+.gwalior-hero h1{
+  font-size:26px;
+}
+
+.gwalior-hero p{
+  font-size:15px;
+}
+
+/* TOURIST PLACES GRID */
+.gwalior-section .places{
+  grid-template-columns:1fr;
+}
+
+/* BUTTONS */
+.buttons{
+  gap:10px;
+}
+
+.buttons button{
+  padding:10px 15px;
+  font-size:14px;
+}
+
+/* MEGA MENU */
+.mega-menu{
+  width:95vw;
+  grid-template-columns:1fr 1fr;
+  right:-20px;
+}
+
+}
+
+/* EXTRA SMALL MOBILE */
+@media (max-width:480px){
+
+.hero h1{
+  font-size:24px;
+}
+
+.gwalior-hero h1{
+  font-size:22px;
+}
+
+nav a{
+  font-size:13px;
+}
+
+}
 
 
