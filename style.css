@@ -551,6 +551,43 @@ footer {
 .dropdown > a:hover::after {
   width: 100%;
 }
+
+/* ================= TABLET FIX ================= */
+
+@media (max-width:1024px){
+
+nav{
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.hero h1{
+  font-size:36px;
+}
+
+.card-container{
+  justify-content:center;
+}
+
+.card{
+  width:45%;
+}
+
+.booking-grid{
+  justify-content:center;
+}
+
+.booking-card{
+  width:45%;
+}
+
+/* MEGA MENU */
+.mega-menu{
+  width:90vw;
+  grid-template-columns: repeat(3,1fr);
+}
+
+}
 /* ================= MOBILE RESPONSIVE FIX ================= */
 
 @media (max-width:768px){
@@ -672,5 +709,7 @@ nav a{
 }
 
 }
+
+
 
 
