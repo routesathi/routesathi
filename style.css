@@ -730,14 +730,17 @@ nav a{
   overflow-x:auto;
   gap:15px;
   padding:10px;
+  scroll-snap-type:x mandatory;
 }
 
 .city-scroll .place-card{
   min-width:250px;
   flex-shrink:0;
+  scroll-snap-align:start;
 }
 
 }
+
 
 
 
