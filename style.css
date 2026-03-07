@@ -729,6 +729,22 @@ nav a{
   }
 
 }
+/* MOBILE IMAGE SCROLL */
+@media(max-width:768px){
+
+.city-scroll{
+  display:flex;
+  overflow-x:auto;
+  gap:15px;
+  padding:10px;
+}
+
+.city-scroll .place-card{
+  min-width:250px;
+  flex-shrink:0;
+}
+
+}
 
 
 
