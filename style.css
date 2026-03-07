@@ -353,12 +353,13 @@ footer {
   background: #f1f5f9;
 }
 
-.gwalior-section .places {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+.gwalior-section .places{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:10px;
 }
+
 
 .gwalior-section .place-card {
   background: white;
@@ -738,6 +739,7 @@ flex-shrink:0;
 }
 
 }
+
 
 
 
