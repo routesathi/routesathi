@@ -400,9 +400,6 @@ footer {
   .gwalior-hero p {
     font-size: 16px;
   }
-  .gwalior-section .places {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* MOBILE */
@@ -675,10 +672,6 @@ nav a{
 }
 
 /* TOURIST PLACES GRID */
-.gwalior-section .places{
-  grid-template-columns:1fr;
-}
-
 /* BUTTONS */
 .buttons{
   gap:10px;
@@ -745,6 +738,7 @@ nav a{
 }
 
 }
+
 
 
 
