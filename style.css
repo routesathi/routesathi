@@ -758,6 +758,35 @@ flex-shrink:0;
 .gwalior-section .places::-webkit-scrollbar{
 display:none;
 }
+.places-wrapper{
+position:relative;
+}
+
+.scroll-btn{
+position:absolute;
+top:40%;
+transform:translateY(-50%);
+background:#1e3c72;
+color:white;
+border:none;
+padding:12px 16px;
+font-size:22px;
+cursor:pointer;
+border-radius:50%;
+z-index:10;
+}
+
+.scroll-btn.left{
+left:-10px;
+}
+
+.scroll-btn.right{
+right:-10px;
+}
+
+.scroll-btn:hover{
+background:#ff9800;
+}
 
 
 
