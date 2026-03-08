@@ -26,6 +26,9 @@
 <!-- TOURIST PLACES -->
 <div class="gwalior-section">
     <h2>Top Tourist Places in Delhi</h2>
+  <div class="places-wrapper">
+
+  <button class="scroll-btn left">❮</button>
 
      <div class="places city-scroll">
         <div class="place-card">
@@ -59,7 +62,11 @@
         <div class="place-card"><img src="images/delhi_images/national_museum.jpg" alt="National Museum"><div>National Museum</div></div>
         <div class="place-card"><img src="images/delhi_images/gandhi_smriti.jpg" alt="Gandhi Smriti"><div>Gandhi Smriti</div></div>
         <div class="place-card"><img src="images/delhi_images/lodhi_gardens.jpg" alt="Lodhi Gardens"><div>Lodhi Gardens</div></div>
-    </div>
+  </div>
+</div>
+
+<button class="scroll-btn right">❯</button>
+
 </div>
 
 <!-- ROUTE PLANNER -->
@@ -328,10 +335,25 @@ const plans = {
 function showPlan(day){
 document.getElementById("planDisplay").innerHTML = plans[day];
 }
+  
+// SCROLL BUTTON JS
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = function(){
+scrollContainer.scrollBy({left:300, behavior:"smooth"});
+}
+
+leftBtn.onclick = function(){
+scrollContainer.scrollBy({left:-300, behavior:"smooth"});
+}
+
 </script>
 
 </body>
 </html>
+
 
 
 
