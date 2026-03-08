@@ -28,6 +28,10 @@
 <div class="gwalior-section">
 
 <h2>Top Tourist Places in Andaman</h2>
+  <div class="places-wrapper">
+
+  <button class="scroll-btn left">❮</button>
+
 
  <div class="places city-scroll">
 
@@ -75,8 +79,8 @@
 <img src="images/andaman_images/corbyns_cove.jpg">
 <div>Corbyn’s Cove Beach</div>
 </div>
-
 </div>
+<button class="scroll-btn right">❯</button>
 </div>
 
 <!-- ROUTE PLANNER -->
@@ -318,9 +322,23 @@ function showPlan(day){
 document.getElementById("planDisplay").innerHTML = plans[day];
 }
 
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = () => {
+scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+};
+
+leftBtn.onclick = () => {
+scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+};
+
 </script>
+
 
 </body>
 </html>
+
 
 
