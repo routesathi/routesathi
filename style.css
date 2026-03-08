@@ -788,6 +788,13 @@ right:-10px;
 background:#ff9800;
 }
 
+@media (max-width:768px){
+
+.scroll-btn{
+display:none;
+}
+
+}
 
 
 
