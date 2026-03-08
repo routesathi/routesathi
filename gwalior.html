@@ -106,7 +106,13 @@
       <div>Patankar Bazaar</div>
     </div>
   </div>
+  </div>
+
+<button class="scroll-btn right">❯</button>
+
+</div>
 </section>
+  
 
 <!-- ROUTE PLANNER -->
 <section class="section">
@@ -322,9 +328,23 @@ Sun Temple <span style="color:#777;">(Perfect Sunset Spot – Approx 5 KM from C
 function showPlan(day){
     document.getElementById("planDisplay").innerHTML = plans[day];
 }
+
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = function(){
+scrollContainer.scrollBy({left:300, behavior:"smooth"});
+}
+
+leftBtn.onclick = function(){
+scrollContainer.scrollBy({left:-300, behavior:"smooth"});
+}
+
 </script>
 
 </body>
 </html>
+
 
 
