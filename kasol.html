@@ -6,373 +6,545 @@
 <title>Kasol Travel Guide | RouteMitra</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header>
-  <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#cities">Cities</a>
-    <a href="contact.html">Contact</a>
-    <a href="feedback.html" class="btn-small">Give Feedback</a>
-  </nav>
+<img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="cities.html">Cities</a>
+<a href="contact.html">Contact</a>
+<a href="feedback.html" class="btn-small">Give Feedback</a>
+</nav>
 </header>
 
-<!-- HERO -->
-<div class="gwalior-hero">
 
-    <h1>Explore Kasol</h1>
-    <p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
-</div>
+<!-- HERO -->
+<section class="gwalior-hero">
+
+<h1>Explore Kasol</h1>
+<p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
+
+</section>
+
 
 <!-- TOURIST PLACES -->
-<div class="gwalior-section">
 
-    <h2>Top Tourist Places in Kasol</h2>
+<section class="gwalior-section">
 
-     <div class="places city-scroll">
-        <div class="place-card">
-            <img src="images/kasol_images/parvati_river.jpg" alt="Parvati River">
-            <p>Beautiful riverside spot perfect for relaxing and nature walks.</p>
-            <div>Parvati River</div>
-        </div>
+<h2>Top Tourist Places in Kasol</h2>
 
-        <div class="place-card">
-            <img src="images/kasol_images/manikaran_sahib.jpg" alt="Manikaran Sahib">
-            <div>Manikaran Sahib Gurudwara</div>
-        </div>
+<div class="scroll-wrapper">
 
-        <div class="place-card">
-            <img src="images/kasol_images/chalal_village.jpg" alt="Chalal Village">
-            <div>Chalal Village</div>
-        </div>
+<button class="scroll-btn left" onclick="scrollPlaces(-1)">❮</button>
 
-        <div class="place-card">
-            <img src="images/kasol_images/nature_park.jpg" alt="Nature Park">
-            <div>Nature Park Kasol</div>
-        </div>
+<div class="places city-scroll" id="placesContainer">
 
-        <div class="place-card">
-            <img src="images/kasol_images/kasol_market.jpg" alt="Kasol Market">
-            <div>Kasol Market</div>
-        </div>
-
-        <div class="place-card">
-            <img src="images/kasol_images/tosh_village.jpg" alt="Tosh Village">
-            <div>Tosh Village</div>
-        </div>
-
-        <div class="place-card">
-            <img src="images/kasol_images/kheerganga.jpg" alt="Kheerganga Trek">
-            <div>Kheerganga Trek</div>
-        </div>
-
-        <div class="place-card">
-            <img src="images/kasol_images/malana_village.jpg" alt="Malana Village">
-            <div>Malana Village</div>
-        </div>
-
-        <div class="place-card">
-            <img src="images/kasol_images/naggar_village.jpg" alt="Naggar Village">
-            <div>Naggar Village</div>
-        </div>
-    </div>
+<div class="place-card">
+<img src="images/kasol_images/parvati_river.jpg">
+<div>Parvati River</div>
 </div>
+
+<div class="place-card">
+<img src="images/kasol_images/manikaran_sahib.jpg">
+<div>Manikaran Sahib Gurudwara</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/chalal_village.jpg">
+<div>Chalal Village</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/nature_park.jpg">
+<div>Nature Park Kasol</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/kasol_market.jpg">
+<div>Kasol Market</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/tosh_village.jpg">
+<div>Tosh Village</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/kheerganga.jpg">
+<div>Kheerganga Trek</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/malana_village.jpg">
+<div>Malana Village</div>
+</div>
+
+<div class="place-card">
+<img src="images/kasol_images/naggar_village.jpg">
+<div>Naggar Village</div>
+</div>
+
+</div>
+
+<button class="scroll-btn right" onclick="scrollPlaces(1)">❯</button>
+
+</div>
+
+</section>
+
+
 
 <!-- ROUTE PLANNER -->
-<div class="section">
-    <h2>Choose Your Travel Plan</h2>
 
-    <div class="buttons">
-        <button onclick="showPlan(1)">1 Day</button>
-        <button onclick="showPlan(2)">2 Day</button>
-        <button onclick="showPlan(3)">3 Day</button>
-        <button onclick="showPlan(4)">4 Day</button>
-    </div>
+<section class="section">
 
-    <div id="planDisplay" class="plan-box">
-        Click a plan to see detailed route.
-    </div>
+<h2>Choose Your Travel Plan</h2>
+
+<div class="buttons">
+
+<button onclick="showPlan(1)">1 Day</button>
+<button onclick="showPlan(2)">2 Days</button>
+<button onclick="showPlan(3)">3 Days</button>
+<button onclick="showPlan(4)">4 Days</button>
+
 </div>
-<!-- KASOL COMPLETE COVERAGE SUMMARY -->
-<div class="section">
-  <h2>📍 Kasol Complete Coverage Summary</h2>
 
-  <div class="plan-box">
-    <h3>🗺 Area-Wise Coverage</h3>
-
-    <p><strong>Kasol Village & Riverside Zone:</strong> Kasol Main Street, Parvati River Walk, local cafes (German Bakery, Evergreen, Moon Dance), Chalal Village, Riverside cafés, picnic / relaxation spots along Parvati River</p>
-    
-    <p><strong>Offbeat Villages & Trekking Zone:</strong> Tosh Village, Malana Village, Grahan Village, Pulga Village, Rasol Village & Kheerganga base, trekking, mountain streams, hidden waterfalls</p>
-    
-    <p><strong>Leisure / Easy Day Zone:</strong> Riverside easy walks, short treks, Chalal trails, Kasol main street shopping & local souvenirs, cafés & casual dining</p>
-
-    <hr>
-
-    <h3>🎯 Planning Logic</h3>
-    <p>✔ Area-wise Route Planning – North-South Parvati Valley & villages separated</p>
-    <p>✔ Minimal Backtracking – Day-wise visits in smooth sequence</p>
-    <p>✔ Mix of Experiences – Village culture + Riverside + Trekking + Leisure + Cafes</p>
-    <p>✔ 4 Days = Complete Coverage:</p>
-    <ul>
-      <li>Day 1: Kasol Village + Chalal + Tosh + Riverside picnic</li>
-      <li>Day 2: Malana, Grahan, Pulga offbeat exploration</li>
-      <li>Day 3: Rasol & Kheerganga trekking + Kasol riverside evening</li>
-      <li>Day 4: Leisure day, short walks, final souvenir shopping & departure</li>
-    </ul>
-    <p>✔ Highlights Managed – Each day balanced: trekking / sightseeing / café / river / village culture</p>
-    <p>✔ Travel Distance Optimized – Distances & travel modes included, zig-zag avoided</p>
-    <p>✔ Visitor-Friendly – Suitable for first-timers & casual tourists alike</p>
-  </div>
+<div id="planDisplay" class="plan-box">
+Click a plan to see detailed route.
 </div>
+
+</section>
+
+
+
+<!-- COMPLETE COVERAGE -->
+
+<section class="section">
+
+<h2>📍 Kasol Complete Coverage Summary</h2>
+
+<div class="plan-box">
+
+<h3>🗺 Area-Wise Coverage</h3>
+
+<p><strong>Kasol Village Zone:</strong> Kasol Main Street, Parvati River Walk, cafés, Chalal Village.</p>
+
+<p><strong>Offbeat Villages:</strong> Tosh Village, Malana Village, Grahan Village, Pulga Village.</p>
+
+<p><strong>Trekking Zone:</strong> Kheerganga Trek, Rasol Village trails, hidden waterfalls.</p>
+
+<hr>
+
+<h3>🎯 Planning Logic</h3>
+
+<ul>
+
+<li>Area wise route planning</li>
+<li>Minimal backtracking</li>
+<li>Village culture + trekking + cafes</li>
+<li>4 days = complete Kasol exploration</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
 
 <footer>
-  © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+
+© 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+
 </footer>
 
+
+
 <script>
-const plans = {
+
+
+function scrollPlaces(direction){
+
+const container=document.getElementById("placesContainer");
+
+const scrollAmount=300;
+
+container.scrollLeft += direction*scrollAmount;
+
+}
+
+
+
+const plans={
+
+
 1: `
-<div class="day-title">🔥 Day 1 – Kasol Village & Chalal Riverside</div>
+<div class="day-title">👑 Day 1 – Complete Royal Jaipur Experience</div>
 
 <div class="timeline-item">
-  <div class="time">🕗 8:00 AM – Arrival / Hotel Check-in</div>
-  <p>Focus: Kasol village + Chalal village + riverside walk</p>
+  <div class="time">🕗 7:30 AM – Hotel Departure</div>
+  City area se Amber side pahunchne me approx 30–40 minutes lagenge.
 </div>
 
 <div class="timeline-item">
-  <div class="time">🏘 8:30 AM – Kasol Village Walk</div>
-  <p>📍 Distance from hotel: 0–1 km</p>
-  <p>🚶 Travel Mode: Walking</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Kasol main street, local shops, Parvati River morning walk</p>
+  <div class="time">🏰 8:15 AM – Amber Fort</div>
+  <strong>Stay Time:</strong> 2 – 2.5 Hours<br>
+  Explore: Suraj Pol, Diwan-e-Aam, Ganesh Pol, Sheesh Mahal, Sukh Niwas<br>
+  <strong>Best Time:</strong> Morning photography<br>
+  Exit Around: 10:45 AM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌿 9:45 AM – Chalal Village</div>
-  <p>📍 Distance from Kasol: 1 km</p>
-  <p>🚶 Travel Mode: Riverside walk (10–15 min)</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Riverside cafes, peaceful vibes, photography</p>
+  <div class="time">🏯 11:00 AM – Jaigarh Fort</div>
+  Amber se 10–15 min drive<br>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Highlights: Jaivana Cannon, Fort Walls, Aravalli View<br>
+  Exit Around: 12:00 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🏞 11:00 AM – Easy Riverside Trek</div>
-  <p>📍 Distance from Chalal: 500 m – 1 km</p>
-  <p>🚶 Travel Mode: Walking / Easy trek</p>
-  <p>⏳ Stay Time: 45 min</p>
-  <p>Highlights: Hidden waterfalls, serene nature spots</p>
+  <div class="time">🌊 12:20 PM – Jal Mahal (Photo Stop)</div>
+  20–25 minutes lakeside photography<br>
+  Entry allowed nahi hoti.
 </div>
 
 <div class="timeline-item">
-  <div class="time">🥘 12:00 PM – Brunch at Kasol Cafes</div>
-  <p>📍 Distance: 1 km back to Kasol</p>
-  <p>🚶 Travel Mode: Walking</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Cafes: German Bakery, Evergreen Cafe</p>
+  <div class="time">🍽 12:45 PM – Lunch Break</div>
+  Nearby restaurant / local dhaba (1 Hour)
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌅 1:15 PM – Riverside Picnic / Relax</div>
-  <p>📍 Near Parvati River</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Picnic, photography, river vibes</p>
+  <div class="time">🏛 2:00 PM – City Palace</div>
+  <strong>Stay Time:</strong> 1.5 Hours<br>
+  Explore: Mubarak Mahal, Chandra Mahal Courtyard, Royal Museum, Peacock Gate<br>
+  Exit Around: 3:30 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🛌 2:30 PM – Rest / Optional Short Walk</div>
-  <p>📍 Kasol Village</p>
+  <div class="time">🔭 3:40 PM – Jantar Mantar</div>
+  <strong>Stay Time:</strong> 40–45 Minutes<br>
+  Exit Around: 4:30 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌇 4:00 PM – Sunset at Chalal Riverside</div>
-  <p>⏳ Stay Time: 45–60 min</p>
+  <div class="time">🌬 4:40 PM – Hawa Mahal</div>
+  <strong>Stay Time:</strong> 30–40 Minutes<br>
+  Exit Around: 5:20 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🍽 6:00 PM – Dinner at Kasol Cafes</div>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🌄 5:45 PM – Nahargarh Fort</div>
+  <strong>Stay Time:</strong> 1 – 1.5 Hour<br>
+  Sunset View + Full Jaipur City Lights<br>
+  Return Around: 7:15 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🕗 7:00 PM – Return to Hotel / Rest</div>
+  <div class="time">🛍 8:00 PM – Bapu Bazaar (Optional)</div>
+  Mojari, Bandhani, Handicrafts Shopping
 </div>
 `,
-
 2: `
-<div class="day-title">🔥 Day 2 – Malana & Village Trekking</div>
+<div class="day-title">🎨 Day 2 – Cultural + Architecture + Relaxed Jaipur</div>
 
 <div class="timeline-item">
-  <div class="time">🕗 7:30 AM – Departure from Kasol</div>
-  <p>Focus: Offbeat mountain villages, culture & trekking</p>
+  <div class="time">🕗 8:00 AM – Hotel se Departure</div>
+  Aaj ka focus: South Jaipur + Modern Architecture + Museums
 </div>
 
 <div class="timeline-item">
-  <div class="time">🏞 8:00 AM – Malana Village</div>
-  <p>📍 Distance from Kasol: 21 km</p>
-  <p>🚗 Travel Mode: Cab / Bike + Short Trek</p>
-  <p>⏳ Stay Time: 2 hr</p>
-  <p>Highlights: Traditional village culture, photography, mountain views</p>
+  <div class="time">🕌 8:30 AM – Birla Mandir Jaipur</div>
+  <strong>Stay Time:</strong> 45 Minutes<br>
+  ✔ White marble temple<br>
+  ✔ Peaceful atmosphere<br>
+  ✔ Photography allowed (outside)<br>
+  Exit Around: 9:15 AM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌿 10:30 AM – Grahan Village</div>
-  <p>📍 Distance from Malana: 5 km</p>
-  <p>🚶 Travel Mode: Trek / Riverside walk</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Authentic Parvati valley vibe, photo ops</p>
+  <div class="time">🚗 Travel: Birla Mandir → Albert Hall Museum</div>
+  Distance: ~3 km<br>
+  Time: 10–15 minutes<br>
+  Best Option: Auto / Cab
 </div>
 
 <div class="timeline-item">
-  <div class="time">🏞 12:00 PM – Pulga Village</div>
-  <p>📍 Distance from Grahan: 6 km</p>
-  <p>🚶 Travel Mode: Short trek (30–40 min)</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Riverside cafes, hidden waterfalls</p>
+  <div class="time">🏛 9:30 AM – Albert Hall Museum</div>
+  Stay Time: 1.5 – 2 Hours<br>
+  Explore: Egyptian Mummy, Royal artefacts, Coins, Paintings<br>
+  Exit Around: 11:30 AM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🥘 1:30 PM – Lunch at Pulga / Riverside</div>
-  <p>📍 Within Pulga village</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🚗 Travel: Albert Hall → Sisodia Rani Garden</div>
+  Distance: ~6 km<br>
+  Time: 20–25 minutes<br>
+  Cab Recommended
 </div>
 
 <div class="timeline-item">
-  <div class="time">🚗 2:30 PM – Return to Kasol</div>
-  <p>📍 Distance: 10 km</p>
-  <p>🚗 Travel Mode: Cab / Bike</p>
-  <p>⏳ Travel Time: 45–60 min</p>
+  <div class="time">🌸 11:45 AM – Sisodia Rani Garden</div>
+  Stay Time: 45 Minutes<br>
+  Mughal style garden visit<br>
+  Exit Around: 12:30 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌅 3:30 PM – Kasol Riverside Chill</div>
-  <p>📍 Near hotel</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🚗 Travel: Sisodia Garden → Lunch Area</div>
+  Distance: ~5 km<br>
+  Time: 15–20 minutes
 </div>
 
 <div class="timeline-item">
-  <div class="time">🍽 5:00 PM – Dinner / Cafe</div>
-  <p>📍 Kasol Village</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🍽 1:00 PM – Lunch Break</div>
+  Relaxed 1 Hour lunch (Raja Park / MI Road Area)
 </div>
 
 <div class="timeline-item">
-  <div class="time">🕗 6:00 PM – Return to Hotel / Rest</div>
+  <div class="time">🚗 Travel: Lunch Area → Galta Ji Temple</div>
+  Distance: ~8 km<br>
+  Time: 25–30 minutes<br>
+  Road narrow & hill side
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 2:15 PM – Galta Ji Temple</div>
+  Stay Time: 1 – 1.5 Hour<br>
+  Natural kund + hill view<br>
+  Exit Around: 3:45 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Galta Ji → Patrika Gate</div>
+  Distance: ~12 km<br>
+  Time: 30–35 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🎨 4:15 PM – Patrika Gate</div>
+  Stay Time: 30–40 Minutes<br>
+  Best Instagram photography spot<br>
+  Exit Around: 5:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Patrika Gate → Central Park</div>
+  Distance: ~7 km<br>
+  Time: 20–25 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌇 5:30 PM – Central Park Jaipur</div>
+  Stay Time: 1 Hour<br>
+  Evening walk + musical fountain<br>
+  Exit Around: 6:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel (Optional): Central Park → Chokhi Dhani</div>
+  Distance: ~15 km<br>
+  Time: 35–40 minutes
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍛 7:30 PM – Chokhi Dhani</div>
+  Stay Time: 2–3 Hours<br>
+  Traditional food + Folk dance + Village theme<br>
+  Return Around: 10:00 PM
 </div>
 `,
-
 3: `
-<div class="day-title">🔥 Day 3 – Tosh Village & Riverside Nature Walks</div>
+<div class="day-title">👑 Day 3 – Royal Leisure + Hidden Jaipur</div>
 
 <div class="timeline-item">
-  <div class="time">🕗 7:30 AM – Departure from Kasol</div>
-  <p>Focus: Tosh village + Parvati river nature walks</p>
+  <div class="time">🕗 8:30 AM – Hotel se Departure</div>
+  Aaj ka focus: Royal heritage + offbeat + local experiences
 </div>
 
 <div class="timeline-item">
-  <div class="time">🏞 8:00 AM – Tosh Village</div>
-  <p>📍 Distance from Kasol: 10 km</p>
-  <p>🚗 Travel Mode: Cab / Bike</p>
-  <p>⏳ Stay Time: 2 hr</p>
-  <p>Highlights: Mountain & river views, local cafes, optional waterfall short trek</p>
+  <div class="time">🏰 9:00 AM – Jaipur City Palace Museum</div>
+  <strong>Stay Time:</strong> 1.5 Hours<br>
+  Explore: Textile gallery, Royal weapon collection, Art & manuscripts<br>
+  <em>Agar Day 1 me sirf basic visit ki thi to aaj detailed museum explore karo</em><br>
+  Exit Around: 10:30 AM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌿 10:30 AM – Riverside Walk to Small Waterfalls</div>
-  <p>📍 Distance from Tosh: 1 km</p>
-  <p>🚶 Travel Mode: Walking / Easy trek</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Hidden waterfalls, nature photography</p>
+  <div class="time">🚗 Travel: City Palace → Panna Meena ka Kund</div>
+  Distance: ~11 km | Time: 30–35 min<br>
+  Cab Recommended
 </div>
 
 <div class="timeline-item">
-  <div class="time">🥘 12:00 PM – Lunch at Tosh Cafes</div>
-  <p>📍 Distance: Village center</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🏞 11:15 AM – Panna Meena ka Kund</div>
+  <strong>Stay Time:</strong> 40 Minutes<br>
+  Highlights: Stepwell architecture, Photography spot, Peaceful vibe<br>
+  Exit Around: 12:00 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🚶 1:15 PM – Nature Trail / Riverside Exploration</div>
-  <p>📍 Distance: 1–2 km</p>
-  <p>⏳ Stay Time: 1–1.5 hr</p>
-  <p>Highlights: Offbeat scenic walks, photography, local flora</p>
+  <div class="time">🚗 Travel: Panna Meena → Anokhi Museum of Hand Printing</div>
+  Distance: ~2 km | Time: 5–10 min
 </div>
 
 <div class="timeline-item">
-  <div class="time">🚗 2:45 PM – Return to Kasol</div>
-  <p>📍 Distance: 10 km</p>
-  <p>⏳ Travel Time: 30–40 min</p>
+  <div class="time">🎨 12:10 PM – Anokhi Museum</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: Block printing history, Textile craft, Cultural learning<br>
+  Exit Around: 1:15 PM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌅 3:30 PM – Kasol Riverside Chill / Tea</div>
-  <p>📍 Near hotel</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🚗 Travel: Amber Area → Lunch (Amer Road / MI Road)</div>
+  Distance: ~10 km | Time: 25–30 min
 </div>
 
 <div class="timeline-item">
-  <div class="time">🍽 5:00 PM – Dinner / Cafe</div>
-  <p>📍 Kasol Village</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🍽 1:45 PM – Lunch Break</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Relaxed lunch
 </div>
 
 <div class="timeline-item">
-  <div class="time">🕗 6:00 PM – Return to Hotel / Rest</div>
+  <div class="time">🚗 Travel: Lunch → Jawahar Circle Garden</div>
+  Distance: ~9 km | Time: 25–30 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌳 3:15 PM – Jawahar Circle Garden</div>
+  <strong>Stay Time:</strong> 45 Minutes<br>
+  Highlights: Circular garden, Musical fountain, Relaxing break<br>
+  Exit Around: 4:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Jawahar Circle → World Trade Park Jaipur</div>
+  Distance: ~2 km | Time: 5–10 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 4:15 PM – World Trade Park</div>
+  <strong>Stay Time:</strong> 1 – 1.5 Hour<br>
+  Highlights: Modern mall experience, Café break, AC comfort<br>
+  Exit Around: 5:45 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: WTP → Bapu Bazaar</div>
+  Distance: ~8 km | Time: 25–30 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 6:15 PM – Bapu Bazaar Shopping</div>
+  <strong>Stay Time:</strong> 1 – 1.5 Hour<br>
+  Highlights: Mojari, Bandhani, Lac bangles, Handicrafts<br>
+  Exit Around: 7:45 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌃 Optional Night Add-on: Nahargarh Fort</div>
+  <strong>Distance:</strong> ~6 km | Time: 20–25 min<br>
+  Highlights: Night city light view, Peaceful vibe<br>
+  Return Around: 9:30–10:00 PM
 </div>
 `,
-
 4: `
-<div class="day-title">🔥 Day 4 – Hidden Waterfalls & Offbeat Trails Near Kasol</div>
+<div class="day-title">🗺 Day 4 – Offbeat & Hidden Jaipur</div>
 
 <div class="timeline-item">
-  <div class="time">🕗 7:30 AM – Departure from Hotel</div>
-  <p>Focus: Hidden waterfalls, easy treks, offbeat nearby hamlets</p>
+  <div class="time">🕗 8:30 AM – Hotel Departure</div>
+  Aaj ka focus: Hidden gems, offbeat spots, local experiences
 </div>
 
 <div class="timeline-item">
-  <div class="time">🏞 8:00 AM – Rasol / Pulga Hidden Waterfalls</div>
-  <p>📍 Distance from Kasol: 6–8 km</p>
-  <p>🚗 Travel Mode: Cab / Bike</p>
-  <p>⏳ Stay Time: 1–1.5 hr</p>
-  <p>Highlights: Photography, riverside walks, peaceful nature</p>
+  <div class="time">🏰 9:00 AM – Nahargarh Fort Trek / Sunset View Spot</div>
+  Distance: ~6 km from hotel | Travel Time: 20–25 min by cab<br>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: City view, light trek, peaceful morning vibe<br>
+  Exit Around: 10:00 AM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌿 10:00 AM – Mini Trek to Offbeat Hamlets</div>
-  <p>📍 Distance: 2–3 km</p>
-  <p>🚶 Travel Mode: Easy trek</p>
-  <p>⏳ Stay Time: 1 hr</p>
-  <p>Highlights: Local life, mountain views, photography</p>
+  <div class="time">🚗 Travel: Nahargarh → Gaitore Ki Chhatriyan</div>
+  Distance: ~5 km | Travel Time: 15–20 min by cab
 </div>
 
 <div class="timeline-item">
-  <div class="time">🥘 12:00 PM – Lunch at Kasol Cafes</div>
-  <p>📍 Return to Kasol</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🏛 10:30 AM – Gaitore Ki Chhatriyan</div>
+  <strong>Stay Time:</strong> 45 Minutes<br>
+  Explore: Royal cenotaphs, photography, quiet heritage spot<br>
+  Exit Around: 11:15 AM
 </div>
 
 <div class="timeline-item">
-  <div class="time">🌅 1:30 PM – Riverside Relaxation / Parvati Walk</div>
-  <p>📍 Near hotel</p>
-  <p>⏳ Stay Time: 1–1.5 hr</p>
+  <div class="time">🚗 Travel: Gaitore → Local Rajasthani Lunch Spot</div>
+  Distance: ~7 km | Travel Time: 20–25 min
 </div>
 
 <div class="timeline-item">
-  <div class="time">🍽 3:00 PM – Tea / Snacks at Local Cafes</div>
-  <p>📍 Kasol Village</p>
-  <p>⏳ Stay Time: 1 hr</p>
+  <div class="time">🍽 12:00 PM – Lunch</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Try local Rajasthani thali / kachori / pyaz ki kachori
 </div>
 
 <div class="timeline-item">
-  <div class="time">🕗 4:30 PM – Departure / Return to Bhuntar / Manali</div>
+  <div class="time">🚗 Travel: Lunch → Tripolia / Johari Bazaar</div>
+  Distance: ~3–4 km | Travel Time: 10–15 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 1:30 PM – Tripolia / Johari Bazaar</div>
+  <strong>Stay Time:</strong> 1–1.5 Hour<br>
+  Explore: Handicrafts, jewelry, lac bangles, fabrics<br>
+  Exit Around: 3:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Bazaar → Rooftop Café / Hidden Stepwell</div>
+  Distance: ~4 km | Travel Time: 10–15 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 3:15 PM – Hidden Stepwell / Rooftop Café</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: Photography, relax, cultural vibe<br>
+  Exit Around: 4:15 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Stepwell → Jaigarh Fort (Optional Sunset)</div>
+  Distance: ~6 km | Travel Time: 15–20 min
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌄 4:30 PM – Jaigarh Fort Sunset (Optional)</div>
+  <strong>Stay Time:</strong> 1 Hour<br>
+  Explore: Fort view, sunset, photography<br>
+  Exit Around: 5:30 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 Travel: Fort → Hotel</div>
+  Distance: ~6 km | Travel Time: 20–25 min<br>
+  Return Around: 6:00 PM
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌃 Optional Evening / Dinner</div>
+  Rooftop restaurant / local café near hotel
 </div>
 `,
-
 };
 
 function showPlan(day){
-  document.getElementById("planDisplay").innerHTML = plans[day];
+    document.getElementById("planDisplay").innerHTML = plans[day];
 }
 </script>
 
 
+</body>
 
+</html>
