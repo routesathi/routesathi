@@ -22,7 +22,7 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="#cities">Cities</a>
+    <a href="index.html#cities">Cities</a>
     <a href="contact.html">Contact</a>
     <a href="feedback.html" class="btn-small">Give Feedback</a>
 
@@ -160,7 +160,7 @@
       <div class="card-content">
         <h3>Delhi</h3>
         <p>Capital city culture & monuments.</p>
-        <a href="delhi.html">View Plan</a>
+        <a href="cities/delhi.html">View Plan</a>
       </div>
     </div>
 
@@ -169,7 +169,7 @@
       <div class="card-content">
         <h3>Goa</h3>
         <p>Beaches & nightlife vibes.</p>
-        <a href="goa.html">View Plan</a>
+        <a href="cities/goa.html">View Plan</a>
       </div>
     </div>
 
@@ -280,12 +280,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const button = document.getElementById("searchBtn");
   
 const cityPages = {
-    "gwalior": "gwalior.html",
-    "delhi": "delhi.html",
-    "goa": "goa.html",
-    "jaipur": "jaipur.html",
-    "kasol": "kasol.html",
-    "andaman": "andaman.html"
+    "gwalior": "cities/gwalior.html",
+    "delhi": "cities/delhi.html",
+    "goa": "cities/goa.html",
+    "jaipur": "cities/jaipur.html",
+    "kasol": "cities/kasol.html",
+    "andaman": "cities/andaman.html"
   };
     function searchCity() {
     const city = input.value.trim().toLowerCase();
