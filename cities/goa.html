@@ -1,1 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goa Travel Guide | RouteMitra</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.png" class="logo" alt="RouteMitra Logo">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#cities">Cities</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html" class="btn-small">Give Feedback</a>
+  </nav>
+</header>
+
+    <!-- HERO -->
+<div class="gwalior-hero">
+
+    <h1>Explore Goa</h1>
+    <p>Complete Travel Route Planner with Day-wise Detailed Plans</p>
+</div>
+
+<!-- TOURIST PLACES -->
+<div class="gwalior-section">
+    <h2>Top Tourist Places in Goa</h2>
+  <div class="places-wrapper">
+<button class="scroll-btn left">❮</button>
+ <div class="places city-scroll">
+        <div class="place-card">
+            <img src="images/goa_images/baga_beach.jpg" alt="Baga Beach">
+            <div>Baga Beach</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/calangute_beach.jpg" alt="Calangute Beach">
+            <div>Calangute Beach</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/anjuna_beach.jpg" alt="Anjuna Beach">
+            <div>Anjuna Beach</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/fort_aguada.jpg" alt="Fort Aguada">
+            <div>Fort Aguada</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/basilica_of_bom_jesus.jpg" alt="Basilica of Bom Jesus">
+            <div>Basilica of Bom Jesus</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/chapora_fort.jpg" alt="Chapora Fort">
+            <div>Chapora Fort</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/dudhsagar_waterfalls.jpg" alt="Dudhsagar Waterfalls">
+            <div>Dudhsagar Waterfalls</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/mangueshi_temple.jpg" alt="Mangueshi Temple">
+            <div>Mangueshi Temple</div>
+        </div>
+        <div class="place-card">
+            <img src="images/goa_images/chapora_beach.jpg" alt="Chapora Beach">
+            <div>Chapora Beach</div>
+        </div>
+    </div>
+<button class="scroll-btn right">❯</button>
+</div>
+</section>
+  
+<!-- ROUTE PLANNER -->
+<div class="section">
+    <h2>Choose Your Travel Plan</h2>
+
+    <div class="buttons">
+        <button onclick="showPlan(1)">1 Day</button>
+        <button onclick="showPlan(2)">2 Day</button>
+        <button onclick="showPlan(3)">3 Day</button>
+        <button onclick="showPlan(4)">4 Day</button>
+    </div>
+
+    <div id="planDisplay" class="plan-box">
+        Click a plan to see detailed route.
+    </div>
+</div>
+
+<!-- GOA COMPLETE COVERAGE SUMMARY -->
+<div class="section">
+  <h2>📍 Goa Complete Coverage Summary</h2>
+
+  <div class="plan-box">
+    <h3>🗺 Area-Wise Coverage</h3>
+
+    <p><strong>North Goa Beaches & Forts:</strong> Calangute, Baga, Anjuna, Vagator, Candolim, Morjim, Ashwem, Mandrem, Aguada Fort, Chapora Fort</p>
+    <p><strong>South Goa Beaches & Hidden Gems:</strong> Colva, Benaulim, Palolem, Agonda, Patnem, Butterfly Beach, Cotigao Wildlife Sanctuary</p>
+    <p><strong>Historic & Cultural Spots:</strong> Fort Aguada, Chapora Fort, Cabo de Rama Fort, Panaji City, Fontainhas Latin Quarter, Miramar Beach, Dona Paula</p>
+    <p><strong>Adventure & Leisure:</strong> Water Sports at Calangute / Candolim / Baga, Parasailing, Jet Ski, Banana Boat, Paragliding</p>
+    <p><strong>Nightlife & Evening Experiences:</strong> SinQ Nightclub, Club Cabana, Beach shacks & Sunset at Chapora / Vagator / Palolem</p>
+
+    <hr>
+
+    <h3>🎯 Planning Logic</h3>
+    <p>✔ Area-wise Route Planning – North Goa / South Goa / Panaji / Offbeat & Hidden Spots</p>
+    <p>✔ Minimal Backtracking – Beach clusters + Fort clusters + City clusters</p>
+    <p>✔ Travel Mode Optimized – Bike / Cab for beaches & forts, walking in Panaji / Fontainhas</p>
+    <p>✔ Stay Time Balanced – 45 min – 1.5 hr depending on attraction</p>
+    <p>✔ 3–4 Days = Complete North + South Goa + Offbeat Hidden Gems + Cultural / Adventure Experiences</p>
+    <p>✔ Realistic & Original – No repeated “already visited” spots for same trip</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+<script>
+const plans = {
+1: `
+<div class="day-title">🔥 Day 1 – North Goa Beaches & Forts</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Hotel Departure</div>
+  <p>Focus: North Goa major beaches + forts + iconic spots</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 8:30 AM – Calangute Beach</div>
+  <p>📍 Distance from hotel: 5 km</p>
+  <p>🚗 Travel Mode: Cab / Bike / Auto</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Morning beach walk, photography</p>
+  <p>🥘 Breakfast nearby</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 9:45 AM – Baga Beach</div>
+  <p>📍 Distance from Calangute Beach: 2 km</p>
+  <p>🚗 Travel Mode: Bike / Auto / Walk (15 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Parasailing / water sports (optional)</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 11:00 AM – Fort Aguada + Lighthouse</div>
+  <p>📍 Distance from Baga Beach: 6 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (15 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Fort view, lighthouse, photo spots</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 12:30 PM – Lunch (Candolim / Calangute area)</div>
+  <p>📍 Distance from Fort Aguada: 4 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10–15 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Cuisine: Goan / Seafood</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 1:30 PM – Chapora Fort / Vagator Viewpoint</div>
+  <p>📍 Distance from Lunch Spot: 6 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (15 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Sunset viewpoint, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 3:00 PM – Anjuna Flea Market / Mapusa Market</div>
+  <p>📍 Distance from Chapora Fort: 5 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10–15 min)</p>
+  <p>⏳ Stay Time: 1–1.5 hr</p>
+  <p>Highlights: Shopping, handicrafts, souvenirs</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 5:00 PM – Sunset at Vagator / Baga Beach</div>
+  <p>📍 Distance from Market: 4 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Relax & photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 6:30 PM – Dinner / Nightlife (Optional)</div>
+  <p>📍 Location: Tito’s Lane / Baga Beach</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:30 PM – Return to Hotel</div>
+  <p>📍 Distance from Dinner Spot: 5 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10–15 min)</p>
+</div>
+`,
+2: `
+<div class="day-title">🔥 Day 2 – South Goa & Panaji Exploration</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Hotel Departure</div>
+  <p>Focus: South Goa beaches, Panaji city, offbeat cultural spots</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 8:30 AM – Colva Beach</div>
+  <p>📍 Distance from hotel: 20 km (depending on North Goa hotel)</p>
+  <p>🚗 Travel Mode: Cab / Bike (40–45 min)</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Calm beach walk, photography, morning vibes</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 10:00 AM – Benaulim Beach</div>
+  <p>📍 Distance from Colva Beach: 3 km</p>
+  <p>🚗 Travel Mode: Bike / Cab (10 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Peaceful beach, small shacks for snacks</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 11:30 AM – Cabo de Rama Fort</div>
+  <p>📍 Distance from Benaulim Beach: 12 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (25 min)</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Fort view, Arabian Sea view, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 1:00 PM – Lunch</div>
+  <p>📍 Location: Palolem / Agonda area</p>
+  <p>📍 Distance from Cabo de Rama: 8 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (15 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Cuisine: Goan seafood / vegetarian options</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 2:15 PM – Palolem Beach</div>
+  <p>📍 Distance from lunch: 4 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Kayaking, relaxed beach time, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏛 3:45 PM – Panaji City / Fontainhas Walk</div>
+  <p>📍 Distance from Palolem Beach: 45 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (1 hr 15 min)</p>
+  <p>⏳ Stay Time: 1–1.5 hr</p>
+  <p>Highlights: Portuguese architecture, colorful streets, local shops</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🛍 5:30 PM – Panaji Local Market / Dona Paula</div>
+  <p>📍 Distance from Fontainhas: 3 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Handicrafts, souvenirs, seaside viewpoint at Dona Paula</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 6:30 PM – Miramar Beach / Sunset</div>
+  <p>📍 Distance from Dona Paula: 4 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10 min)</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Sunset over Arabian Sea, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 7:30 PM – Dinner in Panaji</div>
+  <p>📍 Local restaurants in Panaji</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:30 PM – Return to Hotel</div>
+  <p>📍 Distance: 35–40 km (South Goa hotel) / 20–25 km (North Goa hotel)</p>
+  <p>🚗 Travel Mode: Cab / Bike (45–60 min)</p>
+</div>
+`,
+3: `
+<div class="day-title">🔥 Day 3 – Hidden South Goa & Adventure Spots</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Hotel Departure</div>
+  <p>Focus: Offbeat South Goa beaches, forts, nature spots</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 8:30 AM – Agonda Beach</div>
+  <p>📍 Distance from hotel: 18–20 km (North Goa hotel) / 10 km (South Goa hotel)</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Peaceful beach, sunrise, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 10:00 AM – Butterfly Beach (Secret / Offbeat)</div>
+  <p>📍 Distance from Agonda: 6 km</p>
+  <p>🚗 Travel Mode: Cab + short boat ride (15–20 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Hidden beach, crystal clear water, nature vibes</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏰 11:45 AM – Cabo de Rama Fort (Revisit / Alternative Viewpoints)</div>
+  <p>📍 Distance from Butterfly Beach: 10 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (20–25 min)</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Sea view, photography, fort exploration</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 1:00 PM – Lunch at Palolem / Agonda</div>
+  <p>📍 Distance from Fort: 8 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (15 min)</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Cuisine: Goan seafood / vegetarian options</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 2:15 PM – Patnem Beach</div>
+  <p>📍 Distance from Lunch: 3 km</p>
+  <p>🚗 Travel Mode: Bike / Cab (10 min)</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Relaxed vibes, calm waters, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 3:30 PM – Cotigao Wildlife Sanctuary (Optional Adventure)</div>
+  <p>📍 Distance from Patnem Beach: 30 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (45–50 min)</p>
+  <p>⏳ Stay Time: 1–1.5 hr</p>
+  <p>Highlights: Nature walk, bird watching, forest trails</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 5:30 PM – Sunset at Agonda / Palolem Beach</div>
+  <p>📍 Distance from Sanctuary: 30 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (45 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Sunset, beach photography, relaxing evening</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 6:30 PM – Dinner / Beach Shacks</div>
+  <p>📍 Location: Palolem / Agonda</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:30 PM – Return to Hotel</div>
+  <p>📍 Distance: 20–40 km (depending on hotel location)</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+</div>
+`,
+4: `
+<div class="day-title">🔥 Day 4 – North Goa Adventure & Leisure</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Hotel Departure</div>
+  <p>Focus: Adventure, water sports, North Goa hidden beaches</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 8:30 AM – Morjim Beach</div>
+  <p>📍 Distance from hotel: 12–15 km (North Goa)</p>
+  <p>🚗 Travel Mode: Bike / Cab</p>
+  <p>⏳ Stay Time: 45–60 min</p>
+  <p>Highlights: Peaceful beach, sunrise, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 10:00 AM – Ashwem Beach</div>
+  <p>📍 Distance from Morjim: 3 km</p>
+  <p>🚗 Travel Mode: Bike / Cab (5–10 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Relaxed vibes, beach cafes, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 11:15 AM – Mandrem Beach</div>
+  <p>📍 Distance from Ashwem: 4 km</p>
+  <p>🚗 Travel Mode: Bike / Cab (10 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Quiet, less crowded, sea walk</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏄 12:30 PM – Water Sports at Candolim / Calangute Beach</div>
+  <p>📍 Distance from Mandrem: 18 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (30–35 min)</p>
+  <p>⏳ Stay Time: 1.5 hr</p>
+  <p>Highlights: Parasailing, Banana Boat, Jet Ski, Adventure Fun</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 2:30 PM – Lunch at Candolim / Calangute</div>
+  <p>📍 Location: Beach shacks / restaurants</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 3:45 PM – SinQ Nightclub / Club Cabana (Optional Evening Fun)</div>
+  <p>📍 Distance from lunch: 5–7 km</p>
+  <p>🚗 Travel Mode: Cab / Bike (10–15 min)</p>
+  <p>⏳ Stay Time: 1–2 hr</p>
+  <p>Highlights: Music, cocktails, nightlife experience</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 5:30 PM – Sunset at Chapora Fort</div>
+  <p>📍 Distance from Club / Lunch: 6 km</p>
+  <p>🚗 Travel Mode: Bike / Cab (15 min)</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Sunset view, Vagator & Chapora beach view, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 7:00 PM – Dinner at Vagator / Baga</div>
+  <p>📍 Location: Beach shacks / local restaurants</p>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 PM – Return to Hotel</div>
+  <p>📍 Distance: 5–15 km (depending on hotel location)</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+</div>
+`,
+};
+
+function showPlan(day){
+    document.getElementById("planDisplay").innerHTML = plans[day];
+}
+  
+// SCROLL BUTTON JS
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = function(){
+scrollContainer.scrollBy({left:300, behavior:"smooth"});
+}
+
+leftBtn.onclick = function(){
+scrollContainer.scrollBy({left:-300, behavior:"smooth"});
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
 
