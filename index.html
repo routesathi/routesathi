@@ -146,7 +146,7 @@
 
   <div class="card-container">
 
-    <div class="card">
+   <div class="card city-card">
       <img src="images/gwalior.jpg" alt="Gwalior">
       <div class="card-content">
         <h3>Gwalior</h3>
@@ -155,7 +155,7 @@
       </div>
     </div>
 
-    <div class="card">
+   <div class="card city-card">
       <img src="images/delhi.jpg" alt="Delhi">
       <div class="card-content">
         <h3>Delhi</h3>
@@ -164,7 +164,7 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card city-card">
       <img src="images/goa.jpg" alt="Goa">
       <div class="card-content">
         <h3>Goa</h3>
@@ -306,6 +306,31 @@ const cityPages = {
   });
 
 });
+</script>
+
+  <script>
+
+const searchInput = document.getElementById("cityInput");
+
+searchInput.addEventListener("keyup", function(){
+
+  let value = searchInput.value.toLowerCase();
+  let cards = document.querySelectorAll(".city-card");
+
+  cards.forEach(function(card){
+
+    let text = card.innerText.toLowerCase();
+
+    if(text.includes(value)){
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+
+});
+
 </script>
 
 </body>
