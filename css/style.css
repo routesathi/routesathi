@@ -74,7 +74,7 @@ nav a:hover {
   min-height: 60vh;
   height: auto;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url('images/goa.jpg') center/cover;
+              url('../images/goa.jpg') center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
