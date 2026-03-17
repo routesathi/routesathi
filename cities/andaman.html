@@ -1,1 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andaman Travel Guide | RouteMitra</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <img src="../images/logo.png" class="logo" alt="RouteMitra Logo">
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../index.html#cities">Cities</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../feedback.html" class="btn-small">Give Feedback</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="gwalior-hero">
+    <h1>Explore Andaman & Nicobar Islands</h1>
+    <p>Complete Beach & Adventure Travel Route Planner</p>
+</div>
+
+<!-- TOURIST PLACES -->
+<div class="gwalior-section">
+
+<h2>Top Tourist Places in Andaman</h2>
+  <div class="places-wrapper">
+
+  <button class="scroll-btn left">❮</button>
+
+
+ <div class="places city-scroll">
+
+<div class="place-card">
+<img src="../images/andaman_images/radhanagar_beach.jpg">
+<div>Radhanagar Beach</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/cellular_jail.jpg">
+<div>Cellular Jail</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/ross_island.jpg">
+<div>Ross Island</div>
+</div>
+
+<div class="place-card">
+<img src="images/andaman_images/elephant_beach.jpg">
+<div>Elephant Beach</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/neil_island.jpg">
+<div>Neil Island</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/baratang.jpg">
+<div>Baratang Island</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/limestone_caves.jpg">
+<div>Limestone Caves</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/north_bay.jpg">
+<div>North Bay Island</div>
+</div>
+
+<div class="place-card">
+<img src="../images/andaman_images/corbyns_cove.jpg">
+<div>Corbyn’s Cove Beach</div>
+</div>
+</div>
+<button class="scroll-btn right">❯</button>
+</div>
+
+<!-- ROUTE PLANNER -->
+<div class="section">
+<h2>Choose Your Travel Plan</h2>
+
+<div class="buttons">
+<button onclick="showPlan(1)">1 Day</button>
+<button onclick="showPlan(2)">2 Day</button>
+<button onclick="showPlan(3)">3 Day</button>
+<button onclick="showPlan(4)">4 Day</button>
+</div>
+
+<div id="planDisplay" class="plan-box">
+Click a plan to see detailed route.
+</div>
+</div>
+<div class="section">
+  <h2>📍 Andaman Complete Coverage Summary</h2>
+
+  <div class="plan-box">
+    <h3>🗺 Area-Wise Coverage</h3>
+
+    <p><strong>Port Blair:</strong> Cellular Jail, Anthropological Museum, Corbyn’s Cove, Chidiya Tapu, Baratang (Limestone Caves, Mud Volcano)</p>
+    <p><strong>Havelock Island:</strong> Radhanagar Beach, Elephant Beach, Kala Pathar Beach</p>
+    <p><strong>Neil Island:</strong> Laxmanpur Beach, Bharatpur Beach, Natural Bridge / Offbeat Exploration</p>
+
+    <hr>
+
+    <h3>🎯 Planning Logic</h3>
+    <p>✔ Area-wise Route Planning (Port Blair → Havelock → Neil → Port Blair / Baratang)</p>
+    <p>✔ Minimal Backtracking</p>
+    <p>✔ Mix of Heritage + Beaches + Offbeat + Adventure</p>
+    <p>✔ 4 Days = Almost Complete Andaman Coverage</p>
+  </div>
+</div>
+
+<footer>
+© 2026 RouteMitra.com | Designed with ❤️ by Himanshu Jain
+</footer>
+
+<script>
+const plans = {
+
+1: `
+<div class="day-title">🔥 Day 1 – Port Blair Heritage & Beaches</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 AM – Hotel Departure / Breakfast</div>
+  <p>Focus: Port Blair major heritage + nearby beaches</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏛 9:00 AM – Cellular Jail</div>
+  <p>📍 Distance from hotel: 5 km</p>
+  <p>🚗 Travel Mode: Cab / Auto</p>
+  <p>⏳ Stay Time: 1.5 hr</p>
+  <p>Highlights: History, museum, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌿 10:45 AM – Anthropological Museum</div>
+  <p>📍 Distance from Cellular Jail: 3 km</p>
+  <p>🚗 Travel Mode: Cab / Auto</p>
+  <p>⏳ Stay Time: 45 min</p>
+  <p>Highlights: Tribal culture, artifacts</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 11:45 AM – Corbyn’s Cove Beach</div>
+  <p>📍 Distance from Museum: 8 km</p>
+  <p>🚗 Travel Mode: Cab / Auto</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Beach walk, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 12:45 PM – Lunch at Port Blair</div>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏝 2:00 PM – Ross Island</div>
+  <p>📍 Distance from Port Blair Jetty: 3 km + ferry 15 min</p>
+  <p>⏳ Stay Time: 1.5 hr</p>
+  <p>Highlights: Ruins, photography, history</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 4:00 PM – Chidiya Tapu</div>
+  <p>📍 Distance from Port Blair: 25 km</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Sunset, bird watching, beach stroll</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 6:30 PM – Dinner at Port Blair</div>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 PM – Return to Hotel</div>
+  <p>📍 Distance from dinner spot: 5 km</p>
+</div>
+`,
+
+2: `
+<div class="day-title">🔥 Day 2 – Havelock Island / Radhanagar Beach & Elephant Beach</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 6:30 AM – Departure from Port Blair to Havelock</div>
+  <p>🚤 Ferry: 2.5–3 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕙 10:00 AM – Arrival at Havelock / Hotel Check-in</div>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 10:30 AM – Radhanagar Beach</div>
+  <p>📍 Distance from hotel: 5 km</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Stay Time: 2 hr</p>
+  <p>Highlights: Swimming, beach walk, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 1:00 PM – Lunch at Havelock</div>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏝 2:30 PM – Elephant Beach</div>
+  <p>📍 Distance from Radhanagar: 20 km</p>
+  <p>🚗 Travel Mode: Cab / Boat</p>
+  <p>⏳ Stay Time: 2 hr</p>
+  <p>Highlights: Snorkeling, water sports, beach fun</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 5:00 PM – Kala Pathar Beach / Sunset</div>
+  <p>📍 Distance from Elephant Beach: 5 km</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Sunset, photography, relaxing</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 6:30 PM – Dinner at Havelock / Hotel</div>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 8:00 PM – Overnight Stay at Havelock Hotel</div>
+</div>
+`,
+
+3: `
+<div class="day-title">🔥 Day 3 – Neil Island Exploration</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 7:00 AM – Ferry to Neil Island</div>
+  <p>⏳ Travel Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏖 8:30 AM – Laxmanpur Beach</div>
+  <p>📍 Distance from Jetty: 5 km</p>
+  <p>🚗 Travel Mode: Cab / Bike</p>
+  <p>⏳ Stay Time: 1.5 hr</p>
+  <p>Highlights: Sunrise, photography, peaceful walk</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏝 10:30 AM – Bharatpur Beach</div>
+  <p>📍 Distance from Laxmanpur: 3 km</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Snorkeling, swimming</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 12:00 PM – Lunch at Neil Island</div>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🏞 1:30 PM – Natural Bridge / Offbeat Exploration</div>
+  <p>📍 Distance from Bharatpur: 3 km</p>
+  <p>⏳ Stay Time: 1 hr</p>
+  <p>Highlights: Scenic spot, photography</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕓 3:00 PM – Return to Havelock</div>
+  <p>🚤 Ferry: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 6:00 PM – Dinner / Overnight Stay at Havelock Hotel</div>
+</div>
+`,
+
+4: `
+<div class="day-title">🔥 Day 4 – Baratang / Limestone Caves & Return to Port Blair</div>
+
+<div class="timeline-item">
+  <div class="time">🕗 6:00 AM – Departure from Havelock to Port Blair</div>
+  <p>🚤 Ferry: 2.5–3 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕛 9:30 AM – Port Blair / Breakfast</div>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🚗 10:30 AM – Baratang / Limestone Caves</div>
+  <p>📍 Distance from Port Blair: 100 km</p>
+  <p>🚗 Travel Mode: Cab / Tourist Van</p>
+  <p>⏳ Stay Time: 3 hr</p>
+  <p>Highlights: Mangrove forests, limestone caves, mud volcano</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🍽 1:30 PM – Lunch at Baratang / Port Blair</div>
+  <p>⏳ Stay Time: 1 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🕒 2:30 PM – Return to Port Blair</div>
+  <p>🚗 Distance: 100 km, Travel Time: 3 hr</p>
+</div>
+
+<div class="timeline-item">
+  <div class="time">🌅 6:00 PM – Relax / Light Shopping / Departure</div>
+</div>
+`,
+
+};
+
+function showPlan(day){
+document.getElementById("planDisplay").innerHTML = plans[day];
+}
+
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = () => {
+scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+};
+
+leftBtn.onclick = () => {
+scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+};
+
+</script>
+
+
+</body>
+</html>
+
+
 
