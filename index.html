@@ -308,31 +308,32 @@ const cityPages = {
 });
 </script>
 
-  <script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
 
-const searchInput = document.getElementById("cityInput");
+  const searchInput = document.getElementById("cityInput");
 
-searchInput.addEventListener("keyup", function(){
+  searchInput.addEventListener("keyup", function(){
 
-  let value = searchInput.value.toLowerCase();
-  let cards = document.querySelectorAll(".city-card");
+    let value = searchInput.value.toLowerCase();
+    let cards = document.querySelectorAll(".city-card");
 
-  cards.forEach(function(card){
+    cards.forEach(function(card){
 
-    let text = card.innerText.toLowerCase();
+      let text = card.innerText.toLowerCase();
 
-    if(text.includes(value)){
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+      if(text.includes(value)){
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+
+    });
 
   });
 
 });
-
 </script>
-
 </body>
 </html>
 
