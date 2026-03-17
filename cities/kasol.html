@@ -38,9 +38,10 @@
 
 <div class="places-wrapper">
 
- <button class="scroll-btn left">❮</button>
+<button class="scroll-btn left" onclick="scrollPlaces(-1)">❮</button>
 
-     <div class="places city-scroll">
+   <div class="places city-scroll" id="placesContainer">
+       
 <div class="place-card">
 <img src="../images/kasol_images/parvati_river.jpg">
 <div>Parvati River</div>
@@ -88,7 +89,7 @@
 
 </div>
 
-<button class="scroll-btn right">❯</button>
+<button class="scroll-btn right" onclick="scrollPlaces(1)">❯</button>
 
 </div>
 
