@@ -810,7 +810,39 @@ align-items:center;
 color:white;
 text-align:center;
 }
+.city-hero {
+  height: 60vh;
 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+  position: relative;
+}
+
+/* Dark overlay (text clear dikhega) */
+.city-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* Text upar rahe */
+.city-hero h1,
+.city-hero p {
+  position: relative;
+  z-index: 1;
+}
 
 
 
