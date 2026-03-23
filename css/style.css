@@ -844,7 +844,30 @@ text-align:center;
   z-index: 1;
 }
 
+/* ===== MOBILE CITY SLIDER FINAL FIX ===== */
+@media (max-width:768px){
 
+  .card-container.city-scroll{
+    display:flex !important;
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    gap:15px;
+    padding:10px;
+
+    flex-wrap: nowrap !important;   /* 🔥 main fix */
+    scroll-behavior:smooth;
+  }
+
+  .card-container.city-scroll .card{
+    min-width:250px;
+    flex-shrink:0;
+  }
+
+  .card-container.city-scroll::-webkit-scrollbar{
+    display:none;
+  }
+
+}
 
 
 
