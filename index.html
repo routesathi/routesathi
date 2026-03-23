@@ -144,7 +144,12 @@
 <section class="cities" id="cities">
   <h2>Popular Destinations</h2>
 
-  <div class="card-container">
+  <div class="places-wrapper">
+
+  <button class="scroll-btn left">❮</button>
+
+  <div class="card-container city-scroll">
+
 
    <div class="card city-card">
       <img src="images/gwalior.jpg" alt="Gwalior">
@@ -181,6 +186,10 @@
         <a href="cities/kasol.html">View Plan</a>
       </div>
     </div>
+    
+     </div>
+
+  <button class="scroll-btn right">❯</button>
 
   </div>
 </section>
@@ -230,37 +239,29 @@
   <script>
 document.addEventListener("DOMContentLoaded", function() {
 
+  // ===== SERVICE ICONS =====
   const serviceItems = document.querySelectorAll(".service-item");
 
-  // Flights (1st item)
   if(serviceItems[0]){
     serviceItems[0].style.cursor = "pointer";
-    serviceItems[0].addEventListener("click", function() {
-    window.open("https://aviasales.tpx.lv/jhI0W8b7?currency=inr&locale=en&market=in", "_blank");
-    });
+    serviceItems[0].onclick = () =>
+      window.open("https://aviasales.tpx.lv/jhI0W8b7?currency=inr&locale=en&market=in", "_blank");
   }
 
-  // Hotels (2nd item)
   if(serviceItems[1]){
     serviceItems[1].style.cursor = "pointer";
-    serviceItems[1].addEventListener("click", function() {
+    serviceItems[1].onclick = () =>
       window.open("https://getyourguide.tpx.lv/cHAoDJ4U", "_blank");
-    });
   }
 
-  // Trains (5th item)
   if(serviceItems[4]){
     serviceItems[4].style.cursor = "pointer";
-    serviceItems[4].addEventListener("click", function() {
+    serviceItems[4].onclick = () =>
       window.open("https://www.irctc.co.in", "_blank");
-    });
   }
 
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
 
+  // ===== EMERGENCY =====
   function openMap(query){
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(function(position){
@@ -275,20 +276,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const emergencyButtons = document.querySelectorAll(".emergency-buttons button");
 
-  emergencyButtons[0].onclick = () => openMap("hospital");
-  emergencyButtons[1].onclick = () => openMap("police station");
-  emergencyButtons[2].onclick = () => openMap("fire station");
-  emergencyButtons[3].onclick = () => openMap("atm");
+  if(emergencyButtons.length >= 4){
+    emergencyButtons[0].onclick = () => openMap("hospital");
+    emergencyButtons[1].onclick = () => openMap("police station");
+    emergencyButtons[2].onclick = () => openMap("fire station");
+    emergencyButtons[3].onclick = () => openMap("atm");
+  }
 
-});
-</script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
+  // ===== SEARCH =====
   const input = document.getElementById("cityInput");
   const button = document.getElementById("searchBtn");
-  
-const cityPages = {
+
+  const cityPages = {
     "gwalior": "cities/gwalior.html",
     "delhi": "cities/delhi.html",
     "goa": "cities/goa.html",
@@ -310,12 +310,14 @@ const cityPages = {
     "karnataka": "cities/karnataka.html",
     "telangana": "cities/telangana.html",
     "bihar": "cities/bihar.html",
-    "wb": "cities/wb.html",
+    "wb": "cities/wb.html"
   };
-    function searchCity() {
+
+  function searchCity(){
     const city = input.value.trim().toLowerCase();
-    if(city) {
-      if(cityPages[city]) {
+
+    if(city){
+      if(cityPages[city]){
         window.location.href = cityPages[city];
       } else {
         alert("City not found! Please check spelling.");
@@ -325,40 +327,28 @@ const cityPages = {
     }
   }
 
-  button.addEventListener("click", searchCity);
-  input.addEventListener("keypress", function(e){
-    if(e.key === "Enter") searchCity();
-  });
+  if(button) button.onclick = searchCity;
 
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  const searchInput = document.getElementById("cityInput");
-
-  searchInput.addEventListener("keyup", function(){
-
-    let value = searchInput.value.toLowerCase();
-    let cards = document.querySelectorAll(".city-card");
-
-    cards.forEach(function(card){
-
-      let text = card.innerText.toLowerCase();
-
-      if(text.includes(value)){
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-
+  if(input){
+    input.addEventListener("keypress", function(e){
+      if(e.key === "Enter") searchCity();
     });
+  }
 
-  });
+
+  // ===== SLIDER =====
+  const scrollContainer = document.querySelector(".city-scroll");
+  const leftBtn = document.querySelector(".scroll-btn.left");
+  const rightBtn = document.querySelector(".scroll-btn.right");
+
+  if(scrollContainer && leftBtn && rightBtn){
+    rightBtn.onclick = () => scrollContainer.scrollBy({left:300, behavior:"smooth"});
+    leftBtn.onclick = () => scrollContainer.scrollBy({left:-300, behavior:"smooth"});
+  }
 
 });
 </script>
+  
 </body>
 </html>
 
