@@ -845,17 +845,21 @@ text-align:center;
 }
 
 /* ===== MOBILE CITY SLIDER FINAL FIX ===== */
+/* ===== FINAL MOBILE SLIDER FIX ===== */
 @media (max-width:768px){
 
   .card-container.city-scroll{
     display:flex !important;
     flex-direction:row !important;
     overflow-x:auto !important;
+
+    flex-wrap: nowrap !important;
+
+    justify-content: flex-start !important;   /* 🔥 FIX */
+    align-items: stretch !important;          /* 🔥 FIX */
+
     gap:15px;
     padding:10px;
-
-    flex-wrap: nowrap !important;   /* 🔥 main fix */
-    scroll-behavior:smooth;
   }
 
   .card-container.city-scroll .card{
@@ -868,6 +872,3 @@ text-align:center;
   }
 
 }
-
-
-
