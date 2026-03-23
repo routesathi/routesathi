@@ -844,26 +844,29 @@ text-align:center;
   z-index: 1;
 }
 
-/* ===== MOBILE CITY SLIDER FINAL FIX ===== */
-/* ===== FINAL MOBILE SLIDER FIX ===== */
+/* ===== PERFECT MOBILE SLIDER FIX ===== */
 @media (max-width:768px){
+
+  .places-wrapper{
+    padding:0;   /* 🔥 wrapper ka extra space hatao */
+  }
 
   .card-container.city-scroll{
     display:flex !important;
-    flex-direction:row !important;
     overflow-x:auto !important;
-
     flex-wrap: nowrap !important;
 
-    justify-content: flex-start !important;   /* 🔥 FIX */
-    align-items: stretch !important;          /* 🔥 FIX */
+    justify-content:flex-start !important;  /* 🔥 LEFT ALIGN */
+    align-items:stretch;
 
     gap:15px;
-    padding:10px;
+
+    padding-left:15px;   /* 🔥 thoda left spacing */
+    padding-right:15px;
   }
 
   .card-container.city-scroll .card{
-    min-width:250px;
+    min-width:260px;
     flex-shrink:0;
   }
 
