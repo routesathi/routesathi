@@ -878,3 +878,15 @@ text-align:center;
 .card-container.city-scroll {
   -webkit-overflow-scrolling: touch;
 }
+
+/* FORCE SLIDER WORKING */
+.card-container.city-scroll{
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  display: flex !important;
+}
+
+.card-container.city-scroll .card{
+  min-width: 250px;
+  flex-shrink: 0;
+}
