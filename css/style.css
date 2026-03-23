@@ -642,16 +642,6 @@ nav a{
   width:100%;
 }
 
-/* CITY CARDS */
-.card-container{
-  flex-direction:column;
-  align-items:center;
-}
-
-.card{
-  width:90%;
-}
-
 /* BOOKING CARDS */
 .booking-grid{
   flex-direction:column;
@@ -844,34 +834,47 @@ text-align:center;
   z-index: 1;
 }
 
-/* ===== PERFECT MOBILE SLIDER FIX ===== */
+/* ================= FINAL CITY SLIDER FIX ================= */
+
 @media (max-width:768px){
 
-  .places-wrapper{
-    padding:0;   /* 🔥 wrapper ka extra space hatao */
-  }
+/* normal cards (बाकी sections के लिए) */
+.card-container:not(.city-scroll){
+  flex-direction:column;
+  align-items:center;
+}
 
-  .card-container.city-scroll{
-    display:flex !important;
-    overflow-x:auto !important;
-    flex-wrap: nowrap !important;
+/* 🔥 ONLY city slider */
+.card-container.city-scroll{
+  display:flex;
+  flex-direction:row;
+  overflow-x:auto;
+  gap:15px;
+  padding:10px;
+  scroll-behavior:smooth;
+}
 
-    justify-content:flex-start !important;  /* 🔥 LEFT ALIGN */
-    align-items:stretch;
+/* cards side me rahenge */
+.card-container.city-scroll .card{
+  min-width:250px;
+  flex-shrink:0;
+}
 
-    gap:15px;
+/* scrollbar hide */
+.card-container.city-scroll::-webkit-scrollbar{
+  display:none;
+}
 
-    padding-left:15px;   /* 🔥 thoda left spacing */
-    padding-right:15px;
-  }
+}
 
-  .card-container.city-scroll .card{
-    min-width:260px;
-    flex-shrink:0;
-  }
+/* 🔥 PRO smooth snap */
+.card-container.city-scroll{
+  scroll-snap-type: x mandatory;
+}
 
-  .card-container.city-scroll::-webkit-scrollbar{
-    display:none;
-  }
-
+.card-container.city-scroll .card{
+  scroll-snap-align: start;
+}
+.card-container.city-scroll {
+  -webkit-overflow-scrolling: touch;
 }
