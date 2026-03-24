@@ -890,3 +890,36 @@ text-align:center;
   min-width: 250px;
   flex-shrink: 0;
 }
+
+/* ================= FINAL WORKING MOBILE SLIDER ================= */
+
+@media (max-width:768px){
+
+  /* 🔥 override desktop center issue */
+  .card-container.city-scroll{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+
+    overflow-x: auto !important;
+    gap: 15px;
+    padding: 10px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* cards fix */
+  .card-container.city-scroll .card{
+    min-width: 270px;
+    max-width: 270px;
+    flex-shrink: 0;
+  }
+
+  /* hide scrollbar */
+  .card-container.city-scroll::-webkit-scrollbar{
+    display: none;
+  }
+
+}
