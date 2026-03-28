@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/routesathi/">
+  <title>Ujjain Travel Guide | RouteMitra</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+
+<!-- AUTH -->
+<div class="auth-top">
+  <a href="login.html">Log in</a> /
+  <a href="signup.html">Sign up</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-section">
+    <img src="images/logo.png" class="logo">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#cities">Cities</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html" class="btn-small">Give Feedback</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="gwalior-hero" style="background-image:url('images/ujjain_images/mahakaleshwar.jpg');">
+  <h1>Explore Ujjain</h1>
+  <p>Spiritual City | Complete Travel Route Planner</p>
+</section>
+
+<!-- PLACES -->
+<section class="gwalior-section">
+  <h2>Top Tourist Places in Ujjain</h2>
+
+  <div class="places-wrapper">
+    <button class="scroll-btn left">❮</button>
+
+    <div class="places">
+
+      <div class="card">
+        <img src="images/ujjain_images/mahakaleshwar.jpg">
+        <div>Mahakaleshwar Temple</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/kal_bhairav.jpg">
+        <div>Kal Bhairav Temple</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/harsiddhi_temple.jpg">
+        <div>Harsiddhi Temple</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/ram_ghat.jpg">
+        <div>Ram Ghat</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/sandipani_ashram.jpg">
+        <div>Sandipani Ashram</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/mangalnath.jpg">
+        <div>Mangalnath Temple</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/iskcon.jpg">
+        <div>ISKCON Temple</div>
+      </div>
+
+      <div class="card">
+        <img src="images/ujjain_images/kalideh_palace.jpg">
+        <div>Kalideh Palace</div>
+      </div>
+
+    </div>
+
+    <button class="scroll-btn right">❯</button>
+  </div>
+</section>
+
+<!-- ROUTE -->
+<section class="section">
+  <h2>Choose Your Travel Plan</h2>
+
+  <div class="buttons">
+    <button onclick="showPlan(1)">1 Day</button>
+    <button onclick="showPlan(2)">2 Day</button>
+    <button onclick="showPlan(3)">3 Day</button>
+  </div>
+
+  <div id="planDisplay" class="plan-box">
+    Click a plan to see route.
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 RouteMitra.com
+</footer>
+
+<script>
+
+const plans = {
+
+1: `Day 1 Plan:
+Morning: Mahakaleshwar Darshan
+Afternoon: Kal Bhairav + Harsiddhi
+Evening: Ram Ghat Aarti`,
+
+2: `Day 1: Mahakal + Temples
+Day 2: Mangalnath + Sandipani Ashram`,
+
+3: `Day 1: Mahakal Darshan
+Day 2: Temples Tour
+Day 3: Nearby + Relax`
+
+};
+
+function showPlan(day){
+  document.getElementById("planDisplay").innerText = plans[day];
+}
+
+/* SCROLL */
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = () => scrollContainer.scrollBy({left:300, behavior:"smooth"});
+leftBtn.onclick = () => scrollContainer.scrollBy({left:-300, behavior:"smooth"});
+
+</script>
+
+</body>
+</html>
