@@ -237,7 +237,7 @@
   © 2026 RouteMitra.com | Designed by Himanshu Jain
 </footer>
 
-  <script>
+ <script>
 document.addEventListener("DOMContentLoaded", function() {
 
   // ===== SERVICE ICONS =====
@@ -285,60 +285,68 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
-  // ===== SEARCH =====
+  // ===== SMART SEARCH (NEW SYSTEM) =====
   const input = document.getElementById("cityInput");
   const button = document.getElementById("searchBtn");
 
-  const cityPages = {
-    "gwalior": "cities/india/mp/gwalior.html",
-    "bhopal": "cities/india/mp/bhopal.html",
-    "indore": "cities/india/mp/indore.html",
-    "ujjain": "cities/india/mp/ujjain.html",
-    "orchha": "cities/india/mp/orchha.html",
-    "jabalpur": "cities/india/mp/jabalpur.html",
-    "khajuraho": "cities/india/mp/khajuraho.html",
-    "mandu": "cities/india/mp/mandu.html",
-    "shivpuri": "cities/india/mp/shivpuri.html",
-    "pachmarhi": "cities/india/mp/pachmarhi.html",
-    "rewa": "cities/india/mp/rewa.html",
-    "satna": "cities/india/mp/satna.html",
-    "katni": "cities/india/mp/katni.html",
-    "dewas": "cities/india/mp/dewas.html",
-    "chhatarpur": "cities/india/mp/chhatarpur.html",
-    "delhi": "cities/delhi.html",
-    "goa": "cities/goa.html",
-    "jaipur": "cities/jaipur.html",
-    "kasol": "cities/kasol.html",
-    "andaman": "cities/andaman.html",
-    "manali": "cities/manali.html",
-    "madhya pradesh": "cities/mp.html",
-    "uttar pradesh": "cities/up.html",
-    "himachal pradesh": "cities/hp.html",
-    "uttarakhand": "cities/uttarakhand.html",
-    "punjab": "cities/punjab.html",
-    "haryana": "cities/haryana.html",
-    "rajasthan": "cities/rajasthan.html",
-    "gujarat": "cities/gujarat.html",
-    "maharashtra": "cities/maharashtra.html",
-    "kerala": "cities/kerala.html",
-    "tamilnadu": "cities/tamilnadu.html",
-    "karnataka": "cities/karnataka.html",
-    "telangana": "cities/telangana.html",
-    "bihar": "cities/bihar.html",
-    "wb": "cities/wb.html"
-  };
+  function formatName(name){
+    return name.toLowerCase().trim().replace(/\s+/g, "");
+  }
+
+  function openCity(city, state){
+    const cityName = formatName(city);
+    const stateName = formatName(state);
+
+    const url = `cities/india/${stateName}/${cityName}.html`;
+    window.location.href = url;
+  }
 
   function searchCity(){
-    const city = input.value.trim().toLowerCase();
+    const value = input.value.trim().toLowerCase();
 
-    if(city){
-      if(cityPages[city]){
-        window.location.href = cityPages[city];
-      } else {
-        alert("City not found! Please check spelling.");
-      }
-    } else {
+    if(!value){
       alert("Please enter a city name");
+      return;
+    }
+
+    // ===== AUTO DETECT STATE =====
+    // MP cities
+    const mpCities = ["gwalior","bhopal","indore","ujjain","orchha","jabalpur","khajuraho","mandu","shivpuri","pachmarhi","rewa","satna","katni","dewas","chhatarpur"];
+
+    if(mpCities.includes(value)){
+      openCity(value, "mp");
+      return;
+    }
+
+    // Other direct pages
+    const directPages = {
+      "delhi": "cities/delhi.html",
+      "goa": "cities/goa.html",
+      "jaipur": "cities/jaipur.html",
+      "kasol": "cities/kasol.html",
+      "andaman": "cities/andaman.html",
+      "manali": "cities/manali.html",
+      "madhya pradesh": "cities/mp.html",
+      "uttar pradesh": "cities/up.html",
+      "himachal pradesh": "cities/hp.html",
+      "uttarakhand": "cities/uttarakhand.html",
+      "punjab": "cities/punjab.html",
+      "haryana": "cities/haryana.html",
+      "rajasthan": "cities/rajasthan.html",
+      "gujarat": "cities/gujarat.html",
+      "maharashtra": "cities/maharashtra.html",
+      "kerala": "cities/kerala.html",
+      "tamilnadu": "cities/tamilnadu.html",
+      "karnataka": "cities/karnataka.html",
+      "telangana": "cities/telangana.html",
+      "bihar": "cities/bihar.html",
+      "wb": "cities/wb.html"
+    };
+
+    if(directPages[value]){
+      window.location.href = directPages[value];
+    } else {
+      alert("City not found! (Check spelling)");
     }
   }
 
