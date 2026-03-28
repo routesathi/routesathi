@@ -30,78 +30,64 @@
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="city-hero" style="background-image:url('images/bhopal_images/upper_lake.jpg');">
+<!-- HERO (same class as gwalior) -->
+<section class="gwalior-hero" style="background-image:url('images/bhopal_images/upper_lake.jpg');">
   <h1>Explore Bhopal</h1>
-  <p>City of Lakes | Smart Travel Plans & Route Guide</p>
-</section>
-
-<!-- QUICK INFO -->
-<section class="quick-info">
-  <div>📍 Madhya Pradesh</div>
-  <div>⭐ Best Time: Oct – March</div>
-  <div>🗓 Ideal Stay: 2–3 Days</div>
-  <div>💰 Budget: ₹1500 – ₹3500</div>
+  <p>City of Lakes | Complete Travel Route Planner</p>
 </section>
 
 <!-- PLACES -->
-<section class="city-section">
+<section class="gwalior-section">
   <h2>Top Tourist Places in Bhopal</h2>
 
   <div class="places-wrapper">
     <button class="scroll-btn left">❮</button>
 
-    <div class="places city-scroll">
+    <div class="places">
 
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/upper_lake.jpg">
         <div>Upper Lake</div>
-        <p>Beautiful lake with sunset views & boating.</p>
       </div>
 
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/lower_lake.jpg">
         <div>Lower Lake</div>
       </div>
 
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/taj_ul_masajid.jpg">
         <div>Taj-ul-Masajid</div>
       </div>
 
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/birla_mandir.jpg">
         <div>Birla Mandir</div>
       </div>
 
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/van_vihar.jpg">
-        <div>Van Vihar National Park</div>
+        <div>Van Vihar</div>
       </div>
 
-      <div class="place-card">
-        <img src="images/bhopal_images/state_museum.jpg">
-        <div>State Museum</div>
-      </div>
-
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/tribal_museum.jpg">
         <div>Tribal Museum</div>
       </div>
 
-      <div class="place-card">
+      <div class="card">
+        <img src="images/bhopal_images/state_museum.jpg">
+        <div>State Museum</div>
+      </div>
+
+      <div class="card">
         <img src="images/bhopal_images/sanchi_stupa.jpg">
         <div>Sanchi Stupa</div>
       </div>
 
-      <div class="place-card">
+      <div class="card">
         <img src="images/bhopal_images/bhojpur_temple.jpg">
         <div>Bhojpur Temple</div>
-      </div>
-
-      <div class="place-card">
-        <img src="images/bhopal_images/kerwa_dam.jpg">
-        <div>Kerwa Dam</div>
       </div>
 
     </div>
@@ -110,7 +96,7 @@
   </div>
 </section>
 
-<!-- ROUTE PLANNER -->
+<!-- ROUTE -->
 <section class="section">
   <h2>Choose Your Travel Plan</h2>
 
@@ -134,69 +120,22 @@
 
 const plans = {
 
-1: `<div class="day-title">⚡ 1 Day Plan</div>
+1: `Day 1 Plan:
+Morning: Upper Lake + Van Vihar
+Afternoon: Birla Mandir + Museum
+Evening: Boat Club Sunset`,
 
-<div class="timeline-item">
-🌅 Morning: Upper Lake + Van Vihar
-</div>
+2: `Day 1: City Tour (Lake + Mandir)
+Day 2: Sanchi + Bhojpur`,
 
-<div class="timeline-item">
-🍽 Lunch Break
-</div>
-
-<div class="timeline-item">
-🏛 Afternoon: Birla Mandir + Tribal Museum
-</div>
-
-<div class="timeline-item">
-🌇 Evening: Boat Club Sunset
-</div>
-
-<div class="route-note">
-📏 Distance: ~15 KM<br>
-💰 Budget: ₹800–₹1200
-</div>`,
-
-2: `<div class="day-title">🗓️ 2 Day Plan</div>
-
-<div class="timeline-item">
-📍 Day 1: Lakes + City
-<br>Upper Lake, Van Vihar, Birla Mandir
-</div>
-
-<div class="timeline-item">
-📍 Day 2: Nearby Trips
-<br>Sanchi Stupa + Bhojpur Temple
-</div>
-
-<div class="route-note">
-📏 Distance: ~60 KM<br>
-💰 Budget: ₹2000–₹3000
-</div>`,
-
-3: `<div class="day-title">🧭 3 Day Plan</div>
-
-<div class="timeline-item">
-📍 Day 1: Lakes & Sunset
-</div>
-
-<div class="timeline-item">
-📍 Day 2: Museums & Culture
-</div>
-
-<div class="timeline-item">
-📍 Day 3: Sanchi + Bhojpur + Kerwa Dam
-</div>
-
-<div class="route-note">
-📏 Distance: ~80 KM<br>
-💰 Budget: ₹3000–₹4000
-</div>`
+3: `Day 1: Lakes
+Day 2: Museums
+Day 3: Sanchi + Bhojpur`
 
 };
 
 function showPlan(day){
-  document.getElementById("planDisplay").innerHTML = plans[day];
+  document.getElementById("planDisplay").innerText = plans[day];
 }
 
 /* SCROLL */
