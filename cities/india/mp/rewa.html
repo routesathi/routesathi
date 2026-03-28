@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/routesathi/">
+  <title>Rewa Travel Guide | RouteMitra</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+
+<!-- AUTH -->
+<div class="auth-top">
+  <a href="login.html">Log in</a> /
+  <a href="signup.html">Sign up</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-section">
+    <img src="images/logo.png" class="logo">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#cities">Cities</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html" class="btn-small">Give Feedback</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="gwalior-hero" style="background-image:url('images/rewa_images/keoti_falls.jpg');">
+  <h1>Explore Rewa</h1>
+  <p>Land of Waterfalls & White Tiger | Complete Travel Guide</p>
+</section>
+
+<!-- PLACES -->
+<section class="gwalior-section">
+  <h2>Top Tourist Places in Rewa</h2>
+
+  <div class="places-wrapper">
+    <button class="scroll-btn left">❮</button>
+
+    <div class="places">
+
+      <div class="card">
+        <img src="images/rewa_images/keoti_falls.jpg">
+        <div>Keoti Falls</div>
+      </div>
+
+      <div class="card">
+        <img src="images/rewa_images/purwa_falls.jpg">
+        <div>Purwa Falls</div>
+      </div>
+
+      <div class="card">
+        <img src="images/rewa_images/rewa_fort.jpg">
+        <div>Rewa Fort</div>
+      </div>
+
+      <div class="card">
+        <img src="images/rewa_images/govindgarh.jpg">
+        <div>Govindgarh Palace</div>
+      </div>
+
+      <div class="card">
+        <img src="images/rewa_images/white_tiger.jpg">
+        <div>White Tiger Safari</div>
+      </div>
+
+      <div class="card">
+        <img src="images/rewa_images/raipur_karchuliyan.jpg">
+        <div>Raipur Karchuliyan</div>
+      </div>
+
+    </div>
+
+    <button class="scroll-btn right">❯</button>
+  </div>
+</section>
+
+<!-- ROUTE -->
+<section class="section">
+  <h2>Choose Your Travel Plan</h2>
+
+  <div class="buttons">
+    <button onclick="showPlan(1)">1 Day</button>
+    <button onclick="showPlan(2)">2 Day</button>
+    <button onclick="showPlan(3)">3 Day</button>
+  </div>
+
+  <div id="planDisplay" class="plan-box">
+    Click a plan to see route.
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 RouteMitra.com
+</footer>
+
+<script>
+
+const plans = {
+
+1: `Day 1 Plan:
+Morning: Rewa Fort + Govindgarh Palace
+Afternoon: Keoti Falls
+Evening: City Explore`,
+
+2: `Day 1: Fort + Palace
+Day 2: Keoti Falls + Purwa Falls`,
+
+3: `Day 1: City Tour
+Day 2: Waterfalls
+Day 3: White Tiger Safari + Relax`
+
+};
+
+function showPlan(day){
+  document.getElementById("planDisplay").innerText = plans[day];
+}
+
+/* SCROLL */
+const scrollContainer = document.querySelector(".places");
+const leftBtn = document.querySelector(".scroll-btn.left");
+const rightBtn = document.querySelector(".scroll-btn.right");
+
+rightBtn.onclick = () => scrollContainer.scrollBy({left:300, behavior:"smooth"});
+leftBtn.onclick = () => scrollContainer.scrollBy({left:-300, behavior:"smooth"});
+
+</script>
+
+</body>
+</html>
