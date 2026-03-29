@@ -944,3 +944,22 @@ text-align:center;
 .view-btn:hover{
   background:#1e40af;
 }
+
+.plan-box p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.plan-box h3 {
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.plan-box h4 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.plan-box hr {
+  margin: 15px 0;
+}
