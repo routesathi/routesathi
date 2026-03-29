@@ -326,7 +326,7 @@ footer {
 .gwalior-hero {
   height: 60vh;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url('images/gwalior_images/gwalior_fort.png') 
+              url('images/gwalior_images/gwalior_fort.png');
 
   background-size: cover;        /* 🔥 full cover */
   background-position: center;   /* 🔥 center align */
