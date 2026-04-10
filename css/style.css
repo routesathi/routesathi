@@ -371,11 +371,18 @@ scroll-behavior:smooth;
 
 .gwalior-section .place-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 16px; /* 🔥 smooth corners */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: 0.3s;
+  transition: all 0.3s ease; 
   text-align: center;
+
+  min-width: 320px;   /* 🔥 bada size */
+  max-width: 320px;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .gwalior-section .place-card:hover {
@@ -384,7 +391,7 @@ scroll-behavior:smooth;
 
 .gwalior-section .place-card img {
   width: 100%;
-  height: 2000px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -740,16 +747,9 @@ flex-shrink:0;
 
 /* FIX TOURIST PLACE CARD SIZE */
 
-.gwalior-section .place-card{
-  min-width:280px;
-  max-width:280px;
-  height: 280px;
-  flex-shrink:0;
-}
-
 .gwalior-section .place-card img{
   width:100%;
-  height:180px;
+  height:200px;
   object-fit:cover;
 }
 .gwalior-section .places::-webkit-scrollbar{
