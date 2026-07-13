@@ -1,387 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <base href="/routesathi/">
-  <title>RouteSathi - Explore India Travel Plans</title>
-  <meta name="description" content="Day-wise smart travel plans for Indian cities. RouteSathi helps you explore better.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Explore Madhya Pradesh | RouteSathi</title>
+  <meta name="description" content="Plan memorable Madhya Pradesh trips with RouteSathi: heritage, temples, wildlife, food and nature escapes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mp.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a>
+    <nav><a href="index.html">Home</a><a href="#places">Destinations</a><a href="#travel-style">Travel styles</a></nav>
+    <a class="header-cta" href="#places">Plan your MP trip</a>
+  </header>
 
-<div class="auth-top">
-  <a href="login.html">Log in</a> /
-  <a href="signup.html">Sign up</a>
-</div>
-
-<header>
-  <div class="logo-section">
-    <img src="images/logo.png" class="logo" alt="RouteSathi Logo">
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#cities">Cities</a>
-    <a href="contact.html">Contact</a>
-    <a href="feedback.html" class="btn-small">Give Feedback</a>
-
- <!-- INDIA TOURS MEGA MENU -->
-<div class="mega-dropdown">
-    <a href="#">India Tours ▾</a>
-
-  <div class="mega-menu">
-
-    <div class="mega-column">
-      <h4>North India</h4>
-      <a href="cities/hp.html">Himachal Pradesh</a>
-      <a href="cities/uttarakhand.html">Uttarakhand</a>
-      <a href="cities/punjab.html">Punjab</a>
-      <a href="cities/haryana.html">Haryana</a>
-      <a href="cities/delhi.html">Delhi</a>
-    </div>
-
-    <div class="mega-column">
-      <h4>West India</h4>
-      <a href="cities/rajasthan.html">Rajasthan</a>
-      <a href="cities/gujarat.html">Gujarat</a>
-      <a href="cities/maharashtra.html">Maharashtra</a>
-      <a href="cities/goa.html">Goa</a>
-    </div>
-
-    <div class="mega-column">
-      <h4>South India</h4>
-      <a href="cities/kerala.html">Kerala</a>
-      <a href="cities/tamilnadu.html">Tamil Nadu</a>
-      <a href="cities/karnataka.html">Karnataka</a>
-      <a href="cities/telangana.html">Telangana</a>
-    </div>
-
-    <div class="mega-column">
-      <h4>Central & East</h4>
-      <a href="cities/mp.html">Madhya Pradesh</a>
-      <a href="cities/up.html">Uttar Pradesh</a>
-      <a href="cities/bihar.html">Bihar</a>
-      <a href="cities/wb.html">West Bengal</a>
-    </div>
-
-  </div>
-</div>
-
-<!-- INTERNATIONAL DROPDOWN -->
-<div class="dropdown">
-  <a href="#">International Tours ▾</a>
-  <div class="dropdown-content">
-    <a href="#">Dubai</a>
-    <a href="#">Thailand</a>
-    <a href="#">Bali</a>
-  </div>
-</div>
-  </nav>
-</header>
-
-<!-- SERVICE ICONS -->
-<div class="service-icons">
-  <div class="service-item">✈️ Flights </div>
-  <div class="service-item">🏨 Hotels</div>
-  <div class="service-item">🏠 Homestays</div>
-  <div class="service-item">🎒 Holiday</div>
-  <div class="service-item">🚆 Trains</div>
-  <div class="service-item">🚌 Buses</div>
-  <div class="service-item">🚕 Cabs</div>
-  <div class="service-item active">🎟 Tours</div>
-
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Your Journey Starts with RouteSathi</h1>
-  <p>Ready-to-use, smart & optimized travel plans for every destination.</p>
-
- <div class="search-box">
-  <input type="text" id="cityInput" placeholder="Search your city...">
-  <button id="searchBtn">Search</button>
-</div>
-</section>
-
-<!-- Ad Space -->
-<div class="ad-space">
-  <!-- Google AdSense Code Paste Here -->
-</div>
-
-<!-- EMAIL CAPTURE -->
-<section class="email-capture">
-  <h3>Get Free Travel Plans & Deals</h3>
-  <p>Subscribe & receive smart itineraries + hotel discounts.</p>
-  <input type="email" placeholder="Enter your email">
-  <button>Subscribe</button>
-</section>
-
-<!-- WHY SECTION -->
-<section class="why-use">
-  <h2>Why Use RouteSathi?</h2>
-
-  <div class="why-grid">
-    <div class="why-card">
-      <h3>🗺 Organized Routes</h3>
-      <p>Zig-zag free, area-wise smart travel flow.</p>
-    </div>
-    <div class="why-card">
-      <h3>⏱ Time Optimized</h3>
-      <p>1â€“4 day ready-to-use travel structure.</p>
-    </div>
-    <div class="why-card">
-      <h3>📍 Distances & Mode</h3>
-      <p>Know travel time, transport & stay duration.</p>
-    </div>
-    <div class="why-card">
-      <h3>🌟 Complete Experience</h3>
-      <p>Heritage, beaches, markets & hidden gems.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CITIES -->
-<section class="cities" id="cities">
-  <h2>Popular Destinations</h2>
-
-  <div class="places-wrapper">
-
-  <button class="scroll-btn left">❮</button>
-
-  <div class="card-container city-scroll">
-
-
-   <div class="card city-card">
-      <img src="images/gwalior.jpg" alt="Gwalior">
-      <div class="card-content">
-        <h3>Gwalior</h3>
-        <p>Royal heritage & historic forts of MP.</p>
-       <a href="cities/india/mp/gwalior.html">View Plan</a>
+  <main>
+    <section class="hero-mp">
+      <div class="hero-content">
+        <p class="eyebrow">MADHYA PRADESH · HEART OF INDIA</p>
+        <h1>Find your next<br><em>great Indian story.</em></h1>
+        <p class="hero-text">From ancient temples and royal forts to forests, waterfalls and unforgettable food—Madhya Pradesh is made for slow, meaningful travel.</p>
+        <a class="primary-btn" href="#places">Explore destinations <span>→</span></a>
       </div>
-    </div>
+      <div class="hero-note"><strong>13</strong><span>MP destinations<br>ready to explore</span></div>
+    </section>
 
-   <div class="card city-card">
-      <img src="images/delhi.jpg" alt="Delhi">
-      <div class="card-content">
-        <h3>Delhi</h3>
-        <p>Capital city culture & monuments.</p>
-        <a href="cities/delhi.html">View Plan</a>
+    <section class="intro" id="travel-style">
+      <p class="eyebrow">TRAVEL YOUR WAY</p>
+      <h2>One state. Many kinds<br>of wonder.</h2>
+      <div class="theme-grid">
+        <article><b>01</b><h3>Heritage trails</h3><p>Walk through the forts, palaces and UNESCO-era art of Gwalior, Mandu and Khajuraho.</p></article>
+        <article><b>02</b><h3>Sacred journeys</h3><p>Make time for the timeless temples and riverside rituals of Ujjain, Orchha and Maihar.</p></article>
+        <article><b>03</b><h3>Nature escapes</h3><p>Trade city noise for marble rocks, hill sunsets, waterfalls and wild landscapes.</p></article>
       </div>
-    </div>
+    </section>
 
-    <div class="card city-card">
-      <img src="images/goa.jpg" alt="Goa">
-      <div class="card-content">
-        <h3>Goa</h3>
-        <p>Beaches & nightlife vibes.</p>
-        <a href="cities/goa.html">View Plan</a>
+    <section class="destinations" id="places">
+      <div class="section-heading"><div><p class="eyebrow">START EXPLORING</p><h2>Choose a destination.</h2></div><p>Every guide includes the best places to see and a simple day-wise trip plan.</p></div>
+      <div class="destination-grid">
+        <a class="destination featured" href="cities/india/mp/gwalior.html" style="background-image:url('images/gwalior.jpg')"><span class="tag">HERITAGE</span><div><h3>Gwalior</h3><p>Forts, palaces & music</p></div></a>
+        <a class="destination" href="cities/india/mp/ujjain.html" style="background-image:url('images/mp_images/ujjain_images/mahakaleshwar.jpg')"><span class="tag">SPIRITUAL</span><div><h3>Ujjain</h3><p>Temples & sacred rivers</p></div></a>
+        <a class="destination" href="cities/india/mp/indore.html" style="background-image:url('images/mp_images/indore_images/rajwada.jpg')"><span class="tag">FOOD & CULTURE</span><div><h3>Indore</h3><p>Street food & city life</p></div></a>
+        <a class="destination" href="cities/india/mp/pachmarhi.html" style="background-image:url('images/mp_images/pachmarhi_images/dhoopgarh.jpg')"><span class="tag">NATURE</span><div><h3>Pachmarhi</h3><p>Hills, caves & waterfalls</p></div></a>
+        <a class="destination" href="cities/india/mp/jabalpur.html" style="background-image:url('images/mp_images/jabalpur_images/bhedaghat.jpg')"><span class="tag">SCENIC</span><div><h3>Jabalpur</h3><p>Marble rocks & the Narmada</p></div></a>
+        <a class="destination" href="cities/india/mp/mandu.html" style="background-image:url('images/mp_images/mandu_images/jahaz_mahal.jpg')"><span class="tag">ROYAL</span><div><h3>Mandu</h3><p>Monuments & monsoon views</p></div></a>
+        <a class="destination" href="cities/india/mp/khajuraho.html" style="background-image:url('images/mp_images/khajuraho_images/temples.jpg')"><span class="tag">ART & HISTORY</span><div><h3>Khajuraho</h3><p>Temples & sculpture</p></div></a>
+        <a class="destination" href="cities/india/mp/bhopal.html" style="background-image:url('images/mp_images/bhopal_images/upper_lake.jpg')"><span class="tag">LAKESIDE</span><div><h3>Bhopal</h3><p>Lakes, museums & old city</p></div></a>
+        <a class="destination" href="cities/india/mp/orchha.html" style="background-image:url('images/mp_images/orchha_images/orchha_fort.jpg')"><span class="tag">RIVERSIDE</span><div><h3>Orchha</h3><p>Palaces & peaceful ghats</p></div></a>
       </div>
-    </div>
+    </section>
 
-    <div class="card city-card">
-      <img src="images/kasol.jpg" alt="Kasol">
-      <div class="card-content">
-        <h3>Kasol</h3>
-        <p>Chill vibes, cafes & Himalayan escapes.</p>
-        <a href="cities/kasol.html">View Plan</a>
-      </div>
-    </div>
-    
-     </div>
-
-  <button class="scroll-btn right">❯</button>
-
-  </div>
-</section>
-
-<!-- BOOKING SECTION (Affiliate Ready) -->
-<section class="booking-section">
-  <h2>Book Your Trip Now</h2>
-  <div class="booking-grid">
-
-    <div class="booking-card">
-      <h3>🏨 Hotels</h3>
-      <p>Compare hotel prices & book easily.</p>
-      <a href="#" target="_blank" class="book-btn">Book Hotel</a>
-    </div>
-
-    <div class="booking-card">
-      <h3>🚖 Cabs</h3>
-      <p>Reliable transport options.</p>
-      <a href="#" target="_blank" class="book-btn">Find Cabs</a>
-    </div>
-
-    <div class="booking-card">
-     <h3>✈ Flights</h3>
-      <p>Best flight deals available.</p>
-    <a href="https://aviasales.tpx.lv/jhI0W8b7" target="_blank" class="book-btn">Search Flights</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- EMERGENCY -->
-<section class="emergency">
-  <h2>Emergency & Nearby Help</h2>
-  <p>Quick access to nearby services during travel.</p>
-
-  <div class="emergency-buttons">
-        <button>🏥 Hospital Near Me</button>
-    <button>👮 Police Station</button>
-    <button>🔥 Fire Station</button>
-    <button>🏧 ATM</button>
-
-  </div>
-</section>
-<footer>
-  © 2026  RouteSathi.com | Designed by Himanshu Jain
-</footer>
-
- <script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  // ===== SERVICE ICONS =====
-  const serviceItems = document.querySelectorAll(".service-item");
-
-  if(serviceItems[0]){
-    serviceItems[0].style.cursor = "pointer";
-    serviceItems[0].onclick = () =>
-      window.open("https://aviasales.tpx.lv/jhI0W8b7?currency=inr&locale=en&market=in", "_blank");
-  }
-
-  if(serviceItems[1]){
-    serviceItems[1].style.cursor = "pointer";
-    serviceItems[1].onclick = () =>
-      window.open("https://getyourguide.tpx.lv/cHAoDJ4U", "_blank");
-  }
-
-  if(serviceItems[4]){
-    serviceItems[4].style.cursor = "pointer";
-    serviceItems[4].onclick = () =>
-      window.open("https://www.irctc.co.in", "_blank");
-  }
-
-
-  // ===== EMERGENCY =====
-  function openMap(query){
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(function(position){
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-        window.open(`https://www.google.com/maps/search/${query}/@${lat},${lng},14z`, "_blank");
-      });
-    } else {
-      window.open(`https://www.google.com/maps/search/${query}`, "_blank");
-    }
-  }
-
-  const emergencyButtons = document.querySelectorAll(".emergency-buttons button");
-
-  if(emergencyButtons.length >= 4){
-    emergencyButtons[0].onclick = () => openMap("hospital");
-    emergencyButtons[1].onclick = () => openMap("police station");
-    emergencyButtons[2].onclick = () => openMap("fire station");
-    emergencyButtons[3].onclick = () => openMap("atm");
-  }
-
-
-  // ===== SMART SEARCH (NEW SYSTEM) =====
-  const input = document.getElementById("cityInput");
-  const button = document.getElementById("searchBtn");
-
-  function formatName(name){
-    return name.toLowerCase().trim().replace(/\s+/g, "");
-  }
-
-  function openCity(city, state){
-    const cityName = formatName(city);
-    const stateName = formatName(state);
-
-    const url = `cities/india/${stateName}/${cityName}.html`;
-    window.location.href = url;
-  }
-
-  function searchCity(){
-    const value = input.value.trim().toLowerCase();
-
-    if(!value){
-      alert("Please enter a city name");
-      return;
-    }
-
-    // ===== AUTO DETECT STATE =====
-    // MP cities
-    const mpCities = ["gwalior","bhopal","indore","ujjain","orchha","jabalpur","khajuraho","mandu","shivpuri","pachmarhi","rewa","satna","katni","dewas","chhatarpur"];
-
-    if(mpCities.includes(value)){
-      openCity(value, "mp");
-      return;
-    }
-
-    // Other direct pages
-    const directPages = {
-      "delhi": "cities/delhi.html",
-      "goa": "cities/goa.html",
-      "jaipur": "cities/jaipur.html",
-      "kasol": "cities/kasol.html",
-      "andaman": "cities/andaman.html",
-      "manali": "cities/manali.html",
-      "madhya pradesh": "cities/mp.html",
-      "uttar pradesh": "cities/up.html",
-      "himachal pradesh": "cities/hp.html",
-      "uttarakhand": "cities/uttarakhand.html",
-      "punjab": "cities/punjab.html",
-      "haryana": "cities/haryana.html",
-      "rajasthan": "cities/rajasthan.html",
-      "gujarat": "cities/gujarat.html",
-      "maharashtra": "cities/maharashtra.html",
-      "kerala": "cities/kerala.html",
-      "tamilnadu": "cities/tamilnadu.html",
-      "karnataka": "cities/karnataka.html",
-      "telangana": "cities/telangana.html",
-      "bihar": "cities/bihar.html",
-      "wb": "cities/wb.html"
-    };
-
-    if(directPages[value]){
-      window.location.href = directPages[value];
-    } else {
-      alert("City not found! (Check spelling)");
-    }
-  }
-
-  if(button) button.onclick = searchCity;
-
-  if(input){
-    input.addEventListener("keypress", function(e){
-      if(e.key === "Enter") searchCity();
-    });
-  }
-
-
-  // ===== SLIDER =====
-  const scrollContainer = document.querySelector(".city-scroll");
-  const leftBtn = document.querySelector(".scroll-btn.left");
-  const rightBtn = document.querySelector(".scroll-btn.right");
-
-  if(scrollContainer && leftBtn && rightBtn){
-    rightBtn.onclick = () => scrollContainer.scrollBy({left:300, behavior:"smooth"});
-    leftBtn.onclick = () => scrollContainer.scrollBy({left:-300, behavior:"smooth"});
-  }
-
-});
-</script>
-  
+    <section class="trip-banner"><div><p class="eyebrow">NOT SURE WHERE TO BEGIN?</p><h2>Start with Gwalior.</h2><p>A ready-made heritage route with top places and 1–4 day itinerary options.</p></div><a class="light-btn" href="cities/india/mp/gwalior.html">See Gwalior plan →</a></section>
+  </main>
+  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
