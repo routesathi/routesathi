@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mp.css">
   <link rel="stylesheet" href="css/mp-search.css">
+  <link rel="stylesheet" href="css/community.css">
 </head>
 <body>
   <header class="site-header">
@@ -57,7 +58,8 @@
     </section>
 
     <section class="trip-banner"><div><p class="eyebrow">NOT SURE WHERE TO BEGIN?</p><h2>Start with Gwalior.</h2><p>A ready-made heritage route with top places and 1–4 day itinerary options.</p></div><a class="light-btn" href="cities/india/mp/gwalior.html">See Gwalior plan →</a></section>
+    <section class="trip-builder" id="trip-builder"><div><p class="eyebrow">MAKE IT YOURS</p><h2>Build your MP trip.</h2><p>Tell us where you want to go and how much time you have. We will take you to the right city guide.</p></div><form id="tripBuilder"><label>DESTINATION<select id="tripCity" required><option value="">Choose a city</option><option value="gwalior">Gwalior</option><option value="bhopal">Bhopal</option><option value="indore">Indore</option><option value="ujjain">Ujjain</option><option value="jabalpur">Jabalpur</option><option value="khajuraho">Khajuraho</option><option value="mandu">Mandu</option><option value="pachmarhi">Pachmarhi</option></select></label><label>DAYS<select id="tripDays"><option>1 day</option><option>2 days</option><option>3 days</option><option>4 days</option></select></label><button type="submit">Find my guide →</button><small id="tripMessage" aria-live="polite"></small></form></section>
   </main>
-  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer><script src="js/mp-search.js"></script>
+  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer><button class="feedback-fab" id="feedbackOpen" aria-haspopup="dialog">✦ Feedback</button><dialog class="feedback-dialog" id="feedbackDialog"><form id="feedbackForm" method="dialog"><button class="dialog-close" value="cancel" aria-label="Close">×</button><p class="eyebrow">HELP ROUTESATHI GROW</p><h2>How was your visit?</h2><label>City you explored<select id="feedbackCity"><option>Gwalior</option><option>Bhopal</option><option>Indore</option><option>Ujjain</option><option>Other</option></select></label><fieldset><legend>Your rating</legend><div class="rating"><label><input type="radio" name="rating" value="1" required>1</label><label><input type="radio" name="rating" value="2">2</label><label><input type="radio" name="rating" value="3">3</label><label><input type="radio" name="rating" value="4">4</label><label><input type="radio" name="rating" value="5">5</label></div></fieldset><label>What should we improve?<textarea id="feedbackText" placeholder="Your suggestion makes RouteSathi better."></textarea></label><button class="feedback-send" type="submit">Send feedback</button><p class="feedback-result" id="feedbackResult" aria-live="polite"></p></form></dialog><script src="js/mp-search.js"></script><script src="js/community.js"></script>
 </body>
 </html>
