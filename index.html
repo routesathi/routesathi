@@ -10,12 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mp.css">
+  <link rel="stylesheet" href="css/mp-search.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a>
-    <nav><a href="index.html">Home</a><a href="#places">Destinations</a><a href="#travel-style">Travel styles</a></nav>
-    <a class="header-cta" href="#places">Plan your MP trip</a>
+    <nav><a href="index.html">Home</a><a href="cities/mp-destinations.html">All MP cities</a><a href="#travel-style">Travel styles</a></nav>
+    <a class="header-cta" href="cities/mp-destinations.html">Plan your MP trip</a>
   </header>
 
   <main>
@@ -24,7 +25,8 @@
         <p class="eyebrow">MADHYA PRADESH · HEART OF INDIA</p>
         <h1>Find your next<br><em>great Indian story.</em></h1>
         <p class="hero-text">From ancient temples and royal forts to forests, waterfalls and unforgettable food—Madhya Pradesh is made for slow, meaningful travel.</p>
-        <a class="primary-btn" href="#places">Explore destinations <span>→</span></a>
+        <form class="city-search" id="citySearch"><label for="cityInput">Search a city</label><div><input id="cityInput" autocomplete="off" placeholder="Try Gwalior, Indore or Bhopal"><button type="submit">Search →</button></div><small id="searchMessage" aria-live="polite"></small></form>
+        <a class="primary-btn" href="cities/mp-destinations.html">Explore all MP cities <span>→</span></a>
       </div>
       <div class="hero-note"><strong>13</strong><span>MP destinations<br>ready to explore</span></div>
     </section>
@@ -56,6 +58,6 @@
 
     <section class="trip-banner"><div><p class="eyebrow">NOT SURE WHERE TO BEGIN?</p><h2>Start with Gwalior.</h2><p>A ready-made heritage route with top places and 1–4 day itinerary options.</p></div><a class="light-btn" href="cities/india/mp/gwalior.html">See Gwalior plan →</a></section>
   </main>
-  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer>
+  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer><script src="js/mp-search.js"></script>
 </body>
 </html>
