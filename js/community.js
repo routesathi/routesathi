@@ -1,0 +1,4 @@
+const routes={gwalior:'cities/india/mp/gwalior.html',bhopal:'cities/india/mp/bhopal.html',indore:'cities/india/mp/indore.html',ujjain:'cities/india/mp/ujjain.html',jabalpur:'cities/india/mp/jabalpur.html',khajuraho:'cities/india/mp/khajuraho.html',mandu:'cities/india/mp/mandu.html',pachmarhi:'cities/india/mp/pachmarhi.html'};
+document.querySelector('#tripBuilder')?.addEventListener('submit',event=>{event.preventDefault();const city=document.querySelector('#tripCity').value;document.querySelector('#tripMessage').textContent=city?'Opening your city guide…':'Please choose a destination.';if(city)window.location.href=routes[city]});
+const feedbackFormUrl='https://docs.google.com/forms/d/e/1FAIpQLSfP4Y6uX8kzm2hHp0S-Tw9y8nqujFOVUKpZRgCJp8VTkpHShg/viewform?usp=publish-editor';
+document.querySelector('#feedbackOpen')?.addEventListener('click',()=>window.open(feedbackFormUrl,'_blank','noopener'));
