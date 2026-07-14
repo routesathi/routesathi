@@ -1,155 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <base href="/routesathi/">
-  <title>Madhya Pradesh Travel Guide | RouteMitra</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Explore Madhya Pradesh | RouteSathi</title>
+  <meta name="description" content="Plan memorable Madhya Pradesh trips with RouteSathi: heritage, temples, wildlife, food and nature escapes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mp.css">
 </head>
 <body>
-  
-<script>
-function openCity(city, state){
-  let c = city.toLowerCase().trim().replace(/\s+/g,"");
-  let s = state.toLowerCase().trim().replace(/\s+/g,"");
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a>
+    <nav><a href="index.html">Home</a><a href="cities/mp-destinations.html">All MP cities</a><a href="#travel-style">Travel styles</a></nav>
+    <a class="header-cta" href="cities/mp-destinations.html">Plan your MP trip</a>
+  </header>
 
-  window.location.href = `cities/india/${s}/${c}.html`;
-}
-</script>
-
-<header>
-  <a href="index.html">← Back to Home</a>
-  <h1>Madhya Pradesh Travel</h1>
-</header>
-
-<section class="cities">
-  <h2>Popular Cities in Madhya Pradesh</h2>
-  <div class="card-container">
-
-   <div class="card city-card" onclick="openCity('Gwalior','mp')">
-  <img src="images/gwalior.jpg" alt="Gwalior">
-  <div class="card-content">
-    <h3>Gwalior</h3>
-    <p>Royal heritage & historic forts</p>
-    <span class="view-btn">View Plan</span>
-  </div>
-</div>
-
-    <div class="card city-card"  onclick="openCity('Bhopal','mp')">
-      <img src="images/mp_images/bhopal_images/upper_lake.jpg" alt="Bhopal">
-      <div class="card-content">
-        <h3>Bhopal</h3>
-        <p>Lakes, historical sites & culture</p>
-        <span class="view-btn">View Plan</span>
+  <main>
+    <section class="hero-mp">
+      <div class="hero-content">
+        <p class="eyebrow">MADHYA PRADESH · HEART OF INDIA</p>
+        <h1>Find your next<br><em>great Indian story.</em></h1>
+        <p class="hero-text">From ancient temples and royal forts to forests, waterfalls and unforgettable food—Madhya Pradesh is made for slow, meaningful travel.</p>
+        <a class="primary-btn" href="#places">Explore destinations <span>→</span></a>
       </div>
-    </div>
+      <div class="hero-note"><strong>13</strong><span>MP destinations<br>ready to explore</span></div>
+    </section>
 
-    <div class="card city-card" onclick="openCity('Indore','mp')">
-      <img src="images/mp_images/indore_images/rajwada.jpg" alt="Indore">
-      <div class="card-content">
-        <h3>Indore</h3>
-        <p>Food & culture capital</p>
-     <span class="view-btn">View Plan</span>
+    <section class="intro" id="travel-style">
+      <p class="eyebrow">TRAVEL YOUR WAY</p>
+      <h2>One state. Many kinds<br>of wonder.</h2>
+      <div class="theme-grid">
+        <article><b>01</b><h3>Heritage trails</h3><p>Walk through the forts, palaces and UNESCO-era art of Gwalior, Mandu and Khajuraho.</p></article>
+        <article><b>02</b><h3>Sacred journeys</h3><p>Make time for the timeless temples and riverside rituals of Ujjain, Orchha and Maihar.</p></article>
+        <article><b>03</b><h3>Nature escapes</h3><p>Trade city noise for marble rocks, hill sunsets, waterfalls and wild landscapes.</p></article>
       </div>
-    </div>
+    </section>
 
-    <div class="card city-card" onclick="openCity('Ujjain','mp')">
-      <img src="images/mp_images/ujjain_images/mahakaleshwar.jpg" alt="Ujjain">
-      <div class="card-content">
-        <h3>Ujjain</h3>
-        <p>Mahakaleshwar Temple & festivals</p>
-       <span class="view-btn">View Plan</span>
+    <section class="destinations" id="places">
+      <div class="section-heading"><div><p class="eyebrow">START EXPLORING</p><h2>Choose a destination.</h2></div><p>Every guide includes the best places to see and a simple day-wise trip plan.</p></div>
+      <div class="destination-grid">
+        <a class="destination featured" href="cities/india/mp/gwalior.html" style="background-image:url('images/gwalior.jpg')"><span class="tag">HERITAGE</span><div><h3>Gwalior</h3><p>Forts, palaces & music</p></div></a>
+        <a class="destination" href="cities/india/mp/ujjain.html" style="background-image:url('images/mp_images/ujjain_images/mahakaleshwar.jpg')"><span class="tag">SPIRITUAL</span><div><h3>Ujjain</h3><p>Temples & sacred rivers</p></div></a>
+        <a class="destination" href="cities/india/mp/indore.html" style="background-image:url('images/mp_images/indore_images/rajwada.jpg')"><span class="tag">FOOD & CULTURE</span><div><h3>Indore</h3><p>Street food & city life</p></div></a>
+        <a class="destination" href="cities/india/mp/pachmarhi.html" style="background-image:url('images/mp_images/pachmarhi_images/dhoopgarh.jpg')"><span class="tag">NATURE</span><div><h3>Pachmarhi</h3><p>Hills, caves & waterfalls</p></div></a>
+        <a class="destination" href="cities/india/mp/jabalpur.html" style="background-image:url('images/mp_images/jabalpur_images/bhedaghat.jpg')"><span class="tag">SCENIC</span><div><h3>Jabalpur</h3><p>Marble rocks & the Narmada</p></div></a>
+        <a class="destination" href="cities/india/mp/mandu.html" style="background-image:url('images/mp_images/mandu_images/jahaz_mahal.jpg')"><span class="tag">ROYAL</span><div><h3>Mandu</h3><p>Monuments & monsoon views</p></div></a>
+        <a class="destination" href="cities/india/mp/khajuraho.html" style="background-image:url('images/mp_images/khajuraho_images/temples.jpg')"><span class="tag">ART & HISTORY</span><div><h3>Khajuraho</h3><p>Temples & sculpture</p></div></a>
+        <a class="destination" href="cities/india/mp/bhopal.html" style="background-image:url('images/mp_images/bhopal_images/upper_lake.jpg')"><span class="tag">LAKESIDE</span><div><h3>Bhopal</h3><p>Lakes, museums & old city</p></div></a>
+        <a class="destination" href="cities/india/mp/orchha.html" style="background-image:url('images/mp_images/orchha_images/orchha_fort.jpg')"><span class="tag">RIVERSIDE</span><div><h3>Orchha</h3><p>Palaces & peaceful ghats</p></div></a>
       </div>
-    </div>
+    </section>
 
-    <div class="card city-card" onclick="openCity('Orchha','mp')">
-      <img src="images/mp_images/orchha_images/orchha_fort.jpg" alt="Orchha">
-      <div class="card-content">
-        <h3>Orchha</h3>
-        <p>Historic palaces & riverside beauty</p>
-      <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Jabalpur','mp')">
-      <img src="images/mp_images/jabalpur_images/bhedaghat.jpg" alt="Jabalpur">
-      <div class="card-content">
-        <h3>Jabalpur</h3>
-        <p>Bhedaghat Marble Rocks & waterfalls</p>
-     <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Khajuraho','mp')">
-      <img src="images/mp_images/khajuraho_images/temples.jpg" alt="Khajuraho">
-      <div class="card-content">
-        <h3>Khajuraho</h3>
-        <p>UNESCO temples & sculptures</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Mandu','mp')">
-      <img src="images/mp_images/mandu_images/jahaz_mahal.jpg" alt="Mandu">
-      <div class="card-content">
-        <h3>Mandu</h3>
-        <p>Historic ruins & romantic landscapes</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Shivpuri','mp')">
-      <img src="images/mp_images/shivpuri_images/madhav_national_park.jpg" alt="Shivpuri">
-      <div class="card-content">
-        <h3>Shivpuri</h3>
-        <p>Wildlife & national park adventures</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Pachmarhi','mp')">
-      <img src="images/mp_images/pachmarhi_images/dhoopgarh.jpg" alt="Pachmarhi">
-      <div class="card-content">
-        <h3>Pachmarhi</h3>
-        <p>Hill station in Satpura range, waterfalls & nature trails</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Rewa','mp')">
-      <img src="images/mp_images/rewa_images/keoti_falls.jpg" alt="Rewa">
-      <div class="card-content">
-        <h3>Rewa</h3>
-        <p>White tigers & cultural attractions</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Satna','mp')">
-      <img src="images/mp_images/satna_images/maihar.jpg" alt="Satna">
-      <div class="card-content">
-        <h3>Satna</h3>
-        <p>Nearby waterfalls & cultural spots</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-    <div class="card city-card" onclick="openCity('Chhatarpur','mp')">
-      <img src="images/mp_images/chhatarpur_images/khajuraho.jpg" alt="Chhatarpur">
-      <div class="card-content">
-        <h3>Chhatarpur</h3>
-        <p>Gateway to Khajuraho & nearby temples</p>
-        <span class="view-btn">View Plan</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  © 2026 RouteMitra.com
-</footer>
-
+    <section class="trip-banner"><div><p class="eyebrow">NOT SURE WHERE TO BEGIN?</p><h2>Start with Gwalior.</h2><p>A ready-made heritage route with top places and 1–4 day itinerary options.</p></div><a class="light-btn" href="cities/india/mp/gwalior.html">See Gwalior plan →</a></section>
+  </main>
+  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer>
 </body>
 </html>
