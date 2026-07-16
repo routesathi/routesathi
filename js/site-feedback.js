@@ -36,4 +36,8 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/gwalior-map-routes.js'; script.dataset.gwaliorRoutes = 'true'; document.body.append(script);
   }
+  if (location.pathname.includes('/cities/india/mp/') && !document.querySelector('.site-header') && !document.querySelector('script[data-legacy-gwalior-theme]')) {
+    const script = document.createElement('script');
+    script.src = '/routesathi/js/legacy-gwalior-theme.js'; script.dataset.legacyGwaliorTheme = 'true'; document.body.append(script);
+  }
 })();
