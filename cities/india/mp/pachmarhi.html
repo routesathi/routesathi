@@ -1,137 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="/routesathi/">
-  <title>Pachmarhi Travel Guide | RouteMitra</title>
-  <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="/routesathi/css/site-feedback.css"></head>
-
-<body>
-
-<!-- AUTH -->
-<div class="auth-top">
-  <a href="login.html">Log in</a> /
-  <a href="signup.html">Sign up</a>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="logo-section">
-    <img src="images/logo.png" class="logo">
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#cities">Cities</a>
-    <a href="contact.html">Contact</a>
-    <a href="feedback.html" class="btn-small">Give Feedback</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="gwalior-hero" style="background-image:url('images/mp_images/pachmarhi_images/dhoopgarh.jpg');">
-  <h1>Explore Pachmarhi</h1>
-  <p>Queen of Satpura | Hills, Waterfalls & Nature</p>
-</section>
-
-<!-- PLACES -->
-<section class="gwalior-section">
-  <h2>Top Tourist Places in Pachmarhi</h2>
-
-  <div class="places-wrapper">
-    <button class="scroll-btn left">❮</button>
-
-    <div class="places">
-
-      <div class="card">
-        <img src="images/pachmarhi_images/dhoopgarh.jpg">
-        <div>Dhoopgarh (Highest Point)</div>
-      </div>
-
-      <div class="card">
-        <img src="images/pachmarhi_images/bee_falls.jpg">
-        <div>Bee Falls</div>
-      </div>
-
-      <div class="card">
-        <img src="images/pachmarhi_images/apsara_vihar.jpg">
-        <div>Apsara Vihar</div>
-      </div>
-
-      <div class="card">
-        <img src="images/pachmarhi_images/jata_shankar.jpg">
-        <div>Jata Shankar Cave</div>
-      </div>
-
-      <div class="card">
-        <img src="images/pachmarhi_images/handi_khoh.jpg">
-        <div>Handi Khoh</div>
-      </div>
-
-      <div class="card">
-        <img src="images/pachmarhi_images/pandav_caves.jpg">
-        <div>Pandav Caves</div>
-      </div>
-
-    </div>
-
-    <button class="scroll-btn right">❯</button>
-  </div>
-</section>
-
-<!-- ROUTE -->
-<section class="section">
-  <h2>Choose Your Travel Plan</h2>
-
-  <div class="buttons">
-    <button onclick="showPlan(1)">1 Day</button>
-    <button onclick="showPlan(2)">2 Day</button>
-    <button onclick="showPlan(3)">3 Day</button>
-  </div>
-
-  <div id="planDisplay" class="plan-box">
-    Click a plan to see route.
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 RouteMitra.com
-</footer>
-
-<script>
-
-const plans = {
-
-1: `Day 1 Plan:
-Morning: Pandav Caves + Jata Shankar
-Afternoon: Bee Falls + Apsara Vihar
-Evening: Sunset at Dhoopgarh`,
-
-2: `Day 1: Caves + Waterfalls
-Day 2: Dhoopgarh + Handi Khoh + Nature Explore`,
-
-3: `Day 1: Local Sightseeing
-Day 2: Waterfalls + Sunset Points
-Day 3: Relax + Forest + Photography`
-
-};
-
-function showPlan(day){
-  document.getElementById("planDisplay").innerText = plans[day];
-}
-
-/* SCROLL */
-const scrollContainer = document.querySelector(".places");
-const leftBtn = document.querySelector(".scroll-btn.left");
-const rightBtn = document.querySelector(".scroll-btn.right");
-
-rightBtn.onclick = () => scrollContainer.scrollBy({left:300, behavior:"smooth"});
-leftBtn.onclick = () => scrollContainer.scrollBy({left:-300, behavior:"smooth"});
-
-</script>
-
-<script src="/routesathi/js/site-feedback.js"></script></body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/routesathi/"><title>Pachmarhi Travel Guide | RouteSathi</title><meta name="description" content="A practical Pachmarhi plan with forest permits, two unhurried sightseeing days, food, stays and optional trek or safari."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/mp.css"><link rel="stylesheet" href="css/gwalior.css"><link rel="stylesheet" href="css/language.css"><link rel="stylesheet" href="/routesathi/css/site-feedback.css"></head>
+<body><header class="site-header"><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><nav><a href="cities/mp.html">Madhya Pradesh</a><a href="#plans">Day plans</a><a href="#permit">Permit first</a></nav><div class="header-actions"><button class="language-toggle" type="button" data-language-toggle>हिंदी</button><a class="header-cta" href="#plans">Plan Pachmarhi</a></div></header>
+<main>
+<section class="g-hero" style="background:linear-gradient(90deg,rgba(11,43,36,.92),rgba(11,43,36,.38)),url('images/mp_images/pachmarhi_images/dhoopgarh.jpg') center/cover"><div><p class="eyebrow">PACHMARHI · QUEEN OF SATPURA</p><h1>Forest days,<br><em>done without a rush.</em></h1><p>Arrive, rest, then give Pachmarhi two full days: waterfalls and forest on one day; caves, valleys and town on the next. Keep a third sightseeing day only for a trek or safari.</p><div class="hero-actions"><a class="primary-btn" href="#plans">Choose your plan <span>→</span></a><a class="ghost-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pachmarhi+Madhya+Pradesh">Open Pachmarhi in Maps ↗</a></div></div><aside><strong>IDEAL TRIP</strong><span>3 nights</span><small>Arrival day + 2 full sightseeing days. Add a day for Chauragarh or safari.</small></aside></section>
+<section class="promise"><div><b>01</b><span><strong>Permit before route</strong>Forest-side places can require a permit and authorised vehicle.</span></div><div><b>02</b><span><strong>One circuit per day</strong>Falls and viewpoints are grouped so you do not drive back and forth.</span></div><div><b>03</b><span><strong>Weather decides</strong>Waterfall access and forest timings can change with rain, fog or local orders.</span></div></section>
+<section class="start-here"><div><p class="eyebrow">FIRST, PICK YOUR TIME</p><h2>How long do you have?</h2><p>Do not count the Pipariya/Bhopal transfer as sightseeing time. Pachmarhi is better when you slow down.</p></div><div class="pace-grid"><a href="#arrival"><strong>Arrival day</strong><span>Check in + market</span><small>Keep this light after travel.</small></a><a href="#plans"><strong>2 full days</strong><span>Core Pachmarhi</span><small>Our recommended plan.</small></a><a href="#extra"><strong>Extra day</strong><span>Trek or safari</span><small>Choose one, never both in a hurry.</small></a></div></section>
+<section class="toolbox" id="permit"><div><p class="eyebrow">DO THIS FIRST</p><h2>Permit, vehicle<br>and weather check.</h2></div><div class="tool-grid"><article><h3>Book or ask early</h3><p>Before breakfast, confirm that day's forest permit and authorised Gypsy/vehicle at the local forest counter or through the official permit system. Weekend queues can be longer.</p><a target="_blank" rel="noopener" href="https://forest.mponline.gov.in/">Open official forest portal ↗</a></article><article><h3>Wednesday warning</h3><p>Forest sightseeing is commonly restricted from Wednesday afternoon for maintenance. Do town sights, arrival or market on Wednesday, and confirm at the gate.</p></article><article><h3>Wear the right shoes</h3><p>Bee Fall, Apsara Vihar, Reechgarh, caves and Chauragarh involve steps, uneven rocks or short trails. Carry water; do not rely on slippers.</p></article><article><h3>Monsoon rule</h3><p>Beautiful season, but access, visibility and water levels can change quickly. Never enter a closed trail or cross a flowing stream.</p></article></div></section>
+<section class="plans" id="plans"><div class="plan-title"><div><p class="eyebrow">YOUR READY ROUTE</p><h2>Forest first.<br>Town second.</h2></div><p>Times are practical estimates, not a promise. Start early and accept a changed plan when forest staff close a point for weather or safety.</p></div>
+<div class="day-plan" id="arrival"><div class="day-heading"><div><p class="plan-label">DAY 0 · ARRIVAL</p><h3>Reach, settle, breathe.</h3><p>Pipariya is about 54 km by road. After check-in, do not chase waterfalls; save energy for the two proper days ahead.</p></div><div class="day-stat"><strong>2–4 hrs</strong><span>Keep it easy</span></div></div><div class="route-strip"><span>Check in</span><i>→</i><span>Permit enquiry</span><i>→</i><span>Pachmarhi Lake</span><i>→</i><span>Market dinner</span></div><div class="timeline"><article><time>16:00–18:00</time><div><p class="type place">EASY EVENING</p><h4>Pachmarhi Lake and a short market walk</h4><p>Use this time to buy water, rain cover and snacks for tomorrow. Ask your hotel or the official counter about permit, vehicle and weather status.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pachmarhi+Lake">Open lake in Maps ↗</a></div></article><article><time>19:00</time><div><p class="type food">DINNER</p><h4>Eat close to your stay</h4><p>Do not take a long detour on arrival. Choose a clean, busy place near the market or hotel and rest early.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=restaurants+Pachmarhi">Find current dinner options ↗</a></div></article></div></div>
+<div class="day-plan" id="forest-day"><div class="day-heading"><div><p class="plan-label">DAY 1 · FOREST & WATERFALLS</p><h3>The waterfall circuit</h3><p>Keep this day for the forest-side places. Start at the permit counter, follow the authorised route and finish at Dhoopgarh sunset only if weather is clear.</p></div><div class="day-stat"><strong>8–10 hrs</strong><span>Start: 7:30 AM</span></div></div><div class="route-strip"><span>Permit / Gypsy</span><i>→</i><span>Bee Fall</span><i>→</i><span>Apsara Vihar</span><i>→</i><span>Reechgarh</span><i>→</i><span>Dhoopgarh</span></div><div class="timeline"><article><time>07:30–08:15</time><div><p class="type place">START HERE</p><h4>Permit and vehicle confirmation</h4><p>Confirm the day’s open points, exit time and vehicle arrangement before leaving. Do not pay an unofficial person without a receipt or clear booking detail.</p></div></article><article><time>09:00–11:00</time><div><p class="type place">WATERFALL</p><h4>Bee Fall (Jamuna Prapat)</h4><p>Go early for cooler steps and less crowd. It involves a downhill/uphill walk; allow time for the climb back.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bee+Falls+Pachmarhi">Open Bee Fall in Maps ↗</a></div></article><article><time>11:30–13:15</time><div><p class="type place">POOL & TRAIL</p><h4>Apsara Vihar / Panchali Kund</h4><p>A shorter downhill trail and natural pool area. Follow local safety directions; avoid swimming when water conditions are unsafe.</p></div></article><article><time>15:30–16:45</time><div><p class="type place">ROCK FORMATION</p><h4>Reechgarh</h4><p>Uneven natural cave terrain; go slowly and skip it if anyone in your group is uncomfortable with rough walking.</p></div></article><article><time>17:30–sunset</time><div><p class="type market">VIEWPOINT</p><h4>Dhoopgarh sunset</h4><p>Highest point in the Satpuras. On foggy or rainy days, skip the sunset chase and return before the forest exit time.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Dhoopgarh+Pachmarhi">Open Dhoopgarh in Maps ↗</a></div></article></div></div>
+<div class="day-plan" id="town-day"><div class="day-heading"><div><p class="plan-label">DAY 2 · CAVES, VALLEYS & TOWN</p><h3>Pachmarhi beyond the falls</h3><p>Less water, more landscape and history. This circuit is easier to adapt if the forest route is partly restricted.</p></div><div class="day-stat"><strong>7–9 hrs</strong><span>Start: 8:00 AM</span></div></div><div class="route-strip"><span>Jata Shankar</span><i>→</i><span>Handi Khoh</span><i>→</i><span>Priyadarshini</span><i>→</i><span>Pandav Caves</span><i>→</i><span>Lake / market</span></div><div class="timeline"><article><time>08:00–10:00</time><div><p class="type place">CAVE SHRINE</p><h4>Jata Shankar</h4><p>A rocky cave shrine with steps and uneven ground. Visit respectfully and give elders/children extra time on the descent.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Jata+Shankar+Pachmarhi">Open Jata Shankar in Maps ↗</a></div></article><article><time>10:30–12:30</time><div><p class="type place">VIEWPOINT CIRCUIT</p><h4>Handi Khoh and Priyadarshini Point</h4><p>Keep these viewpoints together. Priyadarshini is associated with Captain Forsyth’s view of the valley; do not cross barriers for photos.</p></div></article><article><time>13:00–14:00</time><div><p class="type food">LUNCH</p><h4>Back in town</h4><p>Return towards town for lunch rather than searching for food deep in the forest. Keep water and simple snacks in your bag.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=restaurants+Pachmarhi">Find current lunch options ↗</a></div></article><article><time>15:30–17:30</time><div><p class="type place">HERITAGE</p><h4>Pandav Caves and Bison Museum</h4><p>An easy heritage stop near town. Use the remaining evening for the lake or market—not another long forest drive.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pandav+Caves+Pachmarhi">Open Pandav Caves in Maps ↗</a></div></article></div></div></section>
+<section class="more-places" id="extra"><div><p class="eyebrow">EXTRA DAY · PICK ONE</p><h2>Give the big experience<br>its own day.</h2><p>Do not squeeze an exhausting trek or real wildlife safari after two packed sightseeing days.</p></div><div class="extra-grid"><article><b>FOR FIT TRAVELLERS</b><h3>Chauragarh trek</h3><p>A temple climb with many steps. Start early, carry water and make it the main event of the day—especially for families or first-time trekkers.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chauragarh+Temple+Pachmarhi">Open Chauragarh in Maps ↗</a></article><article><b>WILDLIFE DAY</b><h3>Satpura Tiger Reserve safari</h3><p>This is different from Pachmarhi sightseeing. Book the designated safari separately, follow its permit/guide rules and check seasonal availability.</p><a target="_blank" rel="noopener" href="https://forest.mponline.gov.in/">Check official permit portal ↗</a></article><article><b>SPIRITUAL OUTING</b><h3>Mahadeo & Gupt Mahadev</h3><p>Choose this as a quieter cave-temple day, subject to access. Gupt Mahadev is narrow inside, so it may not suit everyone.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gupt+Mahadev+Pachmarhi">Open Gupt Mahadev in Maps ↗</a></article><article><b>STAY SMART</b><h3>Where to stay</h3><p>Stay near the main market/cantonment for easy dinners and vehicle pickup. Book ahead for weekends, holidays and monsoon.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=hotels+Pachmarhi">See current stays in Maps ↗</a></article></div></section>
+<section class="toolbox"><div><p class="eyebrow">BEFORE YOU LEAVE</p><h2>Small checks.<br>Better hill trip.</h2></div><div class="tool-grid"><article><h3>Save offline maps</h3><p>Mobile signal can be patchy on forest roads. Download the day’s route before leaving town.</p></article><article><h3>Food without guessing</h3><p>Use current Maps reviews for breakfast, lunch and dinner. Carry a refillable bottle and dry snacks for forest hours.</p></article><article><h3>Family reality check</h3><p>Do not force Bee Fall steps, Reechgarh or Chauragarh on anyone who cannot walk safely. Pick lake, caves and viewpoints instead.</p></article><article><h3>Last checked</h3><p>RouteSathi Pachmarhi research updated 16 July 2026. Verify permit, gate timing and weather on the same day.</p></article></div></section>
+</main><footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer><script src="js/language-toggle.js"></script><script src="js/pachmarhi-tools.js"></script><script src="/routesathi/js/site-feedback.js"></script></body></html>
