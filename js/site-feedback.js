@@ -32,4 +32,8 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/bhopal-tools.js'; script.dataset.bhopalTools = 'true'; document.body.append(script);
   }
+  if (location.pathname.endsWith('/cities/india/mp/gwalior.html') && !document.querySelector('script[data-gwalior-routes]')) {
+    const script = document.createElement('script');
+    script.src = '/routesathi/js/gwalior-map-routes.js'; script.dataset.gwaliorRoutes = 'true'; document.body.append(script);
+  }
 })();
