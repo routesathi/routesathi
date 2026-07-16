@@ -36,8 +36,8 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/gwalior-map-routes.js'; script.dataset.gwaliorRoutes = 'true'; document.body.append(script);
   }
-  if (location.pathname.includes('/cities/india/mp/') && !document.querySelector('.site-header') && !document.querySelector('script[data-legacy-gwalior-theme]')) {
+  if (location.pathname.endsWith('/cities/india/mp/ujjain.html') && !document.querySelector('script[data-ujjain-gwalior-style]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/legacy-gwalior-theme.js'; script.dataset.legacyGwaliorTheme = 'true'; document.body.append(script);
+    script.src = '/routesathi/js/ujjain-gwalior-style.js'; script.dataset.ujjainGwaliorStyle = 'true'; document.body.append(script);
   }
 })();
