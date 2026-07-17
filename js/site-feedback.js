@@ -40,4 +40,8 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/ujjain-gwalior-style.js'; script.dataset.ujjainGwaliorStyle = 'true'; document.body.append(script);
   }
+  if (location.pathname.endsWith('/cities/india/mp/pachmarhi.html') && !document.querySelector('script[data-pachmarhi-gwalior-layout]')) {
+    const script = document.createElement('script');
+    script.src = '/routesathi/js/pachmarhi-gwalior-layout.js'; script.dataset.pachmarhiGwaliorLayout = 'true'; document.body.append(script);
+  }
 })();
