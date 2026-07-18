@@ -44,4 +44,22 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/pachmarhi-gwalior-layout.js'; script.dataset.pachmarhiGwaliorLayout = 'true'; document.body.append(script);
   }
+
+  const photoCovers = {
+    '/cities/india/mp/maheshwar.html': { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/MaheshwarFort.jpg?width=1600', credit: 'Photo: Dusanesurbhi · CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:MaheshwarFort.jpg' },
+    '/cities/india/mp/omkareshwar.html': { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Omkareshwar.JPG?width=1600', credit: 'Photo: Ssriram mt · Public domain', source: 'https://commons.wikimedia.org/wiki/File:Omkareshwar.JPG' }
+  };
+  const cover = photoCovers[location.pathname];
+  if (cover) {
+    const hero = document.querySelector('.g-hero');
+    if (hero) {
+      hero.style.backgroundImage = `linear-gradient(120deg,rgba(20,50,45,.72),rgba(85,115,86,.42)),url('${cover.url}')`;
+      hero.style.backgroundSize = 'cover'; hero.style.backgroundPosition = 'center';
+      const aside = hero.querySelector('aside');
+      if (aside && !aside.querySelector('.route-photo-credit')) {
+        const credit = document.createElement('a'); credit.className = 'route-photo-credit'; credit.href = cover.source; credit.target = '_blank'; credit.rel = 'noopener'; credit.textContent = cover.credit;
+        credit.style.cssText = 'display:block;margin-top:12px;font-size:10px;line-height:1.35;color:inherit;opacity:.75;text-decoration:underline'; aside.append(credit);
+      }
+    }
+  }
 })();
