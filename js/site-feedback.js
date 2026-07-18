@@ -44,6 +44,10 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/pachmarhi-gwalior-layout.js'; script.dataset.pachmarhiGwaliorLayout = 'true'; document.body.append(script);
   }
+  if ((location.pathname.endsWith('/cities/india/mp/indore.html') || location.pathname.endsWith('/cities/india/mp/ujjain.html')) && !document.querySelector('script[data-nearby-trips]')) {
+    const script = document.createElement('script');
+    script.src = '/routesathi/js/nearby-trips.js'; script.dataset.nearbyTrips = 'true'; document.body.append(script);
+  }
 
   const photoCovers = {
     '/cities/india/mp/maheshwar.html': { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/MaheshwarFort.jpg?width=1600', credit: 'Photo: Dusanesurbhi · CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:MaheshwarFort.jpg' },
