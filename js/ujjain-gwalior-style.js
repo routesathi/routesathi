@@ -1,6 +1,6 @@
 (() => {
   if (!location.pathname.endsWith('/cities/india/mp/ujjain.html')) return;
-  const style = document.createElement('style');
-  style.textContent = `.g-hero{position:relative;isolation:isolate}.g-hero>*{position:relative;z-index:1}.g-hero:after{content:'';position:absolute;inset:0;background:rgba(12,40,35,.42);z-index:0}.g-hero aside{background:#fffdf1e8!important}.uj-route-panel{padding:0!important;margin-top:20px!important;background:transparent!important;border:0!important;border-radius:0!important}.uj-route-panel strong{display:none!important}.uj-route-panel div{display:flex;gap:10px;flex-wrap:wrap}.uj-route-panel a{border:0!important;border-radius:0!important;background:var(--lime)!important;color:var(--ink)!important;padding:13px 16px!important;font-size:13px!important;font-weight:700!important}.uj-route-panel a:hover{background:#fff!important}#ujjain-plan-tools{background:#f7f1e5!important}.uj-tools-inner h2{color:#183b35!important}.uj-tools-inner p{color:#60736b!important}.uj-tool-actions button{border-radius:0!important;border-color:#183b35!important;color:#183b35!important}.uj-tool-actions button:hover,.uj-tool-actions button.selected{background:#183b35!important;color:#fff!important}.uj-tool-actions .save{background:#183b35!important;border-color:#183b35!important}.uj-result{border-left-color:#d85e39!important;color:#60736b!important}.uj-result strong{color:#183b35!important}.uj-result a{color:#183b35!important}@media(max-width:850px){.g-hero:after{background:rgba(12,40,35,.5)}}`;
-  document.head.appendChild(style);
+  const toolkit = document.querySelector('.rs-toolkit');
+  const morePlaces = document.querySelector('.more-places');
+  if (toolkit && morePlaces) morePlaces.insertAdjacentElement('afterend', toolkit);
 })();
