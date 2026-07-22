@@ -1,4 +1,18 @@
 (() => {
+  // RouteSathi Google Analytics 4: loaded once on every page that uses this shared file.
+  const gaId = 'G-L5NDQC69K8';
+  if (!window.__routeSathiGaLoaded) {
+    window.__routeSathiGaLoaded = true;
+    const gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+    document.head.append(gaScript);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', gaId);
+  }
+
   const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfP4Y6uX8kzm2hHp0S-Tw9y8nqujFOVUKpZRgCJp8VTkpHShg/viewform?usp=publish-editor';
   const openHindi = () => location.href = `https://translate.google.com/translate?sl=en&tl=hi&u=${encodeURIComponent(location.href)}`;
 
