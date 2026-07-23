@@ -80,6 +80,10 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/arrive-smart.js'; script.dataset.arriveSmart = 'true'; document.body.append(script);
   }
+  if (location.pathname.match(/\/cities\/india\/mp\/.+\.html$/) && !document.querySelector('script[data-share-plan]')) {
+    const script = document.createElement('script');
+    script.src = '/routesathi/js/share-plan.js'; script.dataset.sharePlan = 'true'; document.body.append(script);
+  }
 
   const photoCovers = {
     '/cities/india/mp/maheshwar.html': { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/MaheshwarFort.jpg?width=1600', credit: 'Photo: Dusanesurbhi · CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:MaheshwarFort.jpg' },
