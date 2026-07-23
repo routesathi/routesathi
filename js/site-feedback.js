@@ -76,6 +76,10 @@
     const script = document.createElement('script');
     script.src = '/routesathi/js/wildlife-section.js'; script.dataset.wildlifeSection = 'true'; document.body.append(script);
   }
+  if (location.pathname.match(/\/cities\/india\/mp\/(gwalior|bhopal|indore|ujjain|omkareshwar|maheshwar|orchha|jabalpur|khajuraho|mandu|pachmarhi)\.html$/) && !document.querySelector('script[data-arrive-smart]')) {
+    const script = document.createElement('script');
+    script.src = '/routesathi/js/arrive-smart.js'; script.dataset.arriveSmart = 'true'; document.body.append(script);
+  }
 
   const photoCovers = {
     '/cities/india/mp/maheshwar.html': { url: 'https://commons.wikimedia.org/wiki/Special:FilePath/MaheshwarFort.jpg?width=1600', credit: 'Photo: Dusanesurbhi · CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:MaheshwarFort.jpg' },
