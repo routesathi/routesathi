@@ -11,12 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mp.css">
   <link rel="stylesheet" href="css/site-feedback.css">
+  <link rel="stylesheet" href="css/language.css">
   <style>
     :root { --ink:#123d35; --cream:#f7f1e5; --paper:#fffdf8; --orange:#dc633d; --lime:#d7ec55; --muted:#58716c; }
     * { box-sizing:border-box; }
     body { margin:0; color:var(--ink); background:var(--cream); font-family:"DM Sans",sans-serif; }
     .top { max-width:1160px; margin:auto; padding:20px 28px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .brand { color:var(--ink); text-decoration:none; font-weight:700; font-size:1.16rem; }
+    .brand { color:var(--ink); text-decoration:none; font-weight:700; font-size:23px; letter-spacing:-1.3px; }
     .nav { display:flex; flex-wrap:wrap; gap:16px; }
     .nav a { color:var(--ink); font-weight:600; text-decoration:none; font-size:.92rem; }
     .hero { background:var(--ink); color:white; padding:72px 28px 64px; }
@@ -50,16 +51,21 @@
       .picks { grid-template-columns:1fr; }
       .season { padding:28px 0 32px; }
     }
+    @media (max-width:480px) { .brand { font-size:20px; } }
   </style>
 </head>
 <body>
-  <header class="top">
-    <a class="brand" href="index.html">RouteSathi</a>
-    <nav class="nav" aria-label="Main navigation">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span>&#8599;</span>route<strong>sathi</strong></a>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="cities/mp.html">All MP cities</a>
-      <a href="ready-made-routes.html">Ready-made routes</a>
+      <a href="index.html#travel-style">Travel styles</a>
     </nav>
+    <div class="header-actions">
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Switch website language">&#2361;&#2367;&#2306;&#2342;&#2368;</button>
+      <a class="header-cta" href="cities/mp.html">Plan your MP trip</a>
+    </div>
   </header>
 
   <section class="hero">
@@ -140,6 +146,7 @@
   </main>
 
   <footer>RouteSathi · Make every MP trip easier to plan.</footer>
+  <script src="js/language-toggle.js"></script>
   <script src="js/site-feedback.js"></script>
 </body>
 </html>
