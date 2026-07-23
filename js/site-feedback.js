@@ -35,7 +35,7 @@
   const footer = document.querySelector('footer');
   if (footer && !footer.querySelector('[data-route-privacy]')) {
     const privacy = document.createElement('a');
-    privacy.href = '/routesathi/privacy.html';
+    privacy.href = '/privacy.html';
     privacy.className = 'route-legal-link';
     privacy.dataset.routePrivacy = 'true';
     privacy.textContent = 'Privacy & travel disclaimer';
@@ -54,35 +54,35 @@
 
   if (location.pathname.endsWith('/cities/india/mp/bhopal.html') && !document.querySelector('script[data-bhopal-tools]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/bhopal-tools.js'; script.dataset.bhopalTools = 'true'; document.body.append(script);
+    script.src = '/js/bhopal-tools.js'; script.dataset.bhopalTools = 'true'; document.body.append(script);
   }
   if (location.pathname.endsWith('/cities/india/mp/gwalior.html') && !document.querySelector('script[data-gwalior-routes]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/gwalior-map-routes.js'; script.dataset.gwaliorRoutes = 'true'; document.body.append(script);
+    script.src = '/js/gwalior-map-routes.js'; script.dataset.gwaliorRoutes = 'true'; document.body.append(script);
   }
   if (location.pathname.endsWith('/cities/india/mp/ujjain.html') && !document.querySelector('script[data-ujjain-gwalior-style]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/ujjain-gwalior-style.js'; script.dataset.ujjainGwaliorStyle = 'true'; document.body.append(script);
+    script.src = '/js/ujjain-gwalior-style.js'; script.dataset.ujjainGwaliorStyle = 'true'; document.body.append(script);
   }
   if (location.pathname.endsWith('/cities/india/mp/pachmarhi.html') && !document.querySelector('script[data-pachmarhi-gwalior-layout]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/pachmarhi-gwalior-layout.js'; script.dataset.pachmarhiGwaliorLayout = 'true'; document.body.append(script);
+    script.src = '/js/pachmarhi-gwalior-layout.js'; script.dataset.pachmarhiGwaliorLayout = 'true'; document.body.append(script);
   }
   if ((location.pathname.endsWith('/cities/india/mp/indore.html') || location.pathname.endsWith('/cities/india/mp/ujjain.html')) && !document.querySelector('script[data-nearby-trips]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/nearby-trips.js'; script.dataset.nearbyTrips = 'true'; document.body.append(script);
+    script.src = '/js/nearby-trips.js'; script.dataset.nearbyTrips = 'true'; document.body.append(script);
   }
   if (location.pathname.endsWith('/cities/mp.html') && !document.querySelector('script[data-wildlife-section]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/wildlife-section.js'; script.dataset.wildlifeSection = 'true'; document.body.append(script);
+    script.src = '/js/wildlife-section.js'; script.dataset.wildlifeSection = 'true'; document.body.append(script);
   }
   if (location.pathname.match(/\/cities\/india\/mp\/(gwalior|bhopal|indore|ujjain|omkareshwar|maheshwar|orchha|jabalpur|khajuraho|mandu|pachmarhi)\.html$/) && !document.querySelector('script[data-arrive-smart]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/arrive-smart.js'; script.dataset.arriveSmart = 'true'; document.body.append(script);
+    script.src = '/js/arrive-smart.js'; script.dataset.arriveSmart = 'true'; document.body.append(script);
   }
   if (location.pathname.match(/\/cities\/india\/mp\/.+\.html$/) && !document.querySelector('script[data-share-plan]')) {
     const script = document.createElement('script');
-    script.src = '/routesathi/js/share-plan.js'; script.dataset.sharePlan = 'true'; document.body.append(script);
+    script.src = '/js/share-plan.js'; script.dataset.sharePlan = 'true'; document.body.append(script);
   }
 
   const photoCovers = {
