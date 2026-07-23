@@ -32,6 +32,16 @@
     language.addEventListener('click', openHindi); document.body.append(language);
   }
 
+  const footer = document.querySelector('footer');
+  if (footer && !footer.querySelector('[data-route-privacy]')) {
+    const privacy = document.createElement('a');
+    privacy.href = '/routesathi/privacy.html';
+    privacy.className = 'route-legal-link';
+    privacy.dataset.routePrivacy = 'true';
+    privacy.textContent = 'Privacy & travel disclaimer';
+    footer.append(privacy);
+  }
+
   const isCity = location.pathname.includes('/cities/india/mp/');
   if (isCity && !document.querySelector('.route-checklist')) {
     const main = document.querySelector('main');
