@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://routesathi.github.io/routesathi/sitemap.xml
+Sitemap: https://routesathi.com/sitemap.xml
