@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <base href="/">
+  <title>Request a Custom MP Trip Plan | RouteSathi</title>
+  <meta name="description" content="Tell RouteSathi about your Madhya Pradesh trip and request a practical custom plan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mp.css"><link rel="stylesheet" href="css/language.css"><link rel="stylesheet" href="css/site-feedback.css">
+  <style>
+    .custom-hero{background:#183b35;color:#fff;padding:82px 12% 64px}.custom-hero .eyebrow{color:#d9ee63}.custom-hero h1{font:600 clamp(42px,6vw,74px)/.96 'Playfair Display';letter-spacing:-2.5px;margin:10px 0 16px}.custom-hero p:last-child{max-width:650px;line-height:1.65;color:#dce6de}.custom-wrap{max-width:900px;margin:0 auto;padding:62px 28px 78px}.custom-note{background:#e2ebc0;padding:20px 22px;line-height:1.6;color:#183b35}.custom-note p{margin:0}.custom-form{margin-top:24px;background:#fffdf5;padding:34px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.custom-form label{display:grid;gap:8px;font-size:11px;font-weight:800;letter-spacing:1px;color:#183b35}.custom-form input,.custom-form select,.custom-form textarea{font:500 15px 'DM Sans';color:#183b35;background:#fff;border:1px solid #d7d2c7;padding:13px}.custom-form textarea{min-height:130px;resize:vertical}.custom-form .full{grid-column:1/-1}.custom-form button{border:0;background:#d85e39;color:#fff;padding:15px 20px;font:800 14px 'DM Sans';cursor:pointer;justify-self:start}.custom-form small{grid-column:1/-1;color:#60736b;line-height:1.55}.reply-note{margin:24px 0 0;color:#60736b;line-height:1.65}@media(max-width:700px){.custom-hero{padding:66px 8% 52px}.custom-wrap{padding:42px 18px 58px}.custom-form{padding:24px;grid-template-columns:1fr}.custom-form .full{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><nav><a href="index.html">Home</a><a href="cities/mp.html">All MP cities</a><a href="mp-routes.html">Ready-made routes</a></nav><div class="header-actions"><button class="language-toggle" type="button" data-language-toggle aria-label="Switch website language">हिंदी</button><a class="header-cta" href="cities/mp.html">Plan your MP trip</a></div></header>
+  <main>
+    <section class="custom-hero"><p class="eyebrow">ROUTESATHI HELP</p><h1>Need a plan made<br>for your own trip?</h1><p>Tell us your route, dates and travel style. We will first see whether a practical Madhya Pradesh plan can be made for you—without rushed sightseeing or random suggestions.</p></section>
+    <section class="custom-wrap"><div class="custom-note"><p><strong>This is a trip request, not a booking.</strong> RouteSathi does not take hotel, ticket or payment details here. We will only use your email to reply about your travel-plan request.</p></div>
+      <form class="custom-form" id="customTripForm"><label>YOUR NAME<input id="name" required autocomplete="name" placeholder="Your name"></label><label>YOUR EMAIL<input id="email" required type="email" autocomplete="email" placeholder="you@example.com"></label><label>WHERE DO YOU WANT TO GO?<input id="destination" required placeholder="Example: Gwalior + Orchha"></label><label>HOW MANY DAYS?<select id="days"><option>1 day</option><option>2 days</option><option>3 days</option><option>4 days</option><option>5+ days</option></select></label><label>WHO IS TRAVELLING?<select id="travellers"><option>Solo</option><option>Couple</option><option>Family</option><option>Friends group</option></select></label><label>BUDGET STYLE<select id="budget"><option>Budget</option><option>Comfortable</option><option>Premium</option><option>Not sure yet</option></select></label><label class="full">TRAVEL DATES OR MONTH<input id="dates" required placeholder="Example: 15–17 October, or November weekend"></label><label class="full">WHAT DO YOU WANT HELP WITH?<textarea id="details" required placeholder="Places you like, food/temple/wildlife interest, arrival city, any senior citizen or child travelling, and anything important for your trip."></textarea></label><button type="submit">Create my request email →</button><small>After clicking, your email app will open with the request ready for <strong>routesathi3@gmail.com</strong>. Check the details, then send it yourself.</small></form>
+      <p class="reply-note">Please give RouteSathi time to check route practicality and official timing requirements before expecting a reply.</p>
+    </section>
+  </main>
+  <footer><a class="brand" href="index.html"><span>↗</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>© 2026 RouteSathi</p></footer>
+  <script>
+    document.getElementById('customTripForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const value = id => document.getElementById(id).value.trim();
+      const body = ['RouteSathi Custom Trip Plan Request','',`Name: ${value('name')}`,`Reply email: ${value('email')}`,`Destination: ${value('destination')}`,`Days: ${value('days')}`,`Travellers: ${value('travellers')}`,`Budget style: ${value('budget')}`,`Dates/month: ${value('dates')}`,'',`Trip details: ${value('details')}`].join('\n');
+      window.location.href = `mailto:routesathi3@gmail.com?subject=${encodeURIComponent('Custom MP Trip Plan Request')}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+  <script src="js/language-toggle.js"></script><script src="js/site-feedback.js"></script>
+</body>
+</html>
