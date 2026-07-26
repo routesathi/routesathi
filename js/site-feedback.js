@@ -52,6 +52,44 @@
     }
   }
 
+  // Every guide should lead naturally to other useful RouteSathi guides.
+  // This keeps city pages connected without filling the header with too many links.
+  const relatedGuides = {
+    gwalior: [['Orchha', 'orchha'], ['Khajuraho', 'khajuraho'], ['Bhopal', 'bhopal']],
+    bhopal: [['Sanchi / nearby heritage', 'orchha'], ['Pachmarhi', 'pachmarhi'], ['Jabalpur', 'jabalpur']],
+    indore: [['Ujjain', 'ujjain'], ['Mandu', 'mandu'], ['Maheshwar', 'maheshwar']],
+    ujjain: [['Indore', 'indore'], ['Mandu', 'mandu'], ['Omkareshwar', 'omkareshwar']],
+    pachmarhi: [['Satpura / Madhai', 'satpura'], ['Jabalpur', 'jabalpur'], ['Bhopal', 'bhopal']],
+    jabalpur: [['Panna', 'panna'], ['Kanha', 'kanha'], ['Pachmarhi', 'pachmarhi']],
+    khajuraho: [['Panna', 'panna'], ['Orchha', 'orchha'], ['Gwalior', 'gwalior']],
+    mandu: [['Maheshwar', 'maheshwar'], ['Indore', 'indore'], ['Omkareshwar', 'omkareshwar']],
+    orchha: [['Khajuraho', 'khajuraho'], ['Gwalior', 'gwalior'], ['Panna', 'panna']],
+    omkareshwar: [['Maheshwar', 'maheshwar'], ['Indore', 'indore'], ['Ujjain', 'ujjain']],
+    maheshwar: [['Mandu', 'mandu'], ['Indore', 'indore'], ['Omkareshwar', 'omkareshwar']],
+    kanha: [['Pench', 'pench'], ['Bandhavgarh', 'bandhavgarh'], ['Jabalpur', 'jabalpur']],
+    panna: [['Khajuraho', 'khajuraho'], ['Bandhavgarh', 'bandhavgarh'], ['Jabalpur', 'jabalpur']],
+    satpura: [['Pachmarhi', 'pachmarhi'], ['Pench', 'pench'], ['Bhopal', 'bhopal']],
+    bandhavgarh: [['Panna', 'panna'], ['Kanha', 'kanha'], ['Jabalpur', 'jabalpur']],
+    pench: [['Kanha', 'kanha'], ['Satpura / Madhai', 'satpura'], ['Pachmarhi', 'pachmarhi']]
+  };
+  if (isCity && !document.querySelector('.route-related-guides')) {
+    const slug = location.pathname.split('/').pop().replace('.html', '');
+    const links = relatedGuides[slug];
+    const main = document.querySelector('main');
+    if (main && links) {
+      const section = document.createElement('section');
+      section.className = 'route-related-guides';
+      section.innerHTML = `<p class="eyebrow">KEEP EXPLORING MP</p><h2>Planning more than<br>one destination?</h2><p>Use these connected guides next, or browse every RouteSathi destination.</p><div>${links.map(([name, key]) => `<a href="/cities/india/mp/${key}.html">${name} <span>→</span></a>`).join('')}<a class="route-all-guides" href="/cities/mp-destinations.html">All MP guides <span>→</span></a></div>`;
+      main.append(section);
+    }
+  }
+  if (isCity && !document.querySelector('style[data-route-related-guides]')) {
+    const relatedStyle = document.createElement('style');
+    relatedStyle.dataset.routeRelatedGuides = 'true';
+    relatedStyle.textContent = '.route-related-guides{padding:72px 12%;background:#f7f1e5;color:#183b35}.route-related-guides h2{font:600 clamp(34px,4vw,54px)/1 "Playfair Display",serif;letter-spacing:-1.5px;margin:8px 0 14px}.route-related-guides>p:not(.eyebrow){max-width:580px;color:#60736b;line-height:1.65}.route-related-guides>div{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.route-related-guides a{background:#fffdf5;color:#183b35;text-decoration:none;padding:13px 15px;font-size:13px;font-weight:700;border:1px solid #e0ddcf}.route-related-guides a:hover{background:#dbe87b}.route-related-guides a span{color:#d85e39}.route-related-guides .route-all-guides{background:#183b35;color:#fff}.route-related-guides .route-all-guides span{color:#dbe87b}@media(max-width:650px){.route-related-guides{padding:56px 8%}.route-related-guides>div{display:grid;grid-template-columns:1fr}.route-related-guides a{text-align:center}}';
+    document.head.append(relatedStyle);
+  }
+
   if (location.pathname.endsWith('/cities/india/mp/bhopal.html') && !document.querySelector('script[data-bhopal-tools]')) {
     const script = document.createElement('script');
     script.src = '/js/bhopal-tools.js'; script.dataset.bhopalTools = 'true'; document.body.append(script);

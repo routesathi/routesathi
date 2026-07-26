@@ -1,2 +1,63 @@
-const mpCities={gwalior:'cities/india/mp/gwalior.html',bhopal:'cities/india/mp/bhopal.html',indore:'cities/india/mp/indore.html',ujjain:'cities/india/mp/ujjain.html',omkareshwar:'cities/india/mp/omkareshwar.html',maheshwar:'cities/india/mp/maheshwar.html',orchha:'cities/india/mp/orchha.html',jabalpur:'cities/india/mp/jabalpur.html',khajuraho:'cities/india/mp/khajuraho.html',mandu:'cities/india/mp/mandu.html',pachmarhi:'cities/india/mp/pachmarhi.html',kanha:'cities/india/mp/kanha.html',bandhavgarh:'cities/india/mp/bandhavgarh.html',pench:'cities/india/mp/pench.html',panna:'cities/india/mp/panna.html',satpura:'cities/india/mp/satpura.html'};
-const searchForm=document.querySelector('#citySearch');if(searchForm){searchForm.addEventListener('submit',event=>{event.preventDefault();const city=document.querySelector('#cityInput').value.trim().toLowerCase();const message=document.querySelector('#searchMessage');if(mpCities[city]){window.location.href=mpCities[city];return}message.textContent=city?`We do not have a guide for “${city}” yet. Try Gwalior, Indore or Bhopal.`:'Please type a Madhya Pradesh city.'})}
+(() => {
+  const guides = [
+    { name: 'Gwalior', key: 'gwalior', type: 'Fort, palace & heritage route' },
+    { name: 'Bhopal', key: 'bhopal', type: 'Lakes, museums & old city' },
+    { name: 'Indore', key: 'indore', type: 'Food, markets & city life' },
+    { name: 'Ujjain', key: 'ujjain', type: 'Temples & spiritual trip' },
+    { name: 'Pachmarhi', key: 'pachmarhi', aliases: ['pachmari', 'pachmadi', 'pachmadi'], type: 'Hills, caves & waterfalls' },
+    { name: 'Jabalpur', key: 'jabalpur', type: 'Marble Rocks & Narmada' },
+    { name: 'Khajuraho', key: 'khajuraho', type: 'Temple art & history' },
+    { name: 'Mandu', key: 'mandu', type: 'Palaces, forts & viewpoints' },
+    { name: 'Orchha', key: 'orchha', type: 'Palaces & Betwa river' },
+    { name: 'Omkareshwar', key: 'omkareshwar', aliases: ['omkareswar', 'omkarshwar', 'omkareshvar'], type: 'Jyotirlinga & Narmada island' },
+    { name: 'Maheshwar', key: 'maheshwar', type: 'Ghats & handloom heritage' },
+    { name: 'Kanha', key: 'kanha', type: 'Tiger reserve & safari' },
+    { name: 'Panna', key: 'panna', type: 'Safari & Khajuraho connection' },
+    { name: 'Satpura / Madhai', key: 'satpura', aliases: ['madhai', 'madhai'], type: 'Forest, safari & boat trip' },
+    { name: 'Bandhavgarh', key: 'bandhavgarh', type: 'Tiger safari & fort landscape' },
+    { name: 'Pench', key: 'pench', type: 'Tiger reserve & forest stay' }
+  ];
+  const form = document.querySelector('#citySearch');
+  const input = document.querySelector('#cityInput');
+  const list = document.querySelector('#searchSuggestions');
+  const message = document.querySelector('#searchMessage');
+  if (!form || !input || !list || !message) return;
+
+  const clean = value => value.toLowerCase().replace(/[^a-z]/g, '');
+  const distance = (one, two) => {
+    const a = clean(one), b = clean(two);
+    const rows = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+    for (let j = 1; j <= b.length; j++) rows[0][j] = j;
+    for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) rows[i][j] = Math.min(rows[i - 1][j] + 1, rows[i][j - 1] + 1, rows[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    return rows[a.length][b.length];
+  };
+  const score = (guide, query) => {
+    const terms = [guide.name, guide.key, ...(guide.aliases || [])].map(clean);
+    const q = clean(query);
+    if (!q) return 99;
+    if (terms.some(term => term.startsWith(q) || term.includes(q))) return 0;
+    return Math.min(...terms.map(term => distance(term, q)));
+  };
+  const matches = query => guides.map(guide => ({ guide, score: score(guide, query) })).filter(item => item.score === 0 || (clean(query).length >= 4 && item.score <= 2)).sort((a, b) => a.score - b.score || a.guide.name.localeCompare(b.guide.name)).slice(0, 5);
+  const openGuide = guide => { window.location.href = `cities/india/mp/${guide.key}.html`; };
+  const render = query => {
+    const results = matches(query);
+    if (!clean(query)) { list.innerHTML = ''; list.classList.remove('show'); return results; }
+    if (!results.length) {
+      list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Bhopal, Indore, Ujjain or Pachmarhi.</div>';
+      list.classList.add('show'); return results;
+    }
+    list.innerHTML = results.map(({ guide, score }) => `<a href="cities/india/mp/${guide.key}.html"><strong>${guide.name}</strong>${score ? ' <em>Closest match</em>' : ''}<span>${guide.type}</span></a>`).join('');
+    list.classList.add('show'); return results;
+  };
+  input.addEventListener('input', () => { message.textContent = ''; render(input.value); });
+  input.addEventListener('focus', () => render(input.value));
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const results = render(input.value);
+    if (results.length) {
+      message.textContent = results[0].score ? `Showing the closest guide: ${results[0].guide.name}.` : `Opening ${results[0].guide.name} guide…`;
+      openGuide(results[0].guide);
+    } else message.textContent = 'Try a different spelling or choose a guide from the suggestions.';
+  });
+})();
