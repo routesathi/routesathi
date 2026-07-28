@@ -41,6 +41,14 @@
     privacy.textContent = 'Privacy & travel disclaimer';
     footer.append(privacy);
   }
+  if (footer && !footer.querySelector('[data-route-about]')) {
+    const about = document.createElement('a');
+    about.href = '/about.html';
+    about.className = 'route-legal-link';
+    about.dataset.routeAbout = 'true';
+    about.textContent = 'About RouteSathi';
+    footer.append(about);
+  }
 
   const isCity = location.pathname.includes('/cities/india/mp/');
   if (isCity && !document.querySelector('.route-checklist')) {
