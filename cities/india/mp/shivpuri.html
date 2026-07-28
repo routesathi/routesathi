@@ -1,137 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="/">
-  <title>Shivpuri Travel Guide | RouteMitra</title>
-  <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="/css/site-feedback.css"></head>
-
-<body>
-
-<!-- AUTH -->
-<div class="auth-top">
-  <a href="login.html">Log in</a> /
-  <a href="signup.html">Sign up</a>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="logo-section">
-    <img src="images/logo.png" class="logo">
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#cities">Cities</a>
-    <a href="contact.html">Contact</a>
-    <a href="feedback.html" class="btn-small">Give Feedback</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="gwalior-hero" style="background-image:url('images/mp_images/shivpuri_images/madhav_national_park.jpg');">
-  <h1>Explore Shivpuri</h1>
-  <p>Nature, Lakes & Wildlife | Complete Travel Guide</p>
-</section>
-
-<!-- PLACES -->
-<section class="gwalior-section">
-  <h2>Top Tourist Places in Shivpuri</h2>
-
-  <div class="places-wrapper">
-    <button class="scroll-btn left">❮</button>
-
-    <div class="places">
-
-      <div class="card">
-        <img src="images/shivpuri_images/madhav_national_park.jpg">
-        <div>Madhav National Park</div>
-      </div>
-
-      <div class="card">
-        <img src="images/shivpuri_images/sakhya_sagar.jpg">
-        <div>Sakhya Sagar Lake</div>
-      </div>
-
-      <div class="card">
-        <img src="images/shivpuri_images/bhadaiya_kund.jpg">
-        <div>Bhadaiya Kund</div>
-      </div>
-
-      <div class="card">
-        <img src="images/shivpuri_images/george_castle.jpg">
-        <div>George Castle</div>
-      </div>
-
-      <div class="card">
-        <img src="images/shivpuri_images/chhatris.jpg">
-        <div>Scindia Chhatris</div>
-      </div>
-
-      <div class="card">
-        <img src="images/shivpuri_images/surwaya.jpg">
-        <div>Surwaya Fort</div>
-      </div>
-
-    </div>
-
-    <button class="scroll-btn right">❯</button>
-  </div>
-</section>
-
-<!-- ROUTE -->
-<section class="section">
-  <h2>Choose Your Travel Plan</h2>
-
-  <div class="buttons">
-    <button onclick="showPlan(1)">1 Day</button>
-    <button onclick="showPlan(2)">2 Day</button>
-    <button onclick="showPlan(3)">3 Day</button>
-  </div>
-
-  <div id="planDisplay" class="plan-box">
-    Click a plan to see route.
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 RouteMitra.com
-</footer>
-
-<script>
-
-const plans = {
-
-1: `Day 1 Plan:
-Morning: Madhav National Park
-Afternoon: Sakhya Sagar Lake
-Evening: Chhatris Visit`,
-
-2: `Day 1: National Park + Lake
-Day 2: Bhadaiya Kund + George Castle`,
-
-3: `Day 1: Nature Tour
-Day 2: Heritage + Forts
-Day 3: Relax + Photography`
-
-};
-
-function showPlan(day){
-  document.getElementById("planDisplay").innerText = plans[day];
-}
-
-/* SCROLL */
-const scrollContainer = document.querySelector(".places");
-const leftBtn = document.querySelector(".scroll-btn.left");
-const rightBtn = document.querySelector(".scroll-btn.right");
-
-rightBtn.onclick = () => scrollContainer.scrollBy({left:300, behavior:"smooth"});
-leftBtn.onclick = () => scrollContainer.scrollBy({left:-300, behavior:"smooth"});
-
-</script>
-
-<script src="/js/site-feedback.js"></script></body>
-</html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/">
+<title>Shivpuri Travel Guide | RouteSathi</title>
+<meta name="description" content="A practical 1 and 2-day Shivpuri itinerary for Scindia Chhatris, Madhav forest, Sakhya Sagar and Survaya Garhi, with clear map routes and travel checks.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mp.css"><link rel="stylesheet" href="css/gwalior.css"><link rel="stylesheet" href="css/language.css"><link rel="stylesheet" href="/css/site-feedback.css">
+<style>
+.sh-hero,.sh-start,.sh-more,.sh-toolbox{padding:82px 9%}.sh-hero{display:grid;grid-template-columns:1.4fr .6fr;gap:55px;align-items:center;background:#183b35;color:#fff7e8}.sh-hero h1,.sh-start h2,.sh-more h2,.sh-toolbox h2{font:600 clamp(42px,5vw,70px)/.98 "Playfair Display",serif;letter-spacing:-2px;margin:10px 0 18px}.sh-hero h1 em{color:#dbe87b}.sh-hero>div>p:not(.eyebrow){max-width:660px;font-size:17px;line-height:1.72;color:#deeadf}.sh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.sh-button{display:inline-block;padding:14px 18px;background:#dbe87b;color:#183b35;font-weight:700;text-decoration:none}.sh-button.alt{background:transparent;border:1px solid #9eb4a7;color:#fff7e8}.sh-stat{padding:30px;background:#214941;border-top:3px solid #dbe87b}.sh-stat b{display:block;color:#dbe87b;font:600 48px/1 "Playfair Display",serif}.sh-stat span{display:block;margin:7px 0 20px;font-weight:700}.sh-stat p{font-size:14px;line-height:1.6;color:#d6e3d6;margin:0}.sh-promise{display:grid;grid-template-columns:repeat(3,1fr);background:#102f2a;color:#fff;padding:0 9%}.sh-promise div{padding:27px 20px;border-right:1px solid #31554d;display:flex;gap:13px}.sh-promise div:last-child{border:0}.sh-promise b{color:#dbe87b}.sh-promise span{font-size:14px;line-height:1.55}.sh-promise strong{display:block}.sh-start{background:#f7f1e5;display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;color:#183b35}.sh-start>div>p:not(.eyebrow){color:#60736b;line-height:1.65}.sh-pace{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.sh-pace a{padding:24px;background:#fffdf6;border-top:3px solid #d85e39;color:#183b35;text-decoration:none}.sh-pace strong{display:block;font:600 32px "Playfair Display",serif}.sh-pace span{display:block;margin:7px 0;color:#d85e39;font-size:12px;font-weight:700;letter-spacing:.08em}.sh-pace small{line-height:1.45;color:#60736b}.sh-warning{grid-column:span 2;background:#183b35!important;color:#fff7e8!important;border-top-color:#dbe87b!important}.sh-warning strong{font:600 21px "Playfair Display",serif}.sh-plans{padding:85px 9%;background:#183b35;color:#fff7e8}.sh-plan-title{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;margin-bottom:40px}.sh-plan-title h2{font:600 clamp(38px,4vw,58px)/1 "Playfair Display",serif;margin:8px 0}.sh-plan-title>p{line-height:1.7;color:#d7e4db;align-self:end}.sh-day{margin:28px 0 64px;padding:25px;background:#14362f}.sh-dayhead{display:flex;justify-content:space-between;gap:30px;border-bottom:1px solid #48665d;padding:0 0 22px;margin-bottom:4px}.sh-dayhead h3{font:600 34px/1.1 "Playfair Display",serif;margin:7px 0}.sh-dayhead p{max-width:650px;line-height:1.6;color:#d7e4db;margin:0}.sh-dayhead aside{min-width:135px;background:#214941;padding:17px;text-align:center;height:max-content}.sh-dayhead aside b{display:block;color:#dbe87b;font:600 25px "Playfair Display",serif}.sh-dayhead aside small{font-size:11px}.sh-route{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:18px 0;color:#dbe87b;font-size:12px;font-weight:700}.sh-route i{font-style:normal;color:#d85e39}.sh-time article{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:19px 0;border-top:1px solid #48665d}.sh-time time{color:#dbe87b;font-weight:700}.sh-type{color:#dbe87b!important;font-weight:700;font-size:11px;letter-spacing:.1em}.sh-time h4{font-size:16px;margin:3px 0 5px}.sh-time p{margin:0;line-height:1.57;color:#eff4e8}.sh-time .sh-mini{color:#b9ccc0;font-size:13px;margin-top:6px}.sh-time a,.sh-map,.sh-tools a,.sh-timing a{color:#fff7e8;font-size:13px;font-weight:700;text-underline-offset:3px;display:inline-block;margin-top:9px}.sh-map{background:#e7f0ff;color:#0758a0!important;text-decoration:none;padding:14px 16px;margin-top:22px}.sh-split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sh-split>div{padding:22px;background:#193f38}.sh-split h4{font:600 23px "Playfair Display",serif;margin:0 0 15px}.sh-split ol{list-style:none;padding:0;margin:0}.sh-split li{display:grid;grid-template-columns:58px 1fr;gap:12px;padding:14px 0;border-top:1px solid #48665d;font-size:14px;line-height:1.55}.sh-split li b{color:#dbe87b}.sh-split li strong{display:block}.sh-more{background:#f7f1e5;color:#183b35;display:grid;grid-template-columns:.7fr 1.3fr;gap:55px}.sh-more>div>p:not(.eyebrow){color:#60736b;line-height:1.65}.sh-extra{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.sh-extra article{background:#fffdf6;border-top:3px solid #d85e39;padding:22px}.sh-extra b{font-size:10px;color:#d85e39;letter-spacing:.1em}.sh-extra h3{font:600 24px "Playfair Display",serif;margin:10px 0}.sh-extra p{color:#60736b;line-height:1.6;font-size:14px}.sh-extra a,.sh-tools a{color:#183b35;font-size:13px;font-weight:700}.sh-toolbox{background:#fffdf6;color:#183b35;display:grid;grid-template-columns:.75fr 1.25fr;gap:55px}.sh-tools{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.sh-tools article{padding:22px;background:#f7f1e5}.sh-tools h3{font:600 23px "Playfair Display",serif;margin:0 0 8px}.sh-tools p{color:#60736b;line-height:1.6;font-size:14px}.sh-timing{padding:24px 9%;background:#dbe87b;color:#183b35;display:flex;gap:24px;justify-content:space-between;align-items:center}.sh-timing p{margin:0;line-height:1.6;max-width:950px}.sh-timing a{color:#183b35;white-space:nowrap}.sh-style{padding:0 9% 78px;background:#f7f1e5;color:#183b35}.sh-style>p{max-width:700px;color:#60736b;line-height:1.65}.sh-style-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.sh-style-actions button{border:0;background:#183b35;color:#fff;padding:13px 15px;font-weight:700;cursor:pointer}.sh-style-actions button:hover{background:#d85e39}@media(max-width:760px){.sh-hero,.sh-start,.sh-plan-title,.sh-more,.sh-toolbox{grid-template-columns:1fr;padding:58px 8%;gap:30px}.sh-hero h1{font-size:49px}.sh-promise{grid-template-columns:1fr;padding:0 8%}.sh-promise div{border-right:0;border-bottom:1px solid #31554d}.sh-pace,.sh-split,.sh-extra,.sh-tools{grid-template-columns:1fr}.sh-warning{grid-column:auto}.sh-plans{padding:58px 8%}.sh-day{padding:18px}.sh-dayhead{display:block}.sh-dayhead aside{margin-top:18px}.sh-time article{grid-template-columns:1fr;gap:4px}.sh-more,.sh-toolbox{padding-top:58px;padding-bottom:58px}.sh-timing{display:block;padding:24px 8%}.sh-timing a{display:inline-block;margin-top:12px}.sh-style{padding:0 8% 58px}}
+</style></head><body>
+<header class="site-header"><a class="brand" href="index.html"><span>&#8599;</span>route<strong>sathi</strong></a><nav><a href="cities/mp.html">Madhya Pradesh</a><a href="#plans">Day plans</a><a href="#before-you-go">Travel notes</a></nav><div class="header-actions"><button class="language-toggle" type="button" data-language-toggle aria-label="Switch website language">&#2361;&#2367;&#2306;&#2342;&#2368;</button><a class="header-cta" href="#plans">Plan Shivpuri</a></div></header>
+<main>
+<section class="sh-hero"><div><p class="eyebrow">SHIVPURI &middot; MADHYA PRADESH</p><h1>Shivpuri, slower<br><em>and greener.</em></h1><p>Do the Scindia Chhatris in the morning, keep Madhav's forest and lake circuit together, and leave the second day for Survaya Garhi. A simple route, without making the town feel rushed.</p><div class="sh-actions"><a class="sh-button" href="#plans">Choose 1 or 2 days &rarr;</a><a class="sh-button alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Shivpuri+Madhya+Pradesh">Open Shivpuri in Maps &nearr;</a></div></div><aside class="sh-stat"><b>1&ndash;2 days</b><span>Ideal duration</span><p>One full day covers the core heritage and nature circuit. Keep two days for Survaya Garhi and a less hurried park/lake visit.</p></aside></section>
+<section class="sh-promise"><div><b>01</b><span><strong>One side at a time</strong>Chhatris, forest and lake are kept in a natural order.</span></div><div><b>02</b><span><strong>Honest park guidance</strong>Forest access is checked before the plan depends on it.</span></div><div><b>03</b><span><strong>Made for your time</strong>Take one day when short; two days when you want it complete.</span></div></section>
+<section class="sh-start"><div><p class="eyebrow">FIRST, CHOOSE YOUR PACE</p><h2>How many days<br>do you have?</h2><p>Shivpuri is not a destination to speed-run. Choose the time you actually have, then follow the route in order.</p></div><div class="sh-pace"><a href="#one"><strong>1 day</strong><span>THE ESSENTIAL LOOP</span><small>Chhatris, Madhav access check and Sakhya Sagar at the softer end of the day.</small></a><a href="#two"><strong>2 days</strong><span>THE BETTER CHOICE</span><small>Forest/lakes on Day 1, then Survaya Garhi and flexible town time on Day 2.</small></a><div class="sh-warning"><strong>Important: do not plan this as a guaranteed tiger safari.</strong><small>Madhav is best treated as a forest, lake and heritage experience. Confirm entry, permitted vehicle, road condition and George Castle access directly with the forest staff before leaving.</small></div></div></section>
+<section class="sh-plans" id="plans"><div class="sh-plan-title"><div><p class="eyebrow">YOUR READY ROUTE</p><h2>Follow the clock.<br>Enjoy the town.</h2></div><p>Times are practical starting points, not rigid tickets. Keep 20&ndash;30 minutes extra for entry, local road conditions and any current forest instruction.</p></div>
+<article class="sh-day" id="one"><div class="sh-dayhead"><div><p class="eyebrow">PLAN A &middot; ONE FULL DAY</p><h3>Chhatris, forest &amp; lake</h3><p>This is the right plan when you have only one full day. It keeps heritage in the cooler morning and leaves the nature side for later.</p></div><aside><b>8&ndash;9 hrs</b><small>Start: 8:00 AM</small></aside></div><div class="sh-route"><span>Town breakfast</span><i>&rarr;</i><span>Scindia Chhatris</span><i>&rarr;</i><span>Madhav access</span><i>&rarr;</i><span>Sakhya Sagar</span></div><div class="sh-time"><article><time>08:00&ndash;08:40</time><div><p class="sh-type">BREAKFAST &middot; TOWN SIDE</p><h4>Start in Shivpuri town</h4><p>Have breakfast close to your stay or the main town. Keep it simple; this is a heritage-and-nature day, not a restaurant-hopping route.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=breakfast+Shivpuri+Madhya+Pradesh">Find breakfast in Maps &nearr;</a></div></article><article><time>09:00&ndash;10:30</time><div><p class="sh-type">SCINDIA HERITAGE</p><h4>Scindia Chhatris</h4><p>Give the marble memorials enough time in the cooler morning light. Walk slowly, take photographs respectfully and avoid trying to combine this stop with an outstation drive.</p><p class="sh-mini">Allow: 60&ndash;90 min &middot; Carry water and wear comfortable shoes.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chhatri+Shivpuri">Open Chhatris in Maps &nearr;</a></div></article><article><time>11:00&ndash;13:30</time><div><p class="sh-type">FOREST &middot; ONLY IF ACCESS IS CONFIRMED</p><h4>Madhav National Park / George Castle</h4><p>First confirm the day's entry procedure, permitted vehicle and whether the George Castle route is open. If allowed, keep the forest visit in one continuous block. If access is restricted, do not force a detour&mdash;use the town/lake time instead.</p><p class="sh-mini">Do not assume a fixed safari slot or tiger sighting. Forest rules can change.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Madhav+National+Park+Shivpuri">Open Madhav in Maps &nearr;</a></div></article><article><time>14:00&ndash;15:00</time><div><p class="sh-type">LUNCH &middot; TOWN SIDE</p><h4>Return to Shivpuri for lunch</h4><p>Have lunch in town rather than searching for a distant restaurant from inside the nature circuit. Keep a water bottle and light snacks with you for the afternoon.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=restaurants+Shivpuri+Madhya+Pradesh">See lunch choices in Maps &nearr;</a></div></article><article><time>16:30&ndash;18:30</time><div><p class="sh-type">LAKE &middot; SOFTER EVENING</p><h4>Sakhya Sagar / nearby viewpoints</h4><p>Use the quieter end of the day for the lake side. Keep this flexible around forest staff advice and daylight; return to town before it gets late.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sakhya+Sagar+Lake+Shivpuri">Open Sakhya Sagar in Maps &nearr;</a></div></article></div><a class="sh-map" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Chhatri+Shivpuri&destination=Sakhya+Sagar+Lake+Shivpuri&travelmode=driving&waypoints=Madhav+National+Park+Shivpuri">&#8599; Open Day 1 blue route in Maps</a></article>
+<article class="sh-day" id="two"><div class="sh-dayhead"><div><p class="eyebrow">PLAN B &middot; TWO DAYS</p><h3>Shivpuri, properly explored</h3><p>This is our recommendation when you want both the local heritage and the less-visited Survaya Garhi without turning every stop into a rush.</p></div><aside><b>2 days</b><small>Recommended plan</small></aside></div><div class="sh-split"><div><h4>DAY 1 &middot; Town, forest &amp; lake</h4><ol><li><b>08:30</b><span><strong>Breakfast + Scindia Chhatris</strong>Use the cool morning for the Chhatris; allow 90 minutes.</span></li><li><b>11:00</b><span><strong>Madhav access check</strong>Confirm the permitted route before entering. George Castle is only an add-on when the route is open.</span></li><li><b>14:00</b><span><strong>Lunch in town</strong>Return to the town side instead of crossing around for food.</span></li><li><b>16:30</b><span><strong>Sakhya Sagar</strong>Keep sunset/lake time flexible and finish while there is daylight.</span></li></ol></div><div><h4>DAY 2 &middot; Survaya, slowly done</h4><ol><li><b>08:30</b><span><strong>Leave for Survaya Garhi</strong>Take a cab/own vehicle and start early. Check the last stretch and current road condition locally.</span></li><li><b>10:00</b><span><strong>Survaya Garhi temple complex</strong>Explore the old temple ruins without trying to pack other distant stops around it.</span></li><li><b>13:30</b><span><strong>Back to Shivpuri for lunch</strong>Eat in town, then keep the afternoon open for a missed lake/forest stop or a relaxed rest.</span></li><li><b>16:30</b><span><strong>Town evening</strong>Use this for local snacks, a second Chhatris visit in different light, or an early dinner before departure.</span></li></ol></div></div><a class="sh-map" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Shivpuri+Madhya+Pradesh&destination=Survaya+Garhi+Shivpuri&travelmode=driving">&#8599; Open Day 2 Survaya route in Maps</a></article></section>
+<section class="sh-more"><div><p class="eyebrow">DO NOT MISS THESE</p><h2>More of Shivpuri,<br>when you have time.</h2><p>Add these only in the right plan. This is how the route stays useful instead of becoming a list of random places.</p></div><div class="sh-extra"><article><b>THE CITY ICON</b><h3>Scindia Chhatris</h3><p>The strongest heritage stop in town. Keep it in the morning of either plan, not squeezed into your travel-out day.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chhatri+Shivpuri">Open in Maps &nearr;</a></article><article><b>FOREST HIGH POINT</b><h3>George Castle</h3><p>Inside the Madhav area. Add it only after staff confirms vehicle and route access&mdash;never make it a fixed promise in your day.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=George+Castle+Shivpuri">Open in Maps &nearr;</a></article><article><b>DAY 2 OUTING</b><h3>Survaya Garhi</h3><p>An old temple-complex outing from Shivpuri. It deserves its own half-day, not a quick stop added after the park.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Survaya+Garhi+Shivpuri">Open in Maps &nearr;</a></article><article><b>QUIET END TO DAY 1</b><h3>Sakhya Sagar</h3><p>Use the lake side for softer light and a calm finish. Respect any park boundary, timing or safety instruction in place that day.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sakhya+Sagar+Lake+Shivpuri">Open in Maps &nearr;</a></article></div></section>
+<section class="sh-toolbox" id="before-you-go"><div><p class="eyebrow">STAY, EAT &amp; SPEND</p><h2>Plan like a local.<br>Move with less confusion.</h2><p>Choose one sensible base, eat close to the route, and keep the forest portion flexible.</p></div><div class="sh-tools"><article><h3>Choose your area</h3><p><strong>Town / Chhatris side:</strong> easiest for food, heritage and an early start. <strong>Near Bhadaiya Kund:</strong> consider only if that location suits your stay plan; it is not the best choice for every first-time visitor.</p><a target="_blank" rel="noopener" href="https://shivpuri.nic.in/en/where-to-stay/">See official stay listing &nearr;</a></article><article><h3>Eat where you are</h3><p>Have breakfast and dinner in Shivpuri town. Carry water and a light snack for Madhav/Survaya, rather than relying on a food stop at a remote point.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=restaurants+Shivpuri+Madhya+Pradesh">Find food in Maps &nearr;</a></article><article><h3>Keep a buffer</h3><p>Do not pre-calculate one fixed forest cost. Entry, vehicle availability, access routes and any guide requirement can change. Keep cab time, water and a small cash buffer.</p><a target="_blank" rel="noopener" href="https://mpforest.gov.in/">Check forest information &nearr;</a></article><article><h3>Best travel style</h3><p><strong>Family:</strong> Chhatris + lake, with short walking. <strong>Heritage:</strong> add Survaya on Day 2. <strong>Nature:</strong> keep the Madhav visit flexible and start with official entry advice.</p></article></div></section>
+<section class="sh-style"><p class="eyebrow">CHOOSE YOUR TRAVEL STYLE</p><h2>One guide. Your pace.</h2><p>Use these buttons as a quick reminder before you leave. They do not change the route; they help you follow the version that suits your trip.</p><div class="sh-style-actions"><button type="button" data-note="Family plan: keep Day 1 to Chhatris, a short approved Madhav visit and Sakhya Sagar. Do not add Survaya on the same day.">Family plan</button><button type="button" data-note="Heritage plan: take the 2-day plan and keep Survaya Garhi on Day 2. Give Chhatris a full morning.">Heritage plan</button><button type="button" data-note="Budget plan: stay in town, use a single cab only for the outstation/forest segment and confirm every forest expense before entering.">Budget plan</button><button type="button" data-note="Use your browser print option to save this Shivpuri plan as a PDF before leaving.">Save / print plan</button></div><p id="styleNote" aria-live="polite"></p></section>
+<section class="sh-timing"><p><strong>Before you leave:</strong> verify the opening time, entry procedure, vehicle availability and weather on the same day. Madhav access and local road conditions can change. If you notice a useful update, use Feedback / Report an issue below.</p><a target="_blank" rel="noopener" href="https://shivpuri.nic.in/en/tourist-places/">Official Shivpuri tourist list &nearr;</a></section>
+</main><footer><a class="brand" href="index.html"><span>&#8599;</span>route<strong>sathi</strong></a><p>Discover Madhya Pradesh, one journey at a time.</p><p>&copy; 2026 RouteSathi</p></footer>
+<script>document.querySelectorAll('[data-note]').forEach(button=>button.addEventListener('click',()=>{const note=document.querySelector('#styleNote');note.textContent=button.dataset.note;if(button.textContent.includes('print'))window.print();}));</script><script src="js/language-toggle.js"></script><script src="/js/site-feedback.js"></script></body></html>
