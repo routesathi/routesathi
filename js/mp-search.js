@@ -1,6 +1,7 @@
 (() => {
   const guides = [
     { name: 'Gwalior', key: 'gwalior', type: 'Fort, palace & heritage route' },
+    { name: 'Shivpuri', key: 'shivpuri', type: 'Forest, lakes & Scindia heritage' },
     { name: 'Bhopal', key: 'bhopal', type: 'Lakes, museums & old city' },
     { name: 'Indore', key: 'indore', type: 'Food, markets & city life' },
     { name: 'Ujjain', key: 'ujjain', type: 'Temples & spiritual trip' },

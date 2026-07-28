@@ -64,6 +64,7 @@
   // This keeps city pages connected without filling the header with too many links.
   const relatedGuides = {
     gwalior: [['Orchha', 'orchha'], ['Khajuraho', 'khajuraho'], ['Bhopal', 'bhopal']],
+    shivpuri: [['Gwalior', 'gwalior'], ['Orchha', 'orchha'], ['Khajuraho', 'khajuraho']],
     bhopal: [['Sanchi / nearby heritage', 'orchha'], ['Pachmarhi', 'pachmarhi'], ['Jabalpur', 'jabalpur']],
     indore: [['Ujjain', 'ujjain'], ['Mandu', 'mandu'], ['Maheshwar', 'maheshwar']],
     ujjain: [['Indore', 'indore'], ['Mandu', 'mandu'], ['Omkareshwar', 'omkareshwar']],
