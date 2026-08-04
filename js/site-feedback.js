@@ -49,6 +49,16 @@
     about.textContent = 'About RouteSathi';
     footer.append(about);
   }
+  if (footer && !footer.querySelector('[data-route-instagram]')) {
+    const instagram = document.createElement('a');
+    instagram.href = 'https://www.instagram.com/routesathi/';
+    instagram.target = '_blank';
+    instagram.rel = 'noopener noreferrer';
+    instagram.className = 'route-legal-link';
+    instagram.dataset.routeInstagram = 'true';
+    instagram.textContent = 'Follow @routesathi on Instagram ↗';
+    footer.append(instagram);
+  }
 
   const isCity = location.pathname.includes('/cities/india/mp/');
   if (isCity && !document.querySelector('.route-checklist')) {
