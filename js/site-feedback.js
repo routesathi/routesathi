@@ -61,6 +61,11 @@
   }
 
   const isCity = location.pathname.includes('/cities/india/mp/');
+  // Keep the main itinerary action consistent across every city guide.
+  if (isCity) {
+    const planButton = document.querySelector('a.primary-btn[href="#plans"]');
+    if (planButton) planButton.innerHTML = 'Pick your number of days <span aria-hidden="true">&rarr;</span>';
+  }
   if (isCity && !document.querySelector('.route-checklist')) {
     const main = document.querySelector('main');
     if (main) {
