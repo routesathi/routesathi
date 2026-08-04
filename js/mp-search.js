@@ -48,8 +48,11 @@
       list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Bhopal, Indore, Ujjain or Pachmarhi.</div>';
       list.classList.add('show'); return results;
     }
-    // Keep suggestions uncluttered: visitors only need the city name.
-    list.innerHTML = results.map(({ guide }) => `<a href="cities/india/mp/${guide.key}.html">${guide.name}</a>`).join('');
+    // Use buttons instead of standard links so results look like a clean search menu.
+    list.innerHTML = results.map(({ guide }) => `<button type="button" data-city-guide="${guide.key}">${guide.name}</button>`).join('');
+    list.querySelectorAll('[data-city-guide]').forEach(button => {
+      button.addEventListener('click', () => openGuide({ key: button.dataset.cityGuide }));
+    });
     list.classList.add('show'); return results;
   };
   input.addEventListener('input', () => { message.textContent = ''; render(input.value); });
