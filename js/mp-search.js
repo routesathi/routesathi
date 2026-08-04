@@ -48,7 +48,8 @@
       list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Bhopal, Indore, Ujjain or Pachmarhi.</div>';
       list.classList.add('show'); return results;
     }
-    list.innerHTML = results.map(({ guide, score }) => `<a href="cities/india/mp/${guide.key}.html"><strong>${guide.name}</strong>${score ? ' <em>Closest match</em>' : ''}<span>${guide.type}</span></a>`).join('');
+    // Keep suggestions uncluttered: visitors only need the city name.
+    list.innerHTML = results.map(({ guide }) => `<a href="cities/india/mp/${guide.key}.html">${guide.name}</a>`).join('');
     list.classList.add('show'); return results;
   };
   input.addEventListener('input', () => { message.textContent = ''; render(input.value); });
