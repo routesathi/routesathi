@@ -4,5 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var cta = document.querySelector('.site-header .header-cta');
   if (cta) { cta.textContent = 'Plan a trip'; cta.href = '#plan-my-trip'; }
   var oldCard = document.querySelector('.home-rajasthan');
-  if (oldCard) oldCard.hidden = true;
+  if (oldCard) {
+    oldCard.hidden = true;
+    oldCard.style.display = 'none';
+  }
 });
