@@ -17,6 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   var style = document.createElement('style');
-  style.textContent = '.state-city-card:nth-child(8) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.24),rgba(12,38,34,.08)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Nakki_Lake,_Mount_Abu,_Rajasthan.jpg?width=1200")}';
+  style.textContent = '.state-city-card:nth-child(8) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.24),rgba(12,38,34,.08)),url("images/india/rajasthan/mount-abu/hero.jpg")}';
   document.head.appendChild(style);
 });
