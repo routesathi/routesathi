@@ -11,4 +11,12 @@
   document.querySelectorAll('[data-route-print]').forEach(button=>{
     button.addEventListener('click',()=>window.print());
   });
+
+  /* Rajasthan guides use the same clear pre-trip position as RouteSathi's
+     other city pages: directly after the hero, before planning begins. */
+  if(location.pathname.includes('/cities/india/rajasthan/')){
+    const warning=document.querySelector('.route-warning');
+    const hero=document.querySelector('.route-hero');
+    if(warning && hero) hero.insertAdjacentElement('afterend', warning);
+  }
 })();
