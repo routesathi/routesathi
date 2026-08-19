@@ -8,4 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
     oldCard.hidden = true;
     oldCard.style.display = 'none';
   }
+
+  /* The page keeps the first copy of each useful section and hides
+     accidental repeats added during earlier homepage updates. */
+  ['.home-essentials', '.home-routes'].forEach(function (selector) {
+    var sections = document.querySelectorAll(selector);
+    for (var i = 1; i < sections.length; i += 1) {
+      sections[i].hidden = true;
+      sections[i].style.display = 'none';
+    }
+  });
+
+  var extraGwaliorCard = document.querySelector('.trip-banner');
+  if (extraGwaliorCard) {
+    extraGwaliorCard.hidden = true;
+    extraGwaliorCard.style.display = 'none';
+  }
 });
