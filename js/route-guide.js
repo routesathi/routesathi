@@ -22,7 +22,7 @@
       let updated=warning.querySelector('small')?.textContent.trim() || '';
       /* These cities now use RouteSathi's local Pexels photos, which do not
          require an on-page attribution. Remove their old Wikimedia credits. */
-      if(/\/(bikaner|jaisalmer)\.html$/.test(location.pathname)){
+      if(/\/(bikaner|jaisalmer|jodhpur)\.html$/.test(location.pathname)){
         updated=updated.replace(/\s*Hero photo:.*$/i,'').trim();
       }
       const details=Array.from(warning.childNodes)
