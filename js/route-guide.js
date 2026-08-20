@@ -19,7 +19,12 @@
     const hero=document.querySelector('.route-hero');
     if(warning && hero){
       const title=warning.querySelector('strong')?.textContent.trim() || 'Before you go / निकलने से पहले';
-      const updated=warning.querySelector('small')?.textContent.trim() || '';
+      let updated=warning.querySelector('small')?.textContent.trim() || '';
+      /* Bikaner now uses RouteSathi's local Pexels photo, which does not
+         require an on-page attribution. Remove the old Wikimedia credit. */
+      if(location.pathname.endsWith('/bikaner.html')){
+        updated=updated.replace(/\s*Hero photo:.*$/i,'').trim();
+      }
       const details=Array.from(warning.childNodes)
         .filter(node=>!(node.nodeType===1 && ['STRONG','SMALL','BR'].includes(node.tagName)))
         .map(node=>node.textContent).join(' ').replace(/\s+/g,' ').trim();
