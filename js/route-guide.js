@@ -20,9 +20,9 @@
     if(warning && hero){
       const title=warning.querySelector('strong')?.textContent.trim() || 'Before you go / निकलने से पहले';
       let updated=warning.querySelector('small')?.textContent.trim() || '';
-      /* Bikaner now uses RouteSathi's local Pexels photo, which does not
-         require an on-page attribution. Remove the old Wikimedia credit. */
-      if(location.pathname.endsWith('/bikaner.html')){
+      /* These cities now use RouteSathi's local Pexels photos, which do not
+         require an on-page attribution. Remove their old Wikimedia credits. */
+      if(/\/(bikaner|jaisalmer)\.html$/.test(location.pathname)){
         updated=updated.replace(/\s*Hero photo:.*$/i,'').trim();
       }
       const details=Array.from(warning.childNodes)
