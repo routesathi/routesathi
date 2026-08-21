@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   var facts = document.querySelector('.state-facts strong');
-  if (facts) facts.textContent = '14 guides';
+  if (facts) facts.textContent = '15 guides';
   var coming = document.querySelector('.state-coming');
   if (coming) coming.innerHTML = '<strong>Coming next:</strong> More Rajasthan guides will be added only after their route, map links and practical travel notes are complete—not as empty cards.';
   var grid = document.querySelector('.state-city-grid');
@@ -15,13 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
     ['kota.html', 'RIVER & HERITAGE · 1–2 DAYS', 'Kota', 'Chambal River, Garh Palace, Kishore Sagar and Garadia planned in a practical city-plus-nature route.'],
     ['kumbhalgarh.html', 'FORT & HILLS · 1–2 DAYS', 'Kumbhalgarh', 'A complete fort day with Badal Mahal, rampart views and an optional wildlife sanctuary day.'],
     ['ranakpur.html', 'JAIN HERITAGE · 1 DAY', 'Ranakpur', 'A respectful temple visit with marble architecture, Aravalli time and a sensible Kumbhalgarh connection.'],
-    ['bharatpur.html', 'BIRDS & WETLANDS · 1–2 DAYS', 'Bharatpur', 'Keoladeo birding, park transport, city heritage and realistic wildlife guidance without false sighting promises.']
+    ['bharatpur.html', 'BIRDS & WETLANDS · 1–2 DAYS', 'Bharatpur', 'Keoladeo birding, park transport, city heritage and realistic wildlife guidance without false sighting promises.'],
+    ['ajmer.html', 'SUFI & HERITAGE · 1–2 DAYS', 'Ajmer', 'Ajmer Sharif, Ana Sagar, old-city heritage and a respectful Pushkar connection in one clear route.']
   ];
   cards.forEach(function (card) {
     if (grid.querySelector('a[href="cities/india/rajasthan/' + card[0] + '"]')) return;
     grid.insertAdjacentHTML('beforeend', '<a class="state-city-card" href="cities/india/rajasthan/' + card[0] + '"><div class="state-city-image"></div><div class="state-city-copy"><b>' + card[1] + '</b><h3>' + card[2] + '</h3><p>' + card[3] + '</p><span>Open ' + card[2] + ' guide →</span></div></a>');
   });
   var style = document.createElement('style');
-  style.textContent = '.state-city-card:nth-child(8) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.24),rgba(12,38,34,.08)),url("images/india/rajasthan/mount-abu/hero.jpg")}.state-city-card:nth-child(9) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.30),rgba(12,38,34,.10)),url("images/india/rajasthan/bikaner/hero.jpg")}.state-city-card:nth-child(10) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/bundi/hero.jpg")}.state-city-card:nth-child(11) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/kota/hero.jpg")}.state-city-card:nth-child(12) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.34),rgba(12,38,34,.10)),url("images/india/rajasthan/kumbhalgarh/hero.jpg")}.state-city-card:nth-child(13) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.28),rgba(12,38,34,.08)),url("images/india/rajasthan/ranakpur/hero.jpg")}.state-city-card:nth-child(14) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.42),rgba(12,38,34,.08)),url("images/india/rajasthan/bharatpur/hero.jpg")}';
+  style.textContent = '.state-city-card:nth-child(8) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.24),rgba(12,38,34,.08)),url("images/india/rajasthan/mount-abu/hero.jpg")}.state-city-card:nth-child(9) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.30),rgba(12,38,34,.10)),url("images/india/rajasthan/bikaner/hero.jpg")}.state-city-card:nth-child(10) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/bundi/hero.jpg")}.state-city-card:nth-child(11) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/kota/hero.jpg")}.state-city-card:nth-child(12) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.34),rgba(12,38,34,.10)),url("images/india/rajasthan/kumbhalgarh/hero.jpg")}.state-city-card:nth-child(13) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.28),rgba(12,38,34,.08)),url("images/india/rajasthan/ranakpur/hero.jpg")}.state-city-card:nth-child(14) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.42),rgba(12,38,34,.08)),url("images/india/rajasthan/bharatpur/hero.jpg")}.state-city-card:nth-child(15) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.40),rgba(12,38,34,.08)),url("images/india/rajasthan/ajmer/hero.jpg")}';
   document.head.appendChild(style);
 });
