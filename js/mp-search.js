@@ -16,7 +16,22 @@
     { name: 'Panna', key: 'panna', type: 'Safari & Khajuraho connection' },
     { name: 'Satpura / Madhai', key: 'satpura', aliases: ['madhai', 'madhai'], type: 'Forest, safari & boat trip' },
     { name: 'Bandhavgarh', key: 'bandhavgarh', type: 'Tiger safari & fort landscape' },
-    { name: 'Pench', key: 'pench', type: 'Tiger reserve & forest stay' }
+    { name: 'Pench', key: 'pench', type: 'Tiger reserve & forest stay' },
+    { name: 'Jaipur', key: 'jaipur', type: 'Pink City, palaces & forts', url: 'cities/india/rajasthan/jaipur.html' },
+    { name: 'Udaipur', key: 'udaipur', type: 'Lakes, palaces & romantic city views', url: 'cities/india/rajasthan/udaipur.html' },
+    { name: 'Jodhpur', key: 'jodhpur', type: 'Blue City & Mehrangarh Fort', url: 'cities/india/rajasthan/jodhpur.html' },
+    { name: 'Jaisalmer', key: 'jaisalmer', aliases: ['jaisalmer', 'jaisalmer'], type: 'Golden fort & desert routes', url: 'cities/india/rajasthan/jaisalmer.html' },
+    { name: 'Pushkar', key: 'pushkar', type: 'Lake, temple & market lanes', url: 'cities/india/rajasthan/pushkar.html' },
+    { name: 'Ranthambore', key: 'ranthambore', aliases: ['ranthambor', 'ranthambhore'], type: 'Tiger reserve & safari', url: 'cities/india/rajasthan/ranthambore.html' },
+    { name: 'Chittorgarh', key: 'chittorgarh', aliases: ['chittor', 'chittorghar'], type: 'Hill fort & heritage', url: 'cities/india/rajasthan/chittorgarh.html' },
+    { name: 'Mount Abu', key: 'mountabu', aliases: ['mount abu', 'mt abu'], type: 'Hill station & Dilwara Temples', url: 'cities/india/rajasthan/mount-abu.html' },
+    { name: 'Bikaner', key: 'bikaner', type: 'Desert heritage & Junagarh Fort', url: 'cities/india/rajasthan/bikaner.html' },
+    { name: 'Bundi', key: 'bundi', type: 'Stepwells, murals & palace', url: 'cities/india/rajasthan/bundi.html' },
+    { name: 'Kota', key: 'kota', type: 'Chambal, heritage & Garadia views', url: 'cities/india/rajasthan/kota.html' },
+    { name: 'Kumbhalgarh', key: 'kumbhalgarh', aliases: ['kumbhalgar'], type: 'Fort, hills & sanctuary', url: 'cities/india/rajasthan/kumbhalgarh.html' },
+    { name: 'Ranakpur', key: 'ranakpur', type: 'Jain heritage & Aravallis', url: 'cities/india/rajasthan/ranakpur.html' },
+    { name: 'Bharatpur', key: 'bharatpur', type: 'Keoladeo birds & wetlands', url: 'cities/india/rajasthan/bharatpur.html' },
+    { name: 'Ajmer', key: 'ajmer', type: 'Dargah, heritage & Ana Sagar', url: 'cities/india/rajasthan/ajmer.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
@@ -40,18 +55,18 @@
     return Math.min(...terms.map(term => distance(term, q)));
   };
   const matches = query => guides.map(guide => ({ guide, score: score(guide, query) })).filter(item => item.score === 0 || (clean(query).length >= 4 && item.score <= 2)).sort((a, b) => a.score - b.score || a.guide.name.localeCompare(b.guide.name)).slice(0, 5);
-  const openGuide = guide => { window.location.href = `cities/india/mp/${guide.key}.html`; };
+  const openGuide = guide => { window.location.href = guide.url || `cities/india/mp/${guide.key}.html`; };
   const render = query => {
     const results = matches(query);
     if (!clean(query)) { list.innerHTML = ''; list.classList.remove('show'); return results; }
     if (!results.length) {
-      list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Bhopal, Indore, Ujjain or Pachmarhi.</div>';
+      list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Jaipur, Udaipur, Bhopal or Jaisalmer.</div>';
       list.classList.add('show'); return results;
     }
     // Use buttons instead of standard links so results look like a clean search menu.
     list.innerHTML = results.map(({ guide }) => `<button type="button" data-city-guide="${guide.key}">${guide.name}</button>`).join('');
     list.querySelectorAll('[data-city-guide]').forEach(button => {
-      button.addEventListener('click', () => openGuide({ key: button.dataset.cityGuide }));
+      button.addEventListener('click', () => openGuide(guides.find(guide => guide.key === button.dataset.cityGuide)));
     });
     list.classList.add('show'); return results;
   };

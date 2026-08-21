@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if (nav) nav.innerHTML = '<a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="#travel-style">Travel styles</a>';
   var cta = document.querySelector('.site-header .header-cta');
   if (cta) { cta.textContent = 'Plan a trip'; cta.href = '#plan-my-trip'; }
-  var oldCard = document.querySelector('.home-rajasthan');
-  if (oldCard) {
-    oldCard.hidden = true;
-    oldCard.style.display = 'none';
+  var rajasthanCard = document.querySelector('.home-rajasthan');
+  if (rajasthanCard) {
+    rajasthanCard.hidden = false;
+    rajasthanCard.style.display = '';
   }
 
   /* The page keeps the first copy of each useful section and hides
