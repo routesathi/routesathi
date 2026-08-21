@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   var facts = document.querySelector('.state-facts strong');
-  if (facts) facts.textContent = '10 guides';
+  if (facts) facts.textContent = '11 guides';
   var coming = document.querySelector('.state-coming');
   if (coming) coming.innerHTML = '<strong>Coming next:</strong> More Rajasthan guides will be added only after their route, map links and practical travel notes are complete—not as empty cards.';
   var grid = document.querySelector('.state-city-grid');
@@ -11,13 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
     ['chittorgarh.html', 'HILL FORT · 1–2 DAYS', 'Chittorgarh', 'Vijay Stambh, palaces and temples in one sensible fort route—without zig-zagging all day.'],
     ['mount-abu.html', 'HILL STATION · 1–3 DAYS', 'Mount Abu', 'Nakki Lake, Dilwara Temples, Guru Shikhar and Achalgarh in a practical hill-road plan.'],
     ['bikaner.html', 'DESERT HERITAGE · 1–2 DAYS', 'Bikaner', 'Junagarh Fort, old havelis, camel country and Deshnok planned without turning it into a rushed checklist.'],
-    ['bundi.html', 'STEPWELLS & MURALS · 1–2 DAYS', 'Bundi', 'Garh Palace, Taragarh, Raniji ki Baori and lake-side heritage planned without a rushed uphill route.']
+    ['bundi.html', 'STEPWELLS & MURALS · 1–2 DAYS', 'Bundi', 'Garh Palace, Taragarh, Raniji ki Baori and lake-side heritage planned without a rushed uphill route.'],
+    ['kota.html', 'RIVER & HERITAGE · 1–2 DAYS', 'Kota', 'Chambal River, Garh Palace, Kishore Sagar and Garadia planned in a practical city-plus-nature route.']
   ];
   cards.forEach(function (card) {
     if (grid.querySelector('a[href="cities/india/rajasthan/' + card[0] + '"]')) return;
     grid.insertAdjacentHTML('beforeend', '<a class="state-city-card" href="cities/india/rajasthan/' + card[0] + '"><div class="state-city-image"></div><div class="state-city-copy"><b>' + card[1] + '</b><h3>' + card[2] + '</h3><p>' + card[3] + '</p><span>Open ' + card[2] + ' guide →</span></div></a>');
   });
   var style = document.createElement('style');
-  style.textContent = '.state-city-card:nth-child(8) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.24),rgba(12,38,34,.08)),url("images/india/rajasthan/mount-abu/hero.jpg")}.state-city-card:nth-child(9) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.30),rgba(12,38,34,.10)),url("images/india/rajasthan/bikaner/hero.jpg")}.state-city-card:nth-child(10) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/bundi/hero.jpg")}';
+  style.textContent = '.state-city-card:nth-child(8) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.24),rgba(12,38,34,.08)),url("images/india/rajasthan/mount-abu/hero.jpg")}.state-city-card:nth-child(9) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.30),rgba(12,38,34,.10)),url("images/india/rajasthan/bikaner/hero.jpg")}.state-city-card:nth-child(10) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/bundi/hero.jpg")}.state-city-card:nth-child(11) .state-city-image{background-image:linear-gradient(0deg,rgba(12,38,34,.32),rgba(12,38,34,.08)),url("images/india/rajasthan/kota/hero.jpg")}';
   document.head.appendChild(style);
 });
