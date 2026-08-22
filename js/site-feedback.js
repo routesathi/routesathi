@@ -1,12 +1,15 @@
 (() => {
   // RouteSathi Google Analytics 4: loaded once on every page that uses this shared file.
-  const gaId = 'G-L5NDQC69K8';
+  const gaId = 'G-Z4Y98QPC6J';
+  const hasGoogleTag = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
   if (!window.__routeSathiGaLoaded) {
     window.__routeSathiGaLoaded = true;
-    const gaScript = document.createElement('script');
-    gaScript.async = true;
-    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-    document.head.append(gaScript);
+    if (!hasGoogleTag) {
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+      document.head.append(gaScript);
+    }
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
