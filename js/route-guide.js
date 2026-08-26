@@ -14,7 +14,7 @@
 
   /* Rajasthan guides use the same pre-trip card and position as the MP city
      guides: green checklist card above the hero image. */
-  if(location.pathname.includes('/cities/india/rajasthan/')){
+  if(/\/cities\/india\/(rajasthan|gujarat)\//.test(location.pathname)){
     const warning=document.querySelector('.route-warning');
     const hero=document.querySelector('.route-hero');
     if(warning && hero){
