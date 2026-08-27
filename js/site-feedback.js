@@ -35,6 +35,26 @@
     language.addEventListener('click', openHindi); document.body.append(language);
   }
 
+  // Keep wildlife planning easy to find from every RouteSathi page.
+  // This shared file is loaded site-wide, so one link stays consistent everywhere.
+  const siteHeader = document.querySelector('.site-header');
+  const headerActions = siteHeader && siteHeader.querySelector('.header-actions');
+  if (siteHeader && headerActions && !siteHeader.querySelector('[data-route-wildlife]')) {
+    siteHeader.querySelectorAll('nav a[href*="wildlife.html"]').forEach((link) => link.remove());
+    const wildlife = document.createElement('a');
+    wildlife.href = '/wildlife.html';
+    wildlife.className = 'route-wildlife-link';
+    wildlife.dataset.routeWildlife = 'true';
+    wildlife.textContent = 'Wildlife';
+    headerActions.insertBefore(wildlife, headerActions.querySelector('.header-cta') || null);
+  }
+  if (!document.querySelector('style[data-route-wildlife-style]')) {
+    const wildlifeStyle = document.createElement('style');
+    wildlifeStyle.dataset.routeWildlifeStyle = 'true';
+    wildlifeStyle.textContent = '.route-wildlife-link{display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border:1px solid #78906d;color:#183b35;background:#fffdf6;text-decoration:none;font:700 12px "DM Sans",sans-serif;white-space:nowrap}.route-wildlife-link:hover{background:#dce98e}@media(max-width:620px){.route-wildlife-link{padding:9px 10px;font-size:11px}.header-actions{gap:6px!important}.header-actions .language-toggle{display:none}}';
+    document.head.append(wildlifeStyle);
+  }
+
   const footer = document.querySelector('footer');
   if (footer && !footer.querySelector('[data-route-privacy]')) {
     const privacy = document.createElement('a');
