@@ -34,7 +34,8 @@
     { name: 'Ajmer', key: 'ajmer', type: 'Dargah, heritage & Ana Sagar', url: 'cities/india/rajasthan/ajmer.html' },
     { name: 'Alwar–Sariska', key: 'alwar-sariska', aliases: ['alwar', 'sariska', 'alwar sariska'], type: 'Fort, tiger reserve & heritage', url: 'cities/india/rajasthan/alwar-sariska.html' },
     { name: 'Ahmedabad', key: 'ahmedabad', aliases: ['ahmedabad', 'ahmadabad', 'amdavad', 'ahemdabad'], type: 'Old city, Ashram & heritage', url: 'cities/india/gujarat/ahmedabad.html' },
-    { name: 'Vadodara', key: 'vadodara', aliases: ['vadodara', 'baroda', 'vadodra', 'vadodera'], type: 'Palace, museums & Champaner', url: 'cities/india/gujarat/vadodara.html' }
+    { name: 'Vadodara', key: 'vadodara', aliases: ['vadodara', 'baroda', 'vadodra', 'vadodera'], type: 'Palace, museums & Champaner', url: 'cities/india/gujarat/vadodara.html' },
+    { name: 'Dwarka', key: 'dwarka', aliases: ['dwaraka', 'dwarka gujarat', 'dwarika', 'dwaraka'], type: 'Dwarkadhish, temples & coast', url: 'cities/india/gujarat/dwarka.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
@@ -63,7 +64,7 @@
     const results = matches(query);
     if (!clean(query)) { list.innerHTML = ''; list.classList.remove('show'); return results; }
     if (!results.length) {
-      list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Jaipur, Ahmedabad, Vadodara, Udaipur or Jaisalmer.</div>';
+      list.innerHTML = '<div class="search-empty">No exact guide yet. Try Gwalior, Jaipur, Ahmedabad, Vadodara, Dwarka or Jaisalmer.</div>';
       list.classList.add('show'); return results;
     }
     // Use buttons instead of standard links so results look like a clean search menu.
