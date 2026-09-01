@@ -36,7 +36,8 @@
     { name: 'Ahmedabad', key: 'ahmedabad', aliases: ['ahmedabad', 'ahmadabad', 'amdavad', 'ahemdabad'], type: 'Old city, Ashram & heritage', url: 'cities/india/gujarat/ahmedabad.html' },
     { name: 'Vadodara', key: 'vadodara', aliases: ['vadodara', 'baroda', 'vadodra', 'vadodera', 'varodra', 'varodara', 'vadodara gujarat'], type: 'Palace, museums & Champaner', url: 'cities/india/gujarat/vadodara.html' },
     { name: 'Dwarka', key: 'dwarka', aliases: ['dwaraka', 'dwarka gujarat', 'dwarika', 'dwaraka'], type: 'Dwarkadhish, temples & coast', url: 'cities/india/gujarat/dwarka.html' },
-    { name: 'Somnath', key: 'somnath', aliases: ['somanath', 'somnath temple', 'somnath gujarat'], type: 'Jyotirlinga, coast & pilgrimage', url: 'cities/india/gujarat/somnath.html' }
+    { name: 'Somnath', key: 'somnath', aliases: ['somanath', 'somnath temple', 'somnath gujarat'], type: 'Jyotirlinga, coast & pilgrimage', url: 'cities/india/gujarat/somnath.html' },
+    { name: 'Gir–Sasan', key: 'gir-sasan', aliases: ['gir', 'sasan gir', 'gir national park', 'gir safari'], type: 'Asiatic lions & official safari', url: 'cities/india/gujarat/gir-sasan.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
