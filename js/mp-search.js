@@ -34,7 +34,7 @@
     { name: 'Ajmer', key: 'ajmer', type: 'Dargah, heritage & Ana Sagar', url: 'cities/india/rajasthan/ajmer.html' },
     { name: 'Alwar–Sariska', key: 'alwar-sariska', aliases: ['alwar', 'sariska', 'alwar sariska'], type: 'Fort, tiger reserve & heritage', url: 'cities/india/rajasthan/alwar-sariska.html' },
     { name: 'Ahmedabad', key: 'ahmedabad', aliases: ['ahmedabad', 'ahmadabad', 'amdavad', 'ahemdabad'], type: 'Old city, Ashram & heritage', url: 'cities/india/gujarat/ahmedabad.html' },
-    { name: 'Vadodara', key: 'vadodara', aliases: ['vadodara', 'baroda', 'vadodra', 'vadodera'], type: 'Palace, museums & Champaner', url: 'cities/india/gujarat/vadodara.html' },
+    { name: 'Vadodara', key: 'vadodara', aliases: ['vadodara', 'baroda', 'vadodra', 'vadodera', 'varodra', 'varodara', 'vadodara gujarat'], type: 'Palace, museums & Champaner', url: 'cities/india/gujarat/vadodara.html' },
     { name: 'Dwarka', key: 'dwarka', aliases: ['dwaraka', 'dwarka gujarat', 'dwarika', 'dwaraka'], type: 'Dwarkadhish, temples & coast', url: 'cities/india/gujarat/dwarka.html' }
   ];
   const form = document.querySelector('#citySearch');
