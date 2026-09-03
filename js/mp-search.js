@@ -38,7 +38,8 @@
     { name: 'Dwarka', key: 'dwarka', aliases: ['dwaraka', 'dwarka gujarat', 'dwarika', 'dwaraka'], type: 'Dwarkadhish, temples & coast', url: 'cities/india/gujarat/dwarka.html' },
     { name: 'Somnath', key: 'somnath', aliases: ['somanath', 'somnath temple', 'somnath gujarat'], type: 'Jyotirlinga, coast & pilgrimage', url: 'cities/india/gujarat/somnath.html' },
     { name: 'Gir–Sasan', key: 'gir-sasan', aliases: ['gir', 'sasan gir', 'gir national park', 'gir safari'], type: 'Asiatic lions & official safari', url: 'cities/india/gujarat/gir-sasan.html' },
-    { name: 'Ekta Nagar / Statue of Unity', key: 'ekta-nagar', aliases: ['statue of unity', 'ekta nagar', 'kevadia', 'kevadiya'], type: 'Landmark, Narmada & family travel', url: 'cities/india/gujarat/ekta-nagar.html' }
+    { name: 'Ekta Nagar / Statue of Unity', key: 'ekta-nagar', aliases: ['statue of unity', 'ekta nagar', 'kevadia', 'kevadiya'], type: 'Landmark, Narmada & family travel', url: 'cities/india/gujarat/ekta-nagar.html' },
+    { name: 'Rann of Kutch / Dhordo', key: 'rann-of-kutch', aliases: ['rann of kutch', 'white rann', 'white rann of kutch', 'dhordo', 'kutch', 'rann utsav'], type: 'White desert, culture & seasonal travel', url: 'cities/india/gujarat/rann-of-kutch.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
