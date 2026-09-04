@@ -43,7 +43,8 @@
     { name: 'Jamnagar', key: 'jamnagar', aliases: ['jam nagar', 'lakhota', 'marine national park jamnagar'], type: 'Lake city, heritage & marine nature', url: 'cities/india/gujarat/jamnagar.html' },
     { name: 'Patan–Modhera', key: 'patan-modhera', aliases: ['patan', 'modhera', 'rani ki vav', 'rani ki baoli', 'sun temple modhera'], type: 'Stepwell, Patola & Sun Temple heritage', url: 'cities/india/gujarat/patan-modhera.html' },
     { name: 'Junagadh', key: 'junagadh', aliases: ['junagarh', 'girnar', 'upar kot', 'uparcot', 'mahabat maqbara'], type: 'Fort city, Girnar & heritage', url: 'cities/india/gujarat/junagadh.html' },
-    { name: 'Surat', key: 'surat', aliases: ['dumas', 'surat castle', 'dutch cemetery surat'], type: 'Port heritage, food & coast', url: 'cities/india/gujarat/surat.html' }
+    { name: 'Surat', key: 'surat', aliases: ['dumas', 'surat castle', 'dutch cemetery surat'], type: 'Port heritage, food & coast', url: 'cities/india/gujarat/surat.html' },
+    { name: 'Bhuj', key: 'bhuj', aliases: ['bhuj kutch', 'aina mahal', 'prag mahal', 'bhujodi', 'smritivan', 'kutch museum'], type: 'Kutch heritage, crafts & memorial', url: 'cities/india/gujarat/bhuj.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
