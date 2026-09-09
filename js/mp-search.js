@@ -45,7 +45,8 @@
     { name: 'Junagadh', key: 'junagadh', aliases: ['junagarh', 'girnar', 'upar kot', 'uparcot', 'mahabat maqbara'], type: 'Fort city, Girnar & heritage', url: 'cities/india/gujarat/junagadh.html' },
     { name: 'Surat', key: 'surat', aliases: ['dumas', 'surat castle', 'dutch cemetery surat'], type: 'Port heritage, food & coast', url: 'cities/india/gujarat/surat.html' },
     { name: 'Bhuj', key: 'bhuj', aliases: ['bhuj kutch', 'aina mahal', 'prag mahal', 'bhujodi', 'smritivan', 'kutch museum'], type: 'Kutch heritage, crafts & memorial', url: 'cities/india/gujarat/bhuj.html' },
-    { name: 'Saputara', key: 'saputara', aliases: ['saputara lake', 'gira falls', 'gira waterfall', 'waghai', 'waghai botanical garden', 'dang hill station'], type: 'Hill station, lake & Dang nature', url: 'cities/india/gujarat/saputara.html' }
+    { name: 'Saputara', key: 'saputara', aliases: ['saputara lake', 'gira falls', 'gira waterfall', 'waghai', 'waghai botanical garden', 'dang hill station'], type: 'Hill station, lake & Dang nature', url: 'cities/india/gujarat/saputara.html' },
+    { name: 'Champaner–Pavagadh', key: 'champaner-pavagadh', aliases: ['champaner', 'pavagadh', 'pavagad', 'kalika mata', 'kalika mata temple', 'jami masjid champaner', 'jama masjid champaner', 'kevda masjid'], type: 'UNESCO heritage & pilgrimage', url: 'cities/india/gujarat/champaner-pavagadh.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
