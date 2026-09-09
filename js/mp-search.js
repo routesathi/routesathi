@@ -49,7 +49,8 @@
     { name: 'Champaner–Pavagadh', key: 'champaner-pavagadh', aliases: ['champaner', 'pavagadh', 'pavagad', 'kalika mata', 'kalika mata temple', 'jami masjid champaner', 'jama masjid champaner', 'kevda masjid'], type: 'UNESCO heritage & pilgrimage', url: 'cities/india/gujarat/champaner-pavagadh.html' },
     { name: 'Dholavira', key: 'dholavira', aliases: ['dholavira gujarat', 'dholavira kutch', 'harappan city', 'harappan city gujarat', 'indus valley dholavira', 'dholavira museum', 'khadir island'], type: 'UNESCO Harappan city & archaeology', url: 'cities/india/gujarat/dholavira.html' },
     { name: 'Mandvi', key: 'mandvi', aliases: ['mandvi kutch', 'mandvi beach', 'mandavi', 'vijay vilas palace', 'vijay vilas', 'mandvi shipyard', 'mandvi shipbuilding', 'topansar lake'], type: 'Royal coast, ships & beach', url: 'cities/india/gujarat/mandvi.html' },
-    { name: 'Palitana', key: 'palitana', aliases: ['palitana gujarat', 'shatrunjaya', 'shatrunjay', 'shatrunjaya hill', 'palitana jain temple', 'adinath temple palitana', 'chaumukhji tunk'], type: 'Jain pilgrimage & temple hill', url: 'cities/india/gujarat/palitana.html' }
+    { name: 'Palitana', key: 'palitana', aliases: ['palitana gujarat', 'shatrunjaya', 'shatrunjay', 'shatrunjaya hill', 'palitana jain temple', 'adinath temple palitana', 'chaumukhji tunk'], type: 'Jain pilgrimage & temple hill', url: 'cities/india/gujarat/palitana.html' },
+    { name: 'Little Rann of Kutch', key: 'little-rann-of-kutch', aliases: ['little rann', 'little rann of kutch', 'wild ass sanctuary', 'indian wild ass', 'khur', 'bajana', 'zainabad', 'rann safari'], type: 'Wild ass, birding & salt desert', url: 'cities/india/gujarat/little-rann-of-kutch.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
