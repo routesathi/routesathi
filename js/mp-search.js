@@ -48,7 +48,8 @@
     { name: 'Saputara', key: 'saputara', aliases: ['saputara lake', 'gira falls', 'gira waterfall', 'waghai', 'waghai botanical garden', 'dang hill station'], type: 'Hill station, lake & Dang nature', url: 'cities/india/gujarat/saputara.html' },
     { name: 'Champaner–Pavagadh', key: 'champaner-pavagadh', aliases: ['champaner', 'pavagadh', 'pavagad', 'kalika mata', 'kalika mata temple', 'jami masjid champaner', 'jama masjid champaner', 'kevda masjid'], type: 'UNESCO heritage & pilgrimage', url: 'cities/india/gujarat/champaner-pavagadh.html' },
     { name: 'Dholavira', key: 'dholavira', aliases: ['dholavira gujarat', 'dholavira kutch', 'harappan city', 'harappan city gujarat', 'indus valley dholavira', 'dholavira museum', 'khadir island'], type: 'UNESCO Harappan city & archaeology', url: 'cities/india/gujarat/dholavira.html' },
-    { name: 'Mandvi', key: 'mandvi', aliases: ['mandvi kutch', 'mandvi beach', 'mandavi', 'vijay vilas palace', 'vijay vilas', 'mandvi shipyard', 'mandvi shipbuilding', 'topansar lake'], type: 'Royal coast, ships & beach', url: 'cities/india/gujarat/mandvi.html' }
+    { name: 'Mandvi', key: 'mandvi', aliases: ['mandvi kutch', 'mandvi beach', 'mandavi', 'vijay vilas palace', 'vijay vilas', 'mandvi shipyard', 'mandvi shipbuilding', 'topansar lake'], type: 'Royal coast, ships & beach', url: 'cities/india/gujarat/mandvi.html' },
+    { name: 'Palitana', key: 'palitana', aliases: ['palitana gujarat', 'shatrunjaya', 'shatrunjay', 'shatrunjaya hill', 'palitana jain temple', 'adinath temple palitana', 'chaumukhji tunk'], type: 'Jain pilgrimage & temple hill', url: 'cities/india/gujarat/palitana.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
