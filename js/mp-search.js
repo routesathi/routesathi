@@ -52,7 +52,8 @@
     { name: 'Palitana', key: 'palitana', aliases: ['palitana gujarat', 'shatrunjaya', 'shatrunjay', 'shatrunjaya hill', 'palitana jain temple', 'adinath temple palitana', 'chaumukhji tunk'], type: 'Jain pilgrimage & temple hill', url: 'cities/india/gujarat/palitana.html' },
     { name: 'Little Rann of Kutch', key: 'little-rann-of-kutch', aliases: ['little rann', 'little rann of kutch', 'wild ass sanctuary', 'indian wild ass', 'khur', 'bajana', 'zainabad', 'rann safari'], type: 'Wild ass, birding & salt desert', url: 'cities/india/gujarat/little-rann-of-kutch.html' },
     { name: 'Velavadar Blackbuck National Park', key: 'velavadar', aliases: ['velavadar', 'velavadar blackbuck', 'blackbuck national park', 'blackbuck park gujarat', 'velavadar national park', 'bhavnagar blackbuck', 'velavadar bird sanctuary'], type: 'Blackbuck grassland & winter birding', url: 'cities/india/gujarat/velavadar.html' },
-    { name: 'Porbandar', key: 'porbandar', aliases: ['porbandar gujarat', 'kirti mandir porbandar', 'gandhi birthplace', 'sudama mandir', 'porbandar beach', 'porbandar chowpatty', 'porbandar bird sanctuary'], type: 'Gandhi heritage, coast & birding', url: 'cities/india/gujarat/porbandar.html' }
+    { name: 'Porbandar', key: 'porbandar', aliases: ['porbandar gujarat', 'kirti mandir porbandar', 'gandhi birthplace', 'sudama mandir', 'porbandar beach', 'porbandar chowpatty', 'porbandar bird sanctuary'], type: 'Gandhi heritage, coast & birding', url: 'cities/india/gujarat/porbandar.html' },
+    { name: 'Rajkot', key: 'rajkot', aliases: ['rajkot gujarat', 'kaba gandhi no delo', 'gandhi smriti rajkot', 'watson museum', 'jubilee garden rajkot', 'bangdi bazaar', 'rotary dolls museum'], type: 'Gandhi heritage, museums & city culture', url: 'cities/india/gujarat/rajkot.html' }
   ];
   const form = document.querySelector('#citySearch');
   const input = document.querySelector('#cityInput');
