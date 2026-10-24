@@ -6,23 +6,24 @@
 .destinations-hero h1{text-shadow:0 3px 16px rgba(0,0,0,.45)}
 .destinations-hero p:last-child{max-width:650px;color:#fffdf5;line-height:1.7;text-shadow:0 2px 10px rgba(0,0,0,.52)}
 .destination-states{padding:72px 12%}
-.hub-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}
+.hub-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
 .hub-heading h2{font-size:clamp(36px,4vw,56px);color:#183b35}
 .hub-heading>p{max-width:420px;line-height:1.6;color:#60736b}
 
-/* Three equal cards keep the destination hub calm as more states are added. */
-.state-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:280px;gap:20px}
-.state-hub-card{box-sizing:border-box;min-width:0;height:100%;padding:30px;color:#fff;text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end}
+/* Compact equal cards keep the hub calm as RouteSathi grows state by state. */
+.state-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:242px;gap:20px}
+.state-hub-card{box-sizing:border-box;min-width:0;height:100%;padding:26px;color:#fff;text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;transition:transform .2s ease,box-shadow .2s ease}
 .state-hub-card.mp{background:linear-gradient(140deg,#183b35,#2f6855)}
 .state-hub-card.rajasthan{background:linear-gradient(140deg,#b85434,#e28b55)}
 .state-hub-card.gujarat{background:linear-gradient(140deg,#174239,#75533b 55%,#c79154)}
 .state-hub-card.maharashtra{background:linear-gradient(140deg,#254f44,#397560 56%,#9ab469)}
 .state-hub-card span{font-size:10px;font-weight:800;letter-spacing:1.3px}
-.state-hub-card h3{font:600 clamp(35px,3.5vw,50px)/.95 'Playfair Display';margin:10px 0}
-.state-hub-card p{max-width:34ch;line-height:1.55;margin:0 0 18px}
+.state-hub-card h3{font:600 clamp(34px,3.1vw,47px)/.95 'Playfair Display';margin:9px 0}
+.state-hub-card p{max-width:31ch;line-height:1.5;margin:0 0 16px;font-size:14px}
 .state-hub-card b{background:#fffdf5;color:#183b35;padding:10px 13px;font-size:12px}
+.state-hub-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(24,59,53,.16)}
 .hub-note{margin:0 12% 70px;padding:45px 8%;background:#e2ebc0}
 .hub-note h2{font-size:clamp(38px,4vw,58px);color:#183b35}
 .hub-note p:last-child{max-width:620px;line-height:1.65;color:#52665d}
-@media(max-width:1080px){.state-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:270px}}
-@media(max-width:720px){.destinations-hero{padding:72px 9% 54px;background-position:center}.destination-states{padding:52px 18px}.hub-heading{display:block}.state-hub-grid{grid-template-columns:1fr;grid-auto-rows:250px}.state-hub-card{padding:28px 26px}.hub-note{margin:0 18px 42px;padding:32px 26px}}
+@media(max-width:1080px){.state-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:238px}}
+@media(max-width:720px){.destinations-hero{padding:72px 9% 54px;background-position:center}.destination-states{padding:52px 18px}.hub-heading{display:block}.state-hub-grid{grid-template-columns:1fr;grid-auto-rows:218px;gap:16px}.state-hub-card{padding:25px 24px}.state-hub-card h3{font-size:38px}.state-hub-card p{font-size:13px;margin-bottom:14px}.hub-note{margin:0 18px 42px;padding:32px 26px}}
