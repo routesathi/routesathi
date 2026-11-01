@@ -137,6 +137,43 @@
     document.head.append(relatedStyle);
   }
 
+  // A clean, destination-aware next step for every city guide. These are
+  // ordinary outbound searches for now; approved affiliate URLs can later
+  // replace the four links here without redesigning every page.
+  const cityGuideMatch = location.pathname.match(/^\/cities\/india\/[^/]+\/([^/]+)\.html$/);
+  const isCityGuide = Boolean(cityGuideMatch) && !['index', 'when-to-visit'].includes(cityGuideMatch[1]);
+  if (isCityGuide && !document.querySelector('.route-booking')) {
+    const humanize = value => value.replace(/-/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
+    const titleLead = (document.title || '').split('|')[0]
+      .replace(/\b(Travel Guide|Itinerary|Guide|Travel Plan)\b/gi, '').trim();
+    const cityName = titleLead || humanize(cityGuideMatch[1]);
+    const safeCity = encodeURIComponent(`${cityName}, India`);
+    const booking = document.createElement('section');
+    booking.className = 'route-booking';
+    booking.setAttribute('aria-labelledby', 'routeBookingTitle');
+    booking.innerHTML = `<div class="route-booking-copy"><p class="eyebrow">PLAN & BOOK</p><h2 id="routeBookingTitle">Planning ${cityName}?</h2><p>Your RouteSathi guide handles the route. Use these trusted starting points for stays, travel and official train availability.</p></div><div class="route-booking-grid"><a data-booking-kind="stays" href="https://www.google.com/travel/hotels?q=${safeCity}" target="_blank" rel="noopener noreferrer"><b>STAYS</b><strong>Find stays in ${cityName}</strong><span>Compare hotel options →</span></a><a data-booking-kind="flights" href="https://www.google.com/travel/flights?q=${encodeURIComponent(`Flights to ${cityName}, India`)}" target="_blank" rel="noopener noreferrer"><b>FLIGHTS</b><strong>Search flights</strong><span>Check route options →</span></a><a data-booking-kind="buses" href="https://www.redbus.in/" target="_blank" rel="noopener noreferrer"><b>BUSES</b><strong>Find bus tickets</strong><span>Search buses for your dates →</span></a><a data-booking-kind="trains" href="https://www.irctc.co.in/nget/train-search" target="_blank" rel="noopener noreferrer"><b>TRAINS</b><strong>Check train availability</strong><span>Open official IRCTC search →</span></a></div><p class="route-booking-note">RouteSathi does not take payment or issue tickets. Final prices, availability and booking support are handled by the provider you open.</p>`;
+    const anchor = document.querySelector('.promise, .g-hero, .route-hero, .city-hero');
+    if (anchor) anchor.insertAdjacentElement('afterend', booking);
+    else document.querySelector('main')?.append(booking);
+  }
+  if (isCityGuide && !document.querySelector('style[data-route-booking-style]')) {
+    const bookingStyle = document.createElement('style');
+    bookingStyle.dataset.routeBookingStyle = 'true';
+    bookingStyle.textContent = '.route-booking{padding:72px 12%;background:#f7f1e5;color:#183b35}.route-booking-copy{display:flex;align-items:end;justify-content:space-between;gap:30px}.route-booking .eyebrow{color:#d85e39;font-size:10px;font-weight:800;letter-spacing:1.3px;margin:0}.route-booking h2{font:600 clamp(34px,4.1vw,56px)/1 "Playfair Display",serif;letter-spacing:-1.8px;margin:8px 0 0}.route-booking-copy>p:not(.eyebrow){max-width:450px;color:#60736b;line-height:1.65;margin:0}.route-booking-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}.route-booking-grid a{min-height:155px;padding:20px;background:#fffdf5;border:1px solid #e1dacb;color:#183b35;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between}.route-booking-grid a:hover{background:#dce98e;transform:translateY(-2px)}.route-booking-grid b{font-size:10px;letter-spacing:1.2px;color:#d85e39}.route-booking-grid strong{font:600 23px/1.08 "Playfair Display",serif}.route-booking-grid span{font-size:12px;font-weight:800}.route-booking-note{margin:20px 0 0;color:#60736b;font-size:12px;line-height:1.55}@media(max-width:850px){.route-booking{padding:58px 8%}.route-booking-copy{display:block}.route-booking-copy>p:not(.eyebrow){margin-top:14px}.route-booking-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.route-booking-grid{grid-template-columns:1fr}.route-booking-grid a{min-height:128px}}';
+    document.head.append(bookingStyle);
+  }
+
+  document.querySelectorAll('[data-booking-kind]').forEach(link => {
+    if (link.dataset.bookingTracked) return;
+    link.dataset.bookingTracked = 'true';
+    link.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') window.gtag('event', 'booking_outbound_click', {
+        booking_type: link.dataset.bookingKind,
+        page_path: location.pathname
+      });
+    });
+  });
+
   if (location.pathname.endsWith('/cities/india/mp/bhopal.html') && !document.querySelector('script[data-bhopal-tools]')) {
     const script = document.createElement('script');
     script.src = '/js/bhopal-tools.js'; script.dataset.bhopalTools = 'true'; document.body.append(script);
